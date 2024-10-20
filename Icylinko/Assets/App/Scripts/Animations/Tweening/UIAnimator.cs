@@ -1,6 +1,10 @@
 using UnityEngine;
+using System.Collections;
 using DG.Tweening;
 
+[RequireComponent(typeof(CanvasGroup))]
+[RequireComponent(typeof(RectTransform))]
+[AddComponentMenu("UI/Animations/UI Animator")]
 public class UIAnimator : MonoBehaviour
 {
     public enum SlideDirection { LeftToRight, RightToLeft, BottomToTop, TopToBottom }
@@ -18,15 +22,19 @@ public class UIAnimator : MonoBehaviour
 
     private Vector2 _initialPosition;
 
+    private const float _DEACTIVATESCREENDELAY = 0.25f;
+
     private void Awake()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
         _rectTransform = GetComponent<RectTransform>();
-        
+
         // Сохраняем начальное положение элемента
         _initialPosition = _rectTransform.anchoredPosition;
         _canvasGroup.alpha = 0f;  // По умолчанию элемент невидим
     }
+
+    private void OnEnable() => Appear();
 
     public void Appear()
     {
@@ -42,14 +50,21 @@ public class UIAnimator : MonoBehaviour
         _canvasGroup.DOFade(1f, _fadeInDuration).SetEase(Ease.OutCubic);
     }
 
-    public void Disappear()
+    public void Disappear(GameObject gameObject)
     {
         Vector2 targetPosition = GetStartPosition();
 
         // Анимация удаления (вылет + уменьшение прозрачности)
         _rectTransform.DOAnchorPos(targetPosition, _animationDuration).SetEase(Ease.InCubic);
         _canvasGroup.DOFade(0f, _fadeOutDuration).SetEase(Ease.InCubic)
-            .OnComplete(() => gameObject.SetActive(false));  // Отключаем элемент после завершения анимации
+            .OnComplete(() => StartCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject)));
+    }
+
+    private IEnumerator DisableGameobjectCoroutine(float delay, GameObject gameObject) 
+    {
+        yield return new WaitForSeconds(delay);
+
+        gameObject.SetActive(false);
     }
 
     private Vector2 GetStartPosition()
