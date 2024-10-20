@@ -6211,6 +6211,7 @@ GameObject:
   - component: {fileID: 957142362}
   - component: {fileID: 957142364}
   - component: {fileID: 957142363}
+  - component: {fileID: 957142365}
   m_Layer: 5
   m_Name: Main Menu Screen
   m_TagString: Untagged
@@ -6273,6 +6274,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957142361}
   m_CullTransparentMesh: 1
+--- !u!114 &957142365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957142361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4007edc14e5413692388ff1f4d6c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UIAnimators:
+  - {fileID: 1908597748}
 --- !u!1 &970013800
 GameObject:
   m_ObjectHideFlags: 0
@@ -13502,6 +13517,8 @@ GameObject:
   - component: {fileID: 1908597745}
   - component: {fileID: 1908597747}
   - component: {fileID: 1908597746}
+  - component: {fileID: 1908597749}
+  - component: {fileID: 1908597748}
   m_Layer: 5
   m_Name: Icylinko Text
   m_TagString: Untagged
@@ -13625,6 +13642,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908597744}
   m_CullTransparentMesh: 1
+--- !u!114 &1908597748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908597744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 500
+--- !u!225 &1908597749
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908597744}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1930337653
 GameObject:
   m_ObjectHideFlags: 0
