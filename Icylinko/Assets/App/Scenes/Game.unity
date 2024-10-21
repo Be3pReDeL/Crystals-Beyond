@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -998,7 +998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -1772,7 +1772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -1788,6 +1788,37 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &430192905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 430192906}
+  m_Layer: 0
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430192906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430192905}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445175824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -2102,7 +2133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -2381,7 +2412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -2482,12 +2513,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1882744041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &563634079
 GameObject:
@@ -2659,7 +2690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -2845,7 +2876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -3090,7 +3121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -3311,7 +3342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -3447,7 +3478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -3612,7 +3643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -3748,7 +3779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -3913,7 +3944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -4134,7 +4165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -4268,7 +4299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -4468,7 +4499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -4633,7 +4664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -4943,7 +4974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -5365,7 +5396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -5530,7 +5561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -5695,7 +5726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -5924,7 +5955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -6089,7 +6120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -6594,6 +6625,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814873044}
   m_CullTransparentMesh: 1
+--- !u!1 &1882744040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1882744041}
+  m_Layer: 0
+  m_Name: Main Camera Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1882744041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882744040}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 519420032}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1907437718
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,7 +6806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -6993,7 +7056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -7162,7 +7225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -7348,7 +7411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -7500,7 +7563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -7665,7 +7728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 0
+  _slideDirection: 3
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
@@ -7720,5 +7783,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
+  - {fileID: 1882744041}
   - {fileID: 2113903490}
+  - {fileID: 430192906}
