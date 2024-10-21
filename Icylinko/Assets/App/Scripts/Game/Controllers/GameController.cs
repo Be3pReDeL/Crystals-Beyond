@@ -21,8 +21,8 @@ public class GameController : MonoBehaviour
 
     public UnityEvent<bool> OnGameComplete;
 
-    private int _points = 0; // Текущий счет
-    private int _caughtBalls = 0; // Количество пойманных шариков
+    private int _points = 0;  // Текущий счет
+    private int _caughtBalls = 0;  // Количество пойманных шариков
 
     private void Awake() 
     {
@@ -34,10 +34,10 @@ public class GameController : MonoBehaviour
         if (OnGameComplete == null)
             OnGameComplete = new UnityEvent<bool>();
 
-        PlayerPrefs.SetInt("Game Mode", (int) GameMode.levels);
+        PlayerPrefs.SetInt("Game Mode", (int)GameMode.levels);
         PlayerPrefs.SetInt("Level", 15);
 
-        CurrentGameMode = (GameMode) PlayerPrefs.GetInt("Game Mode", (int) GameMode.endless);
+        CurrentGameMode = (GameMode)PlayerPrefs.GetInt("Game Mode", (int)GameMode.endless);
 
         if (CurrentGameMode == GameMode.levels)
             CurrentLevel = PlayerPrefs.GetInt("Level", 0);
@@ -67,25 +67,22 @@ public class GameController : MonoBehaviour
 
     public void ScorePoints(int points)
     {
-        _points += points; // Увеличиваем счет за выигрышный сегмент
-
-        HUDController.Instance.UpdateScoresText(_points); // Обновляем число заработанных очков
+        _points += points;  // Увеличиваем счет за выигрышный сегмент
+        HUDController.Instance.UpdateScoresText(_points);  // Обновляем число заработанных очков
     }
 
     public void ScoreGoal()
     {
-        _caughtBalls++; // Увеличиваем счет за выигрышный сегмент
+        _caughtBalls++;  // Увеличиваем счет за выигрышный сегмент
+        HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel] - _caughtBalls);  // Обновляем число заработанных очков
 
-        HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel] - _caughtBalls); // Обновляем число заработанных очков
-
-        if(_caughtBalls == _levelGoals[CurrentLevel])
+        if (_caughtBalls == _levelGoals[CurrentLevel])
             OnGameComplete?.Invoke(true);
     }
 
     private void CompleteGame(bool isPlayerAWinner) 
     {
         PrefabSpawner.Instance.Stop();
-        
-        Debug.Log("SO PLAYER IS A " + isPlayerAWinner.ToString());
+        Debug.Log("SO PLAYER IS A " + (isPlayerAWinner ? "WINNER" : "LOSER"));
     }
 }
