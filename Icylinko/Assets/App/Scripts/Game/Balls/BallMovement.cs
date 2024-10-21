@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class MovingObject : MonoBehaviour
+public class BallMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
     private float _currentSpeed;  // Текущая скорость

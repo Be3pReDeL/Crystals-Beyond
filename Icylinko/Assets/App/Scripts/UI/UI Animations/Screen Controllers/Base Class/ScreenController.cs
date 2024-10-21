@@ -8,6 +8,7 @@ public class ScreenController : MonoBehaviour
     public void CloseScreen() 
     {
         foreach (var animator in _UIAnimators) 
-            animator.Disappear(gameObject);
+            if(animator != null && animator.gameObject.activeSelf)
+                animator.Disappear(gameObject);
     }
 }
