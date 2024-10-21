@@ -9,8 +9,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject[] _levelMazes;
     [SerializeField] private Transform _mazeSpawnPoint;
     [SerializeField] private float[] _levelSpawnInterval;
-    [SerializeField] private int[] _levelTotalPrefabs;
     [SerializeField] private float[] _levelInitialSpeed;
+    [SerializeField] private float[] _levelCountAtTime;
     [SerializeField] private float[] _levelSpeedIncreaseRate;
     [Range(0, 30)]
     [SerializeField] private int _dificultyOfEndlessMode = 15;
@@ -49,14 +49,18 @@ public class GameController : MonoBehaviour
         SpawnMaze(CurrentGameMode == GameMode.levels ? CurrentLevel : Random.Range(0, _levelMazes.Length));
         SetupPrefabSpawner(CurrentGameMode == GameMode.levels ? CurrentLevel : _dificultyOfEndlessMode);
 
+        HUDController.Instance.UpdateScoresText(0);
+        if (CurrentGameMode == GameMode.levels)
+            HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel]);
+
         OnGameComplete.AddListener(CompleteGame);
     }
 
     private void SetupPrefabSpawner(int type)
     {
         PrefabSpawner.Instance.SpawnInterval = _levelSpawnInterval[type];
-        PrefabSpawner.Instance.TotalPrefabs = _levelTotalPrefabs[type];
         PrefabSpawner.Instance.InitialSpeed = _levelInitialSpeed[type];
+        PrefabSpawner.Instance.CountAtTime = _levelCountAtTime[type];
         PrefabSpawner.Instance.SpeedIncreaseRate = _levelSpeedIncreaseRate[type];
     }
 
@@ -76,7 +80,7 @@ public class GameController : MonoBehaviour
         HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel] - _caughtBalls); // Обновляем число заработанных очков
 
         if(_caughtBalls == _levelGoals[CurrentLevel])
-            CompleteGame(true);
+            OnGameComplete?.Invoke(true);
     }
 
     private void CompleteGame(bool isPlayerAWinner) 

@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class PrefabSpawner : MonoBehaviour
 {
@@ -8,15 +7,12 @@ public class PrefabSpawner : MonoBehaviour
     [SerializeField] private GameObject[] _prefabs;  // Массив префабов для спавна
     [SerializeField] private Transform _spawnPoint;  // Точка спавна
     public float SpawnInterval { get; set; } = 1f;  // Интервал между спавнами
-    public int TotalPrefabs { get; set; } = 1;  // Общее количество префабов
     public float InitialSpeed { get; set; } = 2f;  // Начальная скорость объектов
+    public float CountAtTime { get; set; } = 1f;  // Количество за раз
     public float SpeedIncreaseRate { get; set; } = 0.5f;  // Скорость прироста
 
-    private int _spawnedCount = 0;  // Счетчик созданных префабов
     private float _spawnTimer = 0f;  // Таймер для спавна
     private bool _isSpawningActive = true;
-
-    private List<GameObject> _balls = new List<GameObject>();
 
     private void Awake()
     {
@@ -30,24 +26,20 @@ public class PrefabSpawner : MonoBehaviour
     {
         if(_isSpawningActive)
         {
-            if (_spawnedCount >= TotalPrefabs && GameController.Instance.CurrentGameMode == GameController.GameMode.levels)
-            {
-                if (_balls.Count == 0 && GameController.Instance.IsGameContinues) 
-                {
-                    GameController.Instance.OnGameComplete.Invoke(false);
-
-                    enabled = false;
-                }
-
-                return;
-            }
-
             _spawnTimer += Time.deltaTime;
             if (_spawnTimer >= SpawnInterval)
             {
-                SpawnPrefab();  // Спавн объекта
+                for(int i = 0; i < CountAtTime; i++)
+                    SpawnPrefab();  // Спавн объекта определенное количество раз
+                    
                 _spawnTimer = 0f;
             }
+        }
+        else
+        {
+            enabled = false;
+
+            return;
         }
     }
 
@@ -57,8 +49,6 @@ public class PrefabSpawner : MonoBehaviour
         GameObject randomPrefab = _prefabs[Random.Range(0, _prefabs.Length)];
 
         GameObject newPrefab = Instantiate(randomPrefab, _spawnPoint.position, Quaternion.identity, _spawnPoint);
-
-        _balls.Add(newPrefab);
 
         // Получаем компонент Rigidbody2D
         Rigidbody2D rb = newPrefab.GetComponent<Rigidbody2D>();
@@ -78,11 +68,7 @@ public class PrefabSpawner : MonoBehaviour
             BallMovement ballMovement = newPrefab.GetComponent<BallMovement>();
             ballMovement.Setup(rb, InitialSpeed, SpeedIncreaseRate);
         }
-
-        _spawnedCount++;
     }
-
-    public void DeleteBallFromList(GameObject ball) => _balls.Remove(ball);
 
     public void Stop() 
     {

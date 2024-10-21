@@ -12,8 +12,6 @@ public class DestroyBall : MonoBehaviour
             
             SpawnParticle(segment.Particle);
 
-            PrefabSpawner.Instance.DeleteBallFromList(gameObject);
-
             Destroy(gameObject);
         }
     }
