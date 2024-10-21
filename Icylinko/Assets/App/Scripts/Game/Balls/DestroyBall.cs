@@ -13,7 +13,7 @@ public class DestroyBall : MonoBehaviour
             SpawnParticle(segment.Particle);
 
             if (segment.ScoreValue < 0)
-                PlayerHealth.Instance.TakeDamage(10);
+                Player.Instance.TakeDamage(10);
 
             Destroy(gameObject);
         }
