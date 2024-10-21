@@ -28,7 +28,7 @@ public class HUDController : MonoBehaviour
         ChangeGameMode(GameController.Instance.CurrentGameMode);
     }
 
-    public void UpdateGoalText(int score) => UpdateText(_goalTextController, string.Format(DEFAULTGOALTEXT, score));
+    public void UpdateGoalText(int score) => UpdateText(_goalTextController, string.Format(DEFAULTGOALTEXT, score < 0 ? 0 : score));
     public void UpdateScoresText(int points) => UpdateText(_scoresTextController, string.Format(DEFAULTSCORESTEXT, points));
 
     public void ChangeGameMode(GameController.GameMode gameMode) 

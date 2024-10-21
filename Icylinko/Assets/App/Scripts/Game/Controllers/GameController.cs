@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour
     public enum GameMode { endless, levels }
     public GameMode CurrentGameMode { get; private set; }
     public int CurrentLevel { get; private set; } = 0;
-    public bool IsGameContinues { get; private set; } = true;
 
     public UnityEvent<bool> OnGameComplete;
 
@@ -85,8 +84,8 @@ public class GameController : MonoBehaviour
 
     private void CompleteGame(bool isPlayerAWinner) 
     {
-        IsGameContinues = isPlayerAWinner;
-
+        PrefabSpawner.Instance.Stop();
+        
         Debug.Log("SO PLAYER IS A " + isPlayerAWinner.ToString());
     }
 }

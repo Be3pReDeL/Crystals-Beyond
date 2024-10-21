@@ -18,9 +18,8 @@ public class DestroyBall : MonoBehaviour
 
     private void UpdateScores(PlayerCircleSegment segment)
     {
-        if(GameController.Instance.CurrentGameMode == GameController.GameMode.endless)
-            GameController.Instance.ScorePoints(segment.ScoreValue);
-        else if (segment.ScoreValue > 0)
+        GameController.Instance.ScorePoints(segment.ScoreValue);
+        if(GameController.Instance.CurrentGameMode == GameController.GameMode.levels)
             GameController.Instance.ScoreGoal();
     }
 
