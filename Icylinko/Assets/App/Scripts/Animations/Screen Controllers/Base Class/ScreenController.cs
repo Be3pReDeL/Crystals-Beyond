@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[AddComponentMenu("UI/Animations/Screen Controller")]
 public class ScreenController : MonoBehaviour
 {
     [SerializeField] private UIAnimator[] _UIAnimators;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using DG.Tweening;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 [RequireComponent(typeof(RectTransform))]
@@ -22,7 +23,7 @@ public class UIAnimator : MonoBehaviour
 
     private Vector2 _initialPosition;
 
-    private const float _DEACTIVATESCREENDELAY = 0.25f;
+    private const float _DEACTIVATESCREENDELAY = 0.05f;
 
     private void Awake()
     {
@@ -38,6 +39,9 @@ public class UIAnimator : MonoBehaviour
 
     public void Appear()
     {
+        if(TryGetComponent(out Button button))
+            button.interactable = true;
+
         gameObject.SetActive(true);  // Активируем элемент
         Vector2 startPosition = GetStartPosition();
 
@@ -52,9 +56,12 @@ public class UIAnimator : MonoBehaviour
 
     public void Disappear(GameObject gameObject)
     {
-        Vector2 targetPosition = GetStartPosition();
-
         // Анимация удаления (вылет + уменьшение прозрачности)
+        Vector2 targetPosition = GetStartPosition();
+        
+        if(TryGetComponent(out Button button))
+            button.interactable = false;
+
         _rectTransform.DOAnchorPos(targetPosition, _animationDuration).SetEase(Ease.InCubic);
         _canvasGroup.DOFade(0f, _fadeOutDuration).SetEase(Ease.InCubic)
             .OnComplete(() => StartCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject)));

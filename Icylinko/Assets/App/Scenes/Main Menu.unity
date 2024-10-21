@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 16797933}
   - component: {fileID: 16797935}
   - component: {fileID: 16797934}
+  - component: {fileID: 16797936}
+  - component: {fileID: 16797937}
   m_Layer: 5
   m_Name: Level Button 10 Text
   m_TagString: Untagged
@@ -256,6 +258,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16797932}
   m_CullTransparentMesh: 1
+--- !u!225 &16797936
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16797932}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &16797937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16797932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &18629061
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +300,8 @@ GameObject:
   - component: {fileID: 18629064}
   - component: {fileID: 18629063}
   - component: {fileID: 18629066}
+  - component: {fileID: 18629067}
+  - component: {fileID: 18629068}
   m_Layer: 5
   m_Name: Level Button 15
   m_TagString: Untagged
@@ -393,6 +426,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &18629067
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18629061}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &18629068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18629061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &30453966
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +466,8 @@ GameObject:
   - component: {fileID: 30453967}
   - component: {fileID: 30453969}
   - component: {fileID: 30453968}
+  - component: {fileID: 30453971}
+  - component: {fileID: 30453970}
   m_Layer: 5
   m_Name: Vibration Toggle Button Text
   m_TagString: Untagged
@@ -529,6 +593,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30453966}
   m_CullTransparentMesh: 1
+--- !u!114 &30453970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30453966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &30453971
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30453966}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &63834000
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +636,8 @@ GameObject:
   - component: {fileID: 63834003}
   - component: {fileID: 63834002}
   - component: {fileID: 63834006}
+  - component: {fileID: 63834007}
+  - component: {fileID: 63834008}
   m_Layer: 5
   m_Name: Levels Mode Button
   m_TagString: Untagged
@@ -633,7 +728,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 63834004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1133983910}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1064332154}
+        m_TargetAssemblyTypeName: ScreenController, Assembly-CSharp
+        m_MethodName: CloseScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &63834004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +806,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &63834007
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63834000}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &63834008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63834000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &78918310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1601,8 @@ GameObject:
   - component: {fileID: 151444093}
   - component: {fileID: 151444092}
   - component: {fileID: 151444095}
+  - component: {fileID: 151444096}
+  - component: {fileID: 151444097}
   m_Layer: 5
   m_Name: Level Button 17
   m_TagString: Untagged
@@ -1577,6 +1727,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &151444096
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151444090}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &151444097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151444090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &160131371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,6 +1767,8 @@ GameObject:
   - component: {fileID: 160131372}
   - component: {fileID: 160131374}
   - component: {fileID: 160131373}
+  - component: {fileID: 160131375}
+  - component: {fileID: 160131376}
   m_Layer: 5
   m_Name: Level Button 11 Text
   m_TagString: Untagged
@@ -1711,6 +1892,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160131371}
   m_CullTransparentMesh: 1
+--- !u!225 &160131375
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160131371}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &160131376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160131371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &167847426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1933,8 @@ GameObject:
   - component: {fileID: 167847430}
   - component: {fileID: 167847429}
   - component: {fileID: 167847428}
+  - component: {fileID: 167847432}
+  - component: {fileID: 167847431}
   m_Layer: 5
   m_Name: Settings Panel
   m_TagString: Untagged
@@ -1816,6 +2028,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167847426}
   m_CullTransparentMesh: 1
+--- !u!114 &167847431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167847426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &167847432
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167847426}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &175149282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,6 +2200,8 @@ GameObject:
   - component: {fileID: 219450700}
   - component: {fileID: 219450699}
   - component: {fileID: 219450702}
+  - component: {fileID: 219450703}
+  - component: {fileID: 219450704}
   m_Layer: 5
   m_Name: Level Button 18
   m_TagString: Untagged
@@ -2083,6 +2326,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &219450703
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219450697}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &219450704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219450697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &252920924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2659,8 @@ GameObject:
   - component: {fileID: 303881740}
   - component: {fileID: 303881742}
   - component: {fileID: 303881741}
+  - component: {fileID: 303881743}
+  - component: {fileID: 303881744}
   m_Layer: 5
   m_Name: Level Button 6 Text
   m_TagString: Untagged
@@ -2510,6 +2784,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303881739}
   m_CullTransparentMesh: 1
+--- !u!225 &303881743
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303881739}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &303881744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303881739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &304661031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,8 +2848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 592.00006, y: -717.0431}
-  m_SizeDelta: {x: 1084.0001, y: 266.81723}
+  m_AnchoredPosition: {x: 592, y: -717.0431}
+  m_SizeDelta: {x: 1084, y: 266.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304661033
 MonoBehaviour:
@@ -2587,6 +2890,8 @@ GameObject:
   - component: {fileID: 309487585}
   - component: {fileID: 309487584}
   - component: {fileID: 309487587}
+  - component: {fileID: 309487588}
+  - component: {fileID: 309487589}
   m_Layer: 5
   m_Name: Level Button 5
   m_TagString: Untagged
@@ -2711,6 +3016,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &309487588
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309487582}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &309487589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309487582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &360470915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,6 +3223,8 @@ GameObject:
   - component: {fileID: 363995965}
   - component: {fileID: 363995964}
   - component: {fileID: 363995967}
+  - component: {fileID: 363995968}
+  - component: {fileID: 363995969}
   m_Layer: 5
   m_Name: Level Button 14
   m_TagString: Untagged
@@ -3013,6 +3349,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &363995968
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363995962}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &363995969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363995962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &416024173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,6 +3391,8 @@ GameObject:
   - component: {fileID: 416024176}
   - component: {fileID: 416024175}
   - component: {fileID: 416024178}
+  - component: {fileID: 416024179}
+  - component: {fileID: 416024180}
   m_Layer: 5
   m_Name: Level Button 16
   m_TagString: Untagged
@@ -3150,6 +3517,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &416024179
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416024173}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &416024180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416024173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &423088486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3227,6 +3623,8 @@ GameObject:
   - component: {fileID: 426650409}
   - component: {fileID: 426650408}
   - component: {fileID: 426650411}
+  - component: {fileID: 426650412}
+  - component: {fileID: 426650413}
   m_Layer: 5
   m_Name: Level Button 20
   m_TagString: Untagged
@@ -3351,6 +3749,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &426650412
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426650406}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &426650413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426650406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &438447115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,6 +4001,8 @@ GameObject:
   - component: {fileID: 488874915}
   - component: {fileID: 488874917}
   - component: {fileID: 488874916}
+  - component: {fileID: 488874919}
+  - component: {fileID: 488874918}
   m_Layer: 5
   m_Name: Level Button 20 Text
   m_TagString: Untagged
@@ -3697,6 +4126,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488874914}
   m_CullTransparentMesh: 1
+--- !u!114 &488874918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488874914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &488874919
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488874914}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &496350502
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,6 +4168,8 @@ GameObject:
   - component: {fileID: 496350505}
   - component: {fileID: 496350504}
   - component: {fileID: 496350507}
+  - component: {fileID: 496350508}
+  - component: {fileID: 496350509}
   m_Layer: 5
   m_Name: Level Button 6
   m_TagString: Untagged
@@ -3834,6 +4294,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &496350508
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496350502}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &496350509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496350502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &516100975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3847,6 +4336,8 @@ GameObject:
   - component: {fileID: 516100978}
   - component: {fileID: 516100977}
   - component: {fileID: 516100980}
+  - component: {fileID: 516100982}
+  - component: {fileID: 516100981}
   m_Layer: 5
   m_Name: Vibration Toggle Button
   m_TagString: Untagged
@@ -3871,8 +4362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178.50003, y: -133.40862}
-  m_SizeDelta: {x: 257.00006, y: 166.81723}
+  m_AnchoredPosition: {x: 178.5, y: -133.40862}
+  m_SizeDelta: {x: 257, y: 166.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516100977
 MonoBehaviour:
@@ -3971,6 +4462,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!114 &516100981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516100975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &516100982
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516100975}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4074,6 +4594,8 @@ GameObject:
   - component: {fileID: 528862647}
   - component: {fileID: 528862649}
   - component: {fileID: 528862648}
+  - component: {fileID: 528862650}
+  - component: {fileID: 528862651}
   m_Layer: 5
   m_Name: Level Button 13 Text
   m_TagString: Untagged
@@ -4197,6 +4719,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528862646}
   m_CullTransparentMesh: 1
+--- !u!225 &528862650
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528862646}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &528862651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528862646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &561196453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,6 +4924,8 @@ GameObject:
   - component: {fileID: 569459492}
   - component: {fileID: 569459494}
   - component: {fileID: 569459493}
+  - component: {fileID: 569459495}
+  - component: {fileID: 569459496}
   m_Layer: 5
   m_Name: Endless Mode Button Text
   m_TagString: Untagged
@@ -4496,6 +5049,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569459491}
   m_CullTransparentMesh: 1
+--- !u!225 &569459495
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569459491}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &569459496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569459491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &593250162
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,6 +5091,8 @@ GameObject:
   - component: {fileID: 593250165}
   - component: {fileID: 593250164}
   - component: {fileID: 593250167}
+  - component: {fileID: 593250168}
+  - component: {fileID: 593250169}
   m_Layer: 5
   m_Name: Level Button 2
   m_TagString: Untagged
@@ -4633,6 +5217,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &593250168
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593250162}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &593250169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593250162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &634498620
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,6 +5437,8 @@ GameObject:
   - component: {fileID: 682380675}
   - component: {fileID: 682380677}
   - component: {fileID: 682380676}
+  - component: {fileID: 682380678}
+  - component: {fileID: 682380679}
   m_Layer: 5
   m_Name: Levels Mode Button Text
   m_TagString: Untagged
@@ -4947,6 +5562,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682380674}
   m_CullTransparentMesh: 1
+--- !u!225 &682380678
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682380674}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &682380679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682380674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &683603349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4960,6 +5604,8 @@ GameObject:
   - component: {fileID: 683603352}
   - component: {fileID: 683603351}
   - component: {fileID: 683603354}
+  - component: {fileID: 683603356}
+  - component: {fileID: 683603355}
   m_Layer: 5
   m_Name: Music Toggle Button
   m_TagString: Untagged
@@ -4984,8 +5630,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178.50003, y: -133.40862}
-  m_SizeDelta: {x: 257.00006, y: 166.81723}
+  m_AnchoredPosition: {x: 178.5, y: -133.40862}
+  m_SizeDelta: {x: 257, y: 166.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683603351
 MonoBehaviour:
@@ -5084,6 +5730,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!114 &683603355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683603349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &683603356
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683603349}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &689649066
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,6 +6176,8 @@ GameObject:
   - component: {fileID: 753237516}
   - component: {fileID: 753237515}
   - component: {fileID: 753237514}
+  - component: {fileID: 753237517}
+  - component: {fileID: 753237518}
   m_Layer: 5
   m_Name: Game Mode Choose Panel
   m_TagString: Untagged
@@ -5593,6 +6270,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753237512}
   m_CullTransparentMesh: 1
+--- !u!225 &753237517
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753237512}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &753237518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753237512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &774010509
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,6 +6312,8 @@ GameObject:
   - component: {fileID: 774010512}
   - component: {fileID: 774010511}
   - component: {fileID: 774010514}
+  - component: {fileID: 774010515}
+  - component: {fileID: 774010516}
   m_Layer: 5
   m_Name: Level Button 10
   m_TagString: Untagged
@@ -5730,6 +6438,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &774010515
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774010509}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &774010516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774010509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &776345811
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,6 +6646,8 @@ GameObject:
   - component: {fileID: 823897027}
   - component: {fileID: 823897029}
   - component: {fileID: 823897028}
+  - component: {fileID: 823897030}
+  - component: {fileID: 823897031}
   m_Layer: 5
   m_Name: Level Button 16 Text
   m_TagString: Untagged
@@ -6032,6 +6771,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823897026}
   m_CullTransparentMesh: 1
+--- !u!225 &823897030
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823897026}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &823897031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823897026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &827504868
 GameObject:
   m_ObjectHideFlags: 0
@@ -6179,6 +6947,8 @@ GameObject:
   - component: {fileID: 866324007}
   - component: {fileID: 866324006}
   - component: {fileID: 866324008}
+  - component: {fileID: 866324010}
+  - component: {fileID: 866324009}
   m_Layer: 5
   m_Name: Toggle Vibration Text
   m_TagString: Untagged
@@ -6202,8 +6972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 670.5001, y: -133.40862}
-  m_SizeDelta: {x: 727.00006, y: 166.81723}
+  m_AnchoredPosition: {x: 670.5, y: -133.40862}
+  m_SizeDelta: {x: 727, y: 166.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866324006
 MonoBehaviour:
@@ -6322,6 +7092,35 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &866324009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866324004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &866324010
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866324004}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &878859341
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,6 +7132,8 @@ GameObject:
   - component: {fileID: 878859342}
   - component: {fileID: 878859344}
   - component: {fileID: 878859343}
+  - component: {fileID: 878859345}
+  - component: {fileID: 878859346}
   m_Layer: 5
   m_Name: Level Button 7 Text
   m_TagString: Untagged
@@ -6456,6 +7257,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878859341}
   m_CullTransparentMesh: 1
+--- !u!225 &878859345
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878859341}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &878859346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878859341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &886159971
 GameObject:
   m_ObjectHideFlags: 0
@@ -6595,6 +7425,8 @@ GameObject:
   - component: {fileID: 925957480}
   - component: {fileID: 925957482}
   - component: {fileID: 925957481}
+  - component: {fileID: 925957483}
+  - component: {fileID: 925957484}
   m_Layer: 5
   m_Name: Back Button Text
   m_TagString: Untagged
@@ -6718,6 +7550,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925957479}
   m_CullTransparentMesh: 1
+--- !u!225 &925957483
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925957479}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &925957484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925957479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &944962538
 GameObject:
   m_ObjectHideFlags: 0
@@ -6731,6 +7592,8 @@ GameObject:
   - component: {fileID: 944962541}
   - component: {fileID: 944962540}
   - component: {fileID: 944962543}
+  - component: {fileID: 944962544}
+  - component: {fileID: 944962545}
   m_Layer: 5
   m_Name: Level Button 12
   m_TagString: Untagged
@@ -6855,6 +7718,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &944962544
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944962538}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &944962545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944962538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &949140696
 GameObject:
   m_ObjectHideFlags: 0
@@ -6999,6 +7891,8 @@ GameObject:
   - component: {fileID: 970013803}
   - component: {fileID: 970013802}
   - component: {fileID: 970013804}
+  - component: {fileID: 970013806}
+  - component: {fileID: 970013805}
   m_Layer: 5
   m_Name: Toggle Sound Text
   m_TagString: Untagged
@@ -7022,8 +7916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 670.5001, y: -133.40862}
-  m_SizeDelta: {x: 727.00006, y: 166.81723}
+  m_AnchoredPosition: {x: 670.5, y: -133.40862}
+  m_SizeDelta: {x: 727, y: 166.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970013802
 MonoBehaviour:
@@ -7142,6 +8036,35 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &970013805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970013800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &970013806
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970013800}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &970585864
 GameObject:
   m_ObjectHideFlags: 0
@@ -7343,6 +8266,8 @@ GameObject:
   - component: {fileID: 995989995}
   - component: {fileID: 995989994}
   - component: {fileID: 995989997}
+  - component: {fileID: 995989999}
+  - component: {fileID: 995989998}
   m_Layer: 5
   m_Name: Sound Toggle Button
   m_TagString: Untagged
@@ -7367,8 +8292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178.50003, y: -133.40862}
-  m_SizeDelta: {x: 257.00006, y: 166.81723}
+  m_AnchoredPosition: {x: 178.5, y: -133.40862}
+  m_SizeDelta: {x: 257, y: 166.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995989994
 MonoBehaviour:
@@ -7467,6 +8392,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!114 &995989998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995989992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &995989999
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995989992}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1005804261
 GameObject:
   m_ObjectHideFlags: 0
@@ -7478,6 +8432,8 @@ GameObject:
   - component: {fileID: 1005804262}
   - component: {fileID: 1005804264}
   - component: {fileID: 1005804263}
+  - component: {fileID: 1005804265}
+  - component: {fileID: 1005804266}
   m_Layer: 5
   m_Name: Level Button 5 Text
   m_TagString: Untagged
@@ -7601,6 +8557,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005804261}
   m_CullTransparentMesh: 1
+--- !u!225 &1005804265
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005804261}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1005804266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005804261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1022505651
 GameObject:
   m_ObjectHideFlags: 0
@@ -7777,6 +8762,8 @@ GameObject:
   - component: {fileID: 1023255741}
   - component: {fileID: 1023255743}
   - component: {fileID: 1023255742}
+  - component: {fileID: 1023255744}
+  - component: {fileID: 1023255745}
   m_Layer: 5
   m_Name: Level Button 12 Text
   m_TagString: Untagged
@@ -7900,6 +8887,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023255740}
   m_CullTransparentMesh: 1
+--- !u!225 &1023255744
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023255740}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1023255745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023255740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1032039772
 GameObject:
   m_ObjectHideFlags: 0
@@ -7911,6 +8927,8 @@ GameObject:
   - component: {fileID: 1032039773}
   - component: {fileID: 1032039775}
   - component: {fileID: 1032039774}
+  - component: {fileID: 1032039777}
+  - component: {fileID: 1032039776}
   m_Layer: 5
   m_Name: Sound Toggle Button Text
   m_TagString: Untagged
@@ -8034,6 +9052,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032039772}
   m_CullTransparentMesh: 1
+--- !u!114 &1032039776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032039772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &1032039777
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032039772}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1047959931
 GameObject:
   m_ObjectHideFlags: 0
@@ -8045,6 +9092,8 @@ GameObject:
   - component: {fileID: 1047959932}
   - component: {fileID: 1047959934}
   - component: {fileID: 1047959933}
+  - component: {fileID: 1047959935}
+  - component: {fileID: 1047959936}
   m_Layer: 5
   m_Name: Level Button 15 Text
   m_TagString: Untagged
@@ -8168,6 +9217,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047959931}
   m_CullTransparentMesh: 1
+--- !u!225 &1047959935
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047959931}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1047959936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047959931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1055417080
 GameObject:
   m_ObjectHideFlags: 0
@@ -8411,6 +9489,7 @@ GameObject:
   - component: {fileID: 1064332151}
   - component: {fileID: 1064332153}
   - component: {fileID: 1064332152}
+  - component: {fileID: 1064332154}
   m_Layer: 5
   m_Name: Game Mode Choose Screen
   m_TagString: Untagged
@@ -8473,6 +9552,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064332150}
   m_CullTransparentMesh: 1
+--- !u!114 &1064332154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064332150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4007edc14e5413692388ff1f4d6c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UIAnimators:
+  - {fileID: 1171062763}
+  - {fileID: 1956427817}
+  - {fileID: 1930337658}
+  - {fileID: 1410718325}
+  - {fileID: 753237518}
+  - {fileID: 1383080466}
+  - {fileID: 569459496}
+  - {fileID: 1811665801}
+  - {fileID: 63834008}
+  - {fileID: 682380679}
+  - {fileID: 1937518203}
 --- !u!1 &1065127677
 GameObject:
   m_ObjectHideFlags: 0
@@ -8486,6 +9589,8 @@ GameObject:
   - component: {fileID: 1065127680}
   - component: {fileID: 1065127679}
   - component: {fileID: 1065127682}
+  - component: {fileID: 1065127683}
+  - component: {fileID: 1065127684}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -8556,7 +9661,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1065127680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1064332150}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1133983914}
+        m_TargetAssemblyTypeName: ScreenController, Assembly-CSharp
+        m_MethodName: CloseScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1065127680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8610,6 +9739,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1065127683
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065127677}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1065127684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065127677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1082540834
 GameObject:
   m_ObjectHideFlags: 0
@@ -8622,6 +9780,8 @@ GameObject:
   - component: {fileID: 1082540838}
   - component: {fileID: 1082540837}
   - component: {fileID: 1082540836}
+  - component: {fileID: 1082540840}
+  - component: {fileID: 1082540839}
   m_Layer: 5
   m_Name: Upper
   m_TagString: Untagged
@@ -8647,8 +9807,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 642.00006, y: -869.3871}
-  m_SizeDelta: {x: 1184.0001, y: 250}
+  m_AnchoredPosition: {x: 642, y: -869.3871}
+  m_SizeDelta: {x: 1184, y: 250}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1082540836
 MonoBehaviour:
@@ -8714,6 +9874,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082540834}
   m_CullTransparentMesh: 1
+--- !u!114 &1082540839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082540834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &1082540840
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082540834}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1082837154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8725,6 +9914,8 @@ GameObject:
   - component: {fileID: 1082837155}
   - component: {fileID: 1082837157}
   - component: {fileID: 1082837156}
+  - component: {fileID: 1082837158}
+  - component: {fileID: 1082837159}
   m_Layer: 5
   m_Name: Level Button 2 Text
   m_TagString: Untagged
@@ -8850,6 +10041,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082837154}
   m_CullTransparentMesh: 1
+--- !u!225 &1082837158
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082837154}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1082837159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082837154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1124204469
 GameObject:
   m_ObjectHideFlags: 0
@@ -9030,6 +10250,8 @@ GameObject:
   - component: {fileID: 1128078997}
   - component: {fileID: 1128078996}
   - component: {fileID: 1128078995}
+  - component: {fileID: 1128078998}
+  - component: {fileID: 1128078999}
   m_Layer: 5
   m_Name: Upper
   m_TagString: Untagged
@@ -9122,6 +10344,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128078993}
   m_CullTransparentMesh: 1
+--- !u!225 &1128078998
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128078993}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1128078999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128078993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1133983910
 GameObject:
   m_ObjectHideFlags: 0
@@ -9133,6 +10384,7 @@ GameObject:
   - component: {fileID: 1133983911}
   - component: {fileID: 1133983913}
   - component: {fileID: 1133983912}
+  - component: {fileID: 1133983914}
   m_Layer: 5
   m_Name: Level Choose Screen
   m_TagString: Untagged
@@ -9195,6 +10447,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133983910}
   m_CullTransparentMesh: 1
+--- !u!114 &1133983914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133983910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4007edc14e5413692388ff1f4d6c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UIAnimators:
+  - {fileID: 1128078999}
+  - {fileID: 1065127684}
+  - {fileID: 925957484}
+  - {fileID: 1636574425}
+  - {fileID: 1519012323}
+  - {fileID: 1288918852}
+  - {fileID: 1273374604}
+  - {fileID: 593250169}
+  - {fileID: 1082837159}
+  - {fileID: 1982735252}
+  - {fileID: 2003039789}
+  - {fileID: 1457961578}
+  - {fileID: 1726619426}
+  - {fileID: 309487589}
+  - {fileID: 1005804266}
+  - {fileID: 496350509}
+  - {fileID: 303881744}
+  - {fileID: 2088413790}
+  - {fileID: 878859346}
+  - {fileID: 1547335576}
+  - {fileID: 1628566309}
+  - {fileID: 1653950645}
+  - {fileID: 2092077144}
+  - {fileID: 774010516}
+  - {fileID: 16797937}
+  - {fileID: 1342821916}
+  - {fileID: 160131376}
+  - {fileID: 944962545}
+  - {fileID: 1023255745}
+  - {fileID: 2096412145}
+  - {fileID: 528862651}
+  - {fileID: 363995969}
+  - {fileID: 1832234916}
+  - {fileID: 18629068}
+  - {fileID: 1047959936}
+  - {fileID: 416024180}
+  - {fileID: 823897031}
+  - {fileID: 151444097}
+  - {fileID: 1163687956}
+  - {fileID: 219450704}
+  - {fileID: 1699458530}
+  - {fileID: 1710570617}
+  - {fileID: 1864692885}
+  - {fileID: 426650413}
+  - {fileID: 488874918}
 --- !u!1 &1163687951
 GameObject:
   m_ObjectHideFlags: 0
@@ -9206,6 +10516,8 @@ GameObject:
   - component: {fileID: 1163687952}
   - component: {fileID: 1163687954}
   - component: {fileID: 1163687953}
+  - component: {fileID: 1163687955}
+  - component: {fileID: 1163687956}
   m_Layer: 5
   m_Name: Level Button 17 Text
   m_TagString: Untagged
@@ -9329,6 +10641,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163687951}
   m_CullTransparentMesh: 1
+--- !u!225 &1163687955
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163687951}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1163687956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163687951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1166612321
 GameObject:
   m_ObjectHideFlags: 0
@@ -9364,8 +10705,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 592.00006, y: -183.40862}
-  m_SizeDelta: {x: 1084.0001, y: 266.81723}
+  m_AnchoredPosition: {x: 592, y: -183.40862}
+  m_SizeDelta: {x: 1084, y: 266.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166612323
 MonoBehaviour:
@@ -9405,6 +10746,8 @@ GameObject:
   - component: {fileID: 1171062761}
   - component: {fileID: 1171062760}
   - component: {fileID: 1171062759}
+  - component: {fileID: 1171062762}
+  - component: {fileID: 1171062763}
   m_Layer: 5
   m_Name: Upper
   m_TagString: Untagged
@@ -9497,6 +10840,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171062757}
   m_CullTransparentMesh: 1
+--- !u!225 &1171062762
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171062757}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1171062763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171062757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1179415128
 GameObject:
   m_ObjectHideFlags: 0
@@ -9816,6 +11188,8 @@ GameObject:
   - component: {fileID: 1273374600}
   - component: {fileID: 1273374602}
   - component: {fileID: 1273374601}
+  - component: {fileID: 1273374603}
+  - component: {fileID: 1273374604}
   m_Layer: 5
   m_Name: Level Button 1 Text
   m_TagString: Untagged
@@ -9941,6 +11315,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273374599}
   m_CullTransparentMesh: 1
+--- !u!225 &1273374603
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273374599}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1273374604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273374599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1279039589
 GameObject:
   m_ObjectHideFlags: 0
@@ -9952,6 +11355,7 @@ GameObject:
   - component: {fileID: 1279039590}
   - component: {fileID: 1279039592}
   - component: {fileID: 1279039591}
+  - component: {fileID: 1279039593}
   m_Layer: 5
   m_Name: Settings Screen
   m_TagString: Untagged
@@ -10014,6 +11418,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279039589}
   m_CullTransparentMesh: 1
+--- !u!114 &1279039593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279039589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4007edc14e5413692388ff1f4d6c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UIAnimators:
+  - {fileID: 2031242965}
+  - {fileID: 2057328307}
+  - {fileID: 2006934823}
+  - {fileID: 167847431}
+  - {fileID: 683603355}
+  - {fileID: 2138812751}
+  - {fileID: 1605508785}
+  - {fileID: 995989998}
+  - {fileID: 1032039776}
+  - {fileID: 970013805}
+  - {fileID: 516100981}
+  - {fileID: 30453970}
+  - {fileID: 866324009}
+  - {fileID: 1082540839}
 --- !u!1 &1285926902
 GameObject:
   m_ObjectHideFlags: 0
@@ -10170,6 +11601,8 @@ GameObject:
   - component: {fileID: 1288918848}
   - component: {fileID: 1288918847}
   - component: {fileID: 1288918850}
+  - component: {fileID: 1288918851}
+  - component: {fileID: 1288918852}
   m_Layer: 5
   m_Name: Level Button 1
   m_TagString: Untagged
@@ -10294,6 +11727,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1288918851
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288918845}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1288918852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288918845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1320068842
 GameObject:
   m_ObjectHideFlags: 0
@@ -10450,6 +11912,8 @@ GameObject:
   - component: {fileID: 1342821912}
   - component: {fileID: 1342821911}
   - component: {fileID: 1342821914}
+  - component: {fileID: 1342821915}
+  - component: {fileID: 1342821916}
   m_Layer: 5
   m_Name: Level Button 11
   m_TagString: Untagged
@@ -10574,6 +12038,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1342821915
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342821909}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1342821916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342821909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1383080458
 GameObject:
   m_ObjectHideFlags: 0
@@ -10588,6 +12081,8 @@ GameObject:
   - component: {fileID: 1383080461}
   - component: {fileID: 1383080460}
   - component: {fileID: 1383080464}
+  - component: {fileID: 1383080465}
+  - component: {fileID: 1383080466}
   m_Layer: 5
   m_Name: Endless Mode Button
   m_TagString: Untagged
@@ -10732,6 +12227,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1383080465
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383080458}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1383080466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383080458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1410718320
 GameObject:
   m_ObjectHideFlags: 0
@@ -10744,6 +12268,8 @@ GameObject:
   - component: {fileID: 1410718324}
   - component: {fileID: 1410718323}
   - component: {fileID: 1410718322}
+  - component: {fileID: 1410718326}
+  - component: {fileID: 1410718325}
   m_Layer: 5
   m_Name: Game Mode Text
   m_TagString: Untagged
@@ -10887,6 +12413,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410718320}
   m_CullTransparentMesh: 1
+--- !u!114 &1410718325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410718320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &1410718326
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410718320}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1412209768
 GameObject:
   m_ObjectHideFlags: 0
@@ -11440,6 +12995,8 @@ GameObject:
   - component: {fileID: 1457961574}
   - component: {fileID: 1457961573}
   - component: {fileID: 1457961576}
+  - component: {fileID: 1457961577}
+  - component: {fileID: 1457961578}
   m_Layer: 5
   m_Name: Level Button 4
   m_TagString: Untagged
@@ -11564,6 +13121,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1457961577
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457961571}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1457961578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457961571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1489211471
 GameObject:
   m_ObjectHideFlags: 0
@@ -11812,6 +13398,8 @@ GameObject:
   - component: {fileID: 1519012321}
   - component: {fileID: 1519012320}
   - component: {fileID: 1519012319}
+  - component: {fileID: 1519012322}
+  - component: {fileID: 1519012323}
   m_Layer: 5
   m_Name: Level Choose Panel
   m_TagString: Untagged
@@ -11920,6 +13508,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519012317}
   m_CullTransparentMesh: 1
+--- !u!225 &1519012322
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519012317}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1519012323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519012317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1519683660
 GameObject:
   m_ObjectHideFlags: 0
@@ -12173,6 +13790,8 @@ GameObject:
   - component: {fileID: 1547335572}
   - component: {fileID: 1547335571}
   - component: {fileID: 1547335574}
+  - component: {fileID: 1547335575}
+  - component: {fileID: 1547335576}
   m_Layer: 5
   m_Name: Level Button 8
   m_TagString: Untagged
@@ -12297,6 +13916,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1547335575
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547335569}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1547335576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547335569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1588041448
 GameObject:
   m_ObjectHideFlags: 0
@@ -12474,6 +14122,8 @@ GameObject:
   - component: {fileID: 1605508783}
   - component: {fileID: 1605508782}
   - component: {fileID: 1605508784}
+  - component: {fileID: 1605508786}
+  - component: {fileID: 1605508785}
   m_Layer: 5
   m_Name: Toggle Music Text
   m_TagString: Untagged
@@ -12497,8 +14147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 670.5001, y: -133.40862}
-  m_SizeDelta: {x: 727.00006, y: 166.81723}
+  m_AnchoredPosition: {x: 670.5, y: -133.40862}
+  m_SizeDelta: {x: 727, y: 166.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605508782
 MonoBehaviour:
@@ -12617,6 +14267,35 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1605508785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605508780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &1605508786
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605508780}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1607183925
 GameObject:
   m_ObjectHideFlags: 0
@@ -12793,6 +14472,8 @@ GameObject:
   - component: {fileID: 1628566305}
   - component: {fileID: 1628566307}
   - component: {fileID: 1628566306}
+  - component: {fileID: 1628566308}
+  - component: {fileID: 1628566309}
   m_Layer: 5
   m_Name: Level Button 8 Text
   m_TagString: Untagged
@@ -12916,6 +14597,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628566304}
   m_CullTransparentMesh: 1
+--- !u!225 &1628566308
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628566304}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1628566309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628566304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1632137863
 GameObject:
   m_ObjectHideFlags: 0
@@ -12993,6 +14703,8 @@ GameObject:
   - component: {fileID: 1636574424}
   - component: {fileID: 1636574423}
   - component: {fileID: 1636574422}
+  - component: {fileID: 1636574426}
+  - component: {fileID: 1636574425}
   m_Layer: 5
   m_Name: Levels Text
   m_TagString: Untagged
@@ -13136,6 +14848,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636574420}
   m_CullTransparentMesh: 1
+--- !u!114 &1636574425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636574420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &1636574426
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636574420}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1653950638
 GameObject:
   m_ObjectHideFlags: 0
@@ -13149,6 +14890,8 @@ GameObject:
   - component: {fileID: 1653950641}
   - component: {fileID: 1653950640}
   - component: {fileID: 1653950643}
+  - component: {fileID: 1653950644}
+  - component: {fileID: 1653950645}
   m_Layer: 5
   m_Name: Level Button 9
   m_TagString: Untagged
@@ -13273,6 +15016,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1653950644
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653950638}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1653950645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653950638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1686318530
 GameObject:
   m_ObjectHideFlags: 0
@@ -13594,6 +15366,8 @@ GameObject:
   - component: {fileID: 1699458526}
   - component: {fileID: 1699458528}
   - component: {fileID: 1699458527}
+  - component: {fileID: 1699458529}
+  - component: {fileID: 1699458530}
   m_Layer: 5
   m_Name: Level Button 18 Text
   m_TagString: Untagged
@@ -13717,6 +15491,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699458525}
   m_CullTransparentMesh: 1
+--- !u!225 &1699458529
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699458525}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1699458530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699458525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1710570610
 GameObject:
   m_ObjectHideFlags: 0
@@ -13730,6 +15533,8 @@ GameObject:
   - component: {fileID: 1710570613}
   - component: {fileID: 1710570612}
   - component: {fileID: 1710570615}
+  - component: {fileID: 1710570616}
+  - component: {fileID: 1710570617}
   m_Layer: 5
   m_Name: Level Button 19
   m_TagString: Untagged
@@ -13854,6 +15659,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1710570616
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710570610}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1710570617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710570610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1726619421
 GameObject:
   m_ObjectHideFlags: 0
@@ -13865,6 +15699,8 @@ GameObject:
   - component: {fileID: 1726619422}
   - component: {fileID: 1726619424}
   - component: {fileID: 1726619423}
+  - component: {fileID: 1726619425}
+  - component: {fileID: 1726619426}
   m_Layer: 5
   m_Name: Level Button 4 Text
   m_TagString: Untagged
@@ -13988,6 +15824,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726619421}
   m_CullTransparentMesh: 1
+--- !u!225 &1726619425
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726619421}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1726619426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726619421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1744479562
 GameObject:
   m_ObjectHideFlags: 0
@@ -14537,6 +16402,8 @@ GameObject:
   - component: {fileID: 1811665799}
   - component: {fileID: 1811665798}
   - component: {fileID: 1811665797}
+  - component: {fileID: 1811665800}
+  - component: {fileID: 1811665801}
   m_Layer: 5
   m_Name: Endless Mode Text
   m_TagString: Untagged
@@ -14680,6 +16547,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811665795}
   m_CullTransparentMesh: 1
+--- !u!225 &1811665800
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811665795}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1811665801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811665795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1814873044
 GameObject:
   m_ObjectHideFlags: 0
@@ -14766,6 +16662,8 @@ GameObject:
   - component: {fileID: 1832234912}
   - component: {fileID: 1832234914}
   - component: {fileID: 1832234913}
+  - component: {fileID: 1832234915}
+  - component: {fileID: 1832234916}
   m_Layer: 5
   m_Name: Level Button 14 Text
   m_TagString: Untagged
@@ -14889,6 +16787,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832234911}
   m_CullTransparentMesh: 1
+--- !u!225 &1832234915
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832234911}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1832234916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832234911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1864692880
 GameObject:
   m_ObjectHideFlags: 0
@@ -14900,6 +16827,8 @@ GameObject:
   - component: {fileID: 1864692881}
   - component: {fileID: 1864692883}
   - component: {fileID: 1864692882}
+  - component: {fileID: 1864692884}
+  - component: {fileID: 1864692885}
   m_Layer: 5
   m_Name: Level Button 19 Text
   m_TagString: Untagged
@@ -15023,6 +16952,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864692880}
   m_CullTransparentMesh: 1
+--- !u!225 &1864692884
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864692880}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1864692885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864692880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1865436510
 GameObject:
   m_ObjectHideFlags: 0
@@ -15058,8 +17016,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 592.00006, y: -450.22583}
-  m_SizeDelta: {x: 1084.0001, y: 266.81723}
+  m_AnchoredPosition: {x: 592, y: -450.22583}
+  m_SizeDelta: {x: 1084, y: 266.81723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865436512
 MonoBehaviour:
@@ -15377,6 +17335,8 @@ GameObject:
   - component: {fileID: 1930337654}
   - component: {fileID: 1930337656}
   - component: {fileID: 1930337655}
+  - component: {fileID: 1930337657}
+  - component: {fileID: 1930337658}
   m_Layer: 5
   m_Name: Back Button Text
   m_TagString: Untagged
@@ -15500,6 +17460,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930337653}
   m_CullTransparentMesh: 1
+--- !u!225 &1930337657
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930337653}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1930337658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930337653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1937518198
 GameObject:
   m_ObjectHideFlags: 0
@@ -15512,6 +17501,8 @@ GameObject:
   - component: {fileID: 1937518202}
   - component: {fileID: 1937518201}
   - component: {fileID: 1937518200}
+  - component: {fileID: 1937518204}
+  - component: {fileID: 1937518203}
   m_Layer: 5
   m_Name: Endless Mode Text
   m_TagString: Untagged
@@ -15655,6 +17646,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937518198}
   m_CullTransparentMesh: 1
+--- !u!114 &1937518203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937518198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &1937518204
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937518198}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1956427810
 GameObject:
   m_ObjectHideFlags: 0
@@ -15668,6 +17688,8 @@ GameObject:
   - component: {fileID: 1956427813}
   - component: {fileID: 1956427812}
   - component: {fileID: 1956427815}
+  - component: {fileID: 1956427816}
+  - component: {fileID: 1956427817}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -15738,7 +17760,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1956427813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957142361}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1064332154}
+        m_TargetAssemblyTypeName: ScreenController, Assembly-CSharp
+        m_MethodName: CloseScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1956427813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15792,6 +17838,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1956427816
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956427810}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1956427817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956427810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &1982735245
 GameObject:
   m_ObjectHideFlags: 0
@@ -15805,6 +17880,8 @@ GameObject:
   - component: {fileID: 1982735248}
   - component: {fileID: 1982735247}
   - component: {fileID: 1982735250}
+  - component: {fileID: 1982735251}
+  - component: {fileID: 1982735252}
   m_Layer: 5
   m_Name: Level Button 3
   m_TagString: Untagged
@@ -15929,6 +18006,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &1982735251
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982735245}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1982735252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982735245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &2003039784
 GameObject:
   m_ObjectHideFlags: 0
@@ -15940,6 +18046,8 @@ GameObject:
   - component: {fileID: 2003039785}
   - component: {fileID: 2003039787}
   - component: {fileID: 2003039786}
+  - component: {fileID: 2003039788}
+  - component: {fileID: 2003039789}
   m_Layer: 5
   m_Name: Level Button 3 Text
   m_TagString: Untagged
@@ -16063,6 +18171,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003039784}
   m_CullTransparentMesh: 1
+--- !u!225 &2003039788
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003039784}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2003039789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003039784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &2006934818
 GameObject:
   m_ObjectHideFlags: 0
@@ -16075,6 +18212,8 @@ GameObject:
   - component: {fileID: 2006934821}
   - component: {fileID: 2006934820}
   - component: {fileID: 2006934822}
+  - component: {fileID: 2006934824}
+  - component: {fileID: 2006934823}
   m_Layer: 5
   m_Name: Settings Screen Text
   m_TagString: Untagged
@@ -16098,8 +18237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 695.5001, y: -125}
-  m_SizeDelta: {x: 877.00006, y: 150}
+  m_AnchoredPosition: {x: 695.5, y: -125}
+  m_SizeDelta: {x: 877, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006934820
 MonoBehaviour:
@@ -16220,6 +18359,35 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2006934823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006934818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &2006934824
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006934818}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2031242959
 GameObject:
   m_ObjectHideFlags: 0
@@ -16233,6 +18401,8 @@ GameObject:
   - component: {fileID: 2031242962}
   - component: {fileID: 2031242961}
   - component: {fileID: 2031242964}
+  - component: {fileID: 2031242966}
+  - component: {fileID: 2031242965}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -16257,8 +18427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 153.50003, y: -125}
-  m_SizeDelta: {x: 207.00006, y: 150}
+  m_AnchoredPosition: {x: 153.5, y: -125}
+  m_SizeDelta: {x: 207, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031242961
 MonoBehaviour:
@@ -16303,7 +18473,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2031242962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957142361}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1279039593}
+        m_TargetAssemblyTypeName: ScreenController, Assembly-CSharp
+        m_MethodName: CloseScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2031242962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16357,6 +18551,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!114 &2031242965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031242959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &2031242966
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031242959}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2036640230
 GameObject:
   m_ObjectHideFlags: 0
@@ -16600,6 +18823,8 @@ GameObject:
   - component: {fileID: 2057328304}
   - component: {fileID: 2057328306}
   - component: {fileID: 2057328305}
+  - component: {fileID: 2057328308}
+  - component: {fileID: 2057328307}
   m_Layer: 5
   m_Name: Back Button Text
   m_TagString: Untagged
@@ -16723,6 +18948,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057328303}
   m_CullTransparentMesh: 1
+--- !u!114 &2057328307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057328303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &2057328308
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057328303}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2088413783
 GameObject:
   m_ObjectHideFlags: 0
@@ -16736,6 +18990,8 @@ GameObject:
   - component: {fileID: 2088413786}
   - component: {fileID: 2088413785}
   - component: {fileID: 2088413788}
+  - component: {fileID: 2088413789}
+  - component: {fileID: 2088413790}
   m_Layer: 5
   m_Name: Level Button 7
   m_TagString: Untagged
@@ -16860,6 +19116,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &2088413789
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088413783}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2088413790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088413783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &2092077139
 GameObject:
   m_ObjectHideFlags: 0
@@ -16871,6 +19156,8 @@ GameObject:
   - component: {fileID: 2092077140}
   - component: {fileID: 2092077142}
   - component: {fileID: 2092077141}
+  - component: {fileID: 2092077143}
+  - component: {fileID: 2092077144}
   m_Layer: 5
   m_Name: Level Button 9 Text
   m_TagString: Untagged
@@ -16994,6 +19281,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092077139}
   m_CullTransparentMesh: 1
+--- !u!225 &2092077143
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092077139}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2092077144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092077139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &2096412138
 GameObject:
   m_ObjectHideFlags: 0
@@ -17007,6 +19323,8 @@ GameObject:
   - component: {fileID: 2096412141}
   - component: {fileID: 2096412140}
   - component: {fileID: 2096412143}
+  - component: {fileID: 2096412144}
+  - component: {fileID: 2096412145}
   m_Layer: 5
   m_Name: Level Button 13
   m_TagString: Untagged
@@ -17131,6 +19449,35 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!225 &2096412144
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096412138}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2096412145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096412138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
 --- !u!1 &2113903489
 GameObject:
   m_ObjectHideFlags: 0
@@ -17176,6 +19523,8 @@ GameObject:
   - component: {fileID: 2138812748}
   - component: {fileID: 2138812750}
   - component: {fileID: 2138812749}
+  - component: {fileID: 2138812752}
+  - component: {fileID: 2138812751}
   m_Layer: 5
   m_Name: Music Toggle Button Text
   m_TagString: Untagged
@@ -17299,6 +19648,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138812747}
   m_CullTransparentMesh: 1
+--- !u!114 &2138812751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138812747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2197e4762d4277b6b5bc6fe2793e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.5
+  _slideDirection: 0
+  _fadeInDuration: 0.3
+  _fadeOutDuration: 0.3
+  _slideOffset: 0
+--- !u!225 &2138812752
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138812747}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
