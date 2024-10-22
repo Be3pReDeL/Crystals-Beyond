@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.EventSystems;  // Необходимо для работы с UI
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private HealthUIController _healthUIController;  // Ссылка на UI контроллер для здоровья
     [SerializeField] private IcePowerController _icePowerController;  // Ссылка на Ice Power контроллер
+    [SerializeField] private Button _icePowerButton;  // Ссылка на кнопку Ice Power
 
     private void Awake() 
     {
@@ -24,25 +25,23 @@ public class Player : MonoBehaviour
         // Инициализируем здоровье игрока
         _currentHealth = _maxHealth;
         _healthUIController.InitializeHealthUI(_maxHealth, _currentHealth);
+
+        // Добавляем слушателя нажатия на кнопку
+        _icePowerButton.onClick.AddListener(ActivateIcePower);
     }
 
-    private void Update()
+    // Метод для активации Ice Power
+    private void ActivateIcePower()
     {
-        // Проверяем нажатие на экран для активации Ice Power, только если это не UI элемент
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !IsPointerOverUI())
+        if (_icePowerController.IsIcePowerAvailable)
         {
-            // Проверяем, доступна ли Ice Power, и активируем, если да
-            if (_icePowerController.IsIcePowerAvailable())
-            {
-                _icePowerController.UseIcePower();
-            }
+            Debug.Log("Ice Power активирован!");
+            _icePowerController.UseIcePower();
         }
-    }
-
-    // Метод для проверки, нажимает ли игрок на UI элемент
-    private bool IsPointerOverUI()
-    {
-        return EventSystem.current.IsPointerOverGameObject();  // Проверяем, находится ли указатель мыши или касание на UI элементе
+        else
+        {
+            Debug.Log("Ice Power недоступен.");
+        }
     }
 
     // Метод для получения урона

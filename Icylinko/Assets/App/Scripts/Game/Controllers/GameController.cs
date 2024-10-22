@@ -83,6 +83,7 @@ public class GameController : MonoBehaviour
     private void CompleteGame(bool isPlayerAWinner) 
     {
         PrefabSpawner.Instance.Stop();
+        IcePowerController.Instance.IsIcePowerAvailable = false;
         Debug.Log("SO PLAYER IS A " + (isPlayerAWinner ? "WINNER" : "LOSER"));
     }
 }
