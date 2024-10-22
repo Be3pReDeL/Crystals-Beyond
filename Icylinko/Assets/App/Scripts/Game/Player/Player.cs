@@ -34,14 +34,7 @@ public class Player : MonoBehaviour
     private void ActivateIcePower()
     {
         if (_icePowerController.IsIcePowerAvailable)
-        {
-            Debug.Log("Ice Power активирован!");
             _icePowerController.UseIcePower();
-        }
-        else
-        {
-            Debug.Log("Ice Power недоступен.");
-        }
     }
 
     // Метод для получения урона

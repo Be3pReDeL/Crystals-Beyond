@@ -23,7 +23,9 @@ public class UIAnimator : MonoBehaviour
 
     private Vector2 _initialPosition;
 
-    private const float _DEACTIVATESCREENDELAY = 0.05f;
+    private const float _DEACTIVATESCREENDELAY = 0.01f;
+
+    private bool _isAnimating; // Флаг анимации
 
     private void Awake()
     {
@@ -39,7 +41,7 @@ public class UIAnimator : MonoBehaviour
 
     public void Appear()
     {
-        if(TryGetComponent(out Button button))
+        if (TryGetComponent(out Button button))
             button.interactable = true;
 
         gameObject.SetActive(true);  // Активируем элемент
@@ -50,18 +52,26 @@ public class UIAnimator : MonoBehaviour
         _canvasGroup.alpha = 0f;
 
         // Анимация вылета + увеличение прозрачности
-        _rectTransform.DOAnchorPos(_initialPosition, _animationDuration).SetEase(Ease.OutCubic);
+        _isAnimating = true; // Устанавливаем флаг анимации
+        _rectTransform.DOAnchorPos(_initialPosition, _animationDuration).SetEase(Ease.OutCubic).OnComplete(() => _isAnimating = false);
         _canvasGroup.DOFade(1f, _fadeInDuration).SetEase(Ease.OutCubic);
     }
 
     public void Disappear(GameObject gameObject)
     {
+        if (_isAnimating) // Проверяем, идет ли анимация
+        {
+            Debug.Log("Animation in progress, cannot disappear yet.");
+            return; // Если анимация еще не завершена, игнорируем вызов
+        }
+
         // Анимация удаления (вылет + уменьшение прозрачности)
         Vector2 targetPosition = GetStartPosition();
         
-        if(TryGetComponent(out Button button))
+        if (TryGetComponent(out Button button))
             button.interactable = false;
 
+        _isAnimating = true; // Устанавливаем флаг анимации
         _rectTransform.DOAnchorPos(targetPosition, _animationDuration).SetEase(Ease.InCubic);
         _canvasGroup.DOFade(0f, _fadeOutDuration).SetEase(Ease.InCubic)
             .OnComplete(() => StartCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject)));
@@ -72,6 +82,7 @@ public class UIAnimator : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         gameObject.SetActive(false);
+        _isAnimating = false; // Сбрасываем флаг анимации
     }
 
     private Vector2 GetStartPosition()

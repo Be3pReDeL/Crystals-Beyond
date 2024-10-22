@@ -34,13 +34,9 @@ public class GameController : MonoBehaviour
         if (OnGameComplete == null)
             OnGameComplete = new UnityEvent<bool>();
 
-        PlayerPrefs.SetInt("Game Mode", (int)GameMode.levels);
-        PlayerPrefs.SetInt("Level", 15);
-
-        CurrentGameMode = (GameMode)PlayerPrefs.GetInt("Game Mode", (int)GameMode.endless);
-
+        CurrentGameMode = PlayerPrefsController.GetGameMode(GameMode.endless);
         if (CurrentGameMode == GameMode.levels)
-            CurrentLevel = PlayerPrefs.GetInt("Level", 0);
+            CurrentLevel = PlayerPrefsController.GetLevel(0);
     }
 
     private void Start() 
@@ -51,6 +47,8 @@ public class GameController : MonoBehaviour
         HUDController.Instance.UpdateScoresText(0);
         if (CurrentGameMode == GameMode.levels)
             HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel]);
+
+        TimeController.Instance.StartSpeedingUp();
 
         OnGameComplete.AddListener(CompleteGame);
     }
@@ -84,6 +82,10 @@ public class GameController : MonoBehaviour
     {
         PrefabSpawner.Instance.Stop();
         IcePowerController.Instance.IsIcePowerAvailable = false;
+        TimeController.Instance.StopSpeedingUp();
+
+        EndGameController.Instance.ShowEndGameScreen(isPlayerAWinner, _points, CurrentGameMode == GameMode.endless, CurrentLevel);
+
         Debug.Log("SO PLAYER IS A " + (isPlayerAWinner ? "WINNER" : "LOSER"));
     }
 }
