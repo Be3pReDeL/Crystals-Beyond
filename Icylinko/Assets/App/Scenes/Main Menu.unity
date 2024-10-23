@@ -1255,6 +1255,50 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &167689823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167689824}
+  - component: {fileID: 167689825}
+  m_Layer: 0
+  m_Name: Vibration Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &167689824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167689823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 324729642}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &167689825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167689823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704f887c5b04f412bb84bb08b03d4567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &167847426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2165,8 @@ Transform:
   m_Children:
   - {fileID: 481099551}
   - {fileID: 1374284016}
+  - {fileID: 600062395}
+  - {fileID: 167689824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360470915
@@ -3153,6 +3199,7 @@ GameObject:
   - component: {fileID: 516100980}
   - component: {fileID: 516100982}
   - component: {fileID: 516100981}
+  - component: {fileID: 516100983}
   m_Layer: 5
   m_Name: Vibration Toggle Button
   m_TagString: Untagged
@@ -3306,6 +3353,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &516100983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516100975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f218400f8097d4426b46e9ccc54a0de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _offSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,6 +3895,51 @@ MonoBehaviour:
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 0
+--- !u!1 &600062394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600062395}
+  - component: {fileID: 600062396}
+  m_Layer: 0
+  m_Name: Sound Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &600062395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600062394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 324729642}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600062396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600062394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee52f7b28ff13470095ef19821f18746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: d42644174c4d8495cbec388466b7de3c, type: 2}
 --- !u!1 &634498620
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,6 +4406,7 @@ GameObject:
   - component: {fileID: 683603354}
   - component: {fileID: 683603356}
   - component: {fileID: 683603355}
+  - component: {fileID: 683603357}
   m_Layer: 5
   m_Name: Music Toggle Button
   m_TagString: Untagged
@@ -4453,6 +4560,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &683603357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683603349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5daa49ef97e649968d8ed614ac831ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _offSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &689649066
 GameObject:
   m_ObjectHideFlags: 0
@@ -7144,6 +7265,7 @@ GameObject:
   - component: {fileID: 995989997}
   - component: {fileID: 995989999}
   - component: {fileID: 995989998}
+  - component: {fileID: 995990000}
   m_Layer: 5
   m_Name: Sound Toggle Button
   m_TagString: Untagged
@@ -7297,6 +7419,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &995990000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995989992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335bc461f8886420c997ece2e44b2d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  _offSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1022505651
 GameObject:
   m_ObjectHideFlags: 0
@@ -14572,7 +14708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Levels Mode: Test yourself by completing all 20 exciting levels'
+  m_text: 'Levels Mode: Test yourself by completing all 30 exciting levels'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

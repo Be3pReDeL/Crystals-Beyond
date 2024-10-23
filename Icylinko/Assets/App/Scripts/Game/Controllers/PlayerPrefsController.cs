@@ -11,6 +11,9 @@ public class PlayerPrefsController : MonoBehaviour
     private const string PurchasedBackgroundsKey = "Purchased Backgrounds";
     private const string PointsKey = "Points";
     private const string LevelUnlockedKeyPrefix = "LevelUnlocked_"; // Префикс для ключей уровней
+    public const string MusicPrefKey = "MusicEnabled";
+    public const string SoundPrefKey = "SoundEnabled";
+    public const string VibrationPrefKey = "VibrationEnabled";
 
     private void Awake() 
     {
@@ -114,5 +117,49 @@ public class PlayerPrefsController : MonoBehaviour
     public static int GetPoints(int defaultPoints)
     {
         return PlayerPrefs.GetInt(PointsKey, defaultPoints);
+    }
+
+    // Музыка
+    public static void SetMusicEnabled(bool enabled)
+    {
+        SetBool(MusicPrefKey, enabled);
+    }
+
+    public static bool IsMusicEnabled()
+    {
+        return GetBool(MusicPrefKey, true);
+    }
+
+    // Звук
+    public static void SetSoundEnabled(bool enabled)
+    {
+        SetBool(SoundPrefKey, enabled);
+    }
+
+    public static bool IsSoundEnabled()
+    {
+        return GetBool(SoundPrefKey, true);
+    }
+
+    // Вибрация
+    public static void SetVibrationEnabled(bool enabled)
+    {
+        SetBool(VibrationPrefKey, enabled);
+    }
+
+    public static bool IsVibrationEnabled()
+    {
+        return GetBool(VibrationPrefKey, true);
+    }
+
+    // Универсальные методы для работы с bool
+    public static void SetBool(string key, bool value)
+    {
+        PlayerPrefs.SetInt(key, value ? 1 : 0);
+    }
+
+    public static bool GetBool(string key, bool defaultValue)
+    {
+        return PlayerPrefs.GetInt(key, defaultValue ? 1 : 0) == 1;
     }
 }
