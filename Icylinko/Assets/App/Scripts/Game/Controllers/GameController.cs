@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
             OnGameComplete = new UnityEvent<bool>();
 
         CurrentGameMode = PlayerPrefsController.GetGameMode(GameMode.endless);
+        
         if (CurrentGameMode == GameMode.levels)
             CurrentLevel = PlayerPrefsController.GetLevel(0);
     }

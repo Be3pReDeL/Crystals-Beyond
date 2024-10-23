@@ -46,7 +46,7 @@ public class EndGameController : MonoBehaviour
             _levelTextController.SetText($"Level: {level}");
             // Отмечаем текущий уровень как завершенный
             PlayerPrefsController.SetLevelUnlocked(level + 1, true); // Открываем следующий уровень
-            PlayerPrefsController.SetCompletedLevels(level + 1); // Отмечаем текущий уровень как завершенный
+            PlayerPrefsController.SetCompletedLevels(level); // Отмечаем текущий уровень как завершенный
         }
 
         // Устанавливаем текст очков
@@ -60,10 +60,8 @@ public class EndGameController : MonoBehaviour
 
     public void NextLevelButton()
     {
-        // Логика для перехода на следующий уровень
-        Debug.Log("Going to Next Level...");
-
         int currentLevel = PlayerPrefsController.GetLevel(0);
+        PlayerPrefsController.SetGameMode(GameController.GameMode.levels);
         PlayerPrefsController.SetLevel(currentLevel + 1); // Увеличиваем текущий уровень
 
         LoadSceneButton.LoadRelativeScene(0);
