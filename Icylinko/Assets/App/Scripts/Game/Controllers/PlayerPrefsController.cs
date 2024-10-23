@@ -111,7 +111,7 @@ public class PlayerPrefsController : MonoBehaviour
     // Points
     public static void SetPoints(int points)
     {
-        PlayerPrefs.SetInt(PointsKey, points);
+        PlayerPrefs.SetInt(PointsKey, points < 0 ? 0 : points);
     }
 
     public static int GetPoints(int defaultPoints)

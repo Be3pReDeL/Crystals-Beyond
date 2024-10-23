@@ -4,14 +4,17 @@ public class IcePowerController : MonoBehaviour
 {
     public static IcePowerController Instance { get; private set; }
 
-    [SerializeField] private IcePowerUIController _icePowerUIController;  // Ссылка на новый контроллер для управления UI Slider
+    [SerializeField] private IcePowerUIController _icePowerUIController;
     [SerializeField] private ScreenController _slowMotionOverlayScreenController;
-    [SerializeField] private float _rechargeDuration = 7f;  // Время для полного восстановления
-    [SerializeField] private float _slowMotionDuration = 5f;  // Время замедления
+    [SerializeField] private float _slowMotionDuration = 5f;
 
-    public bool IsIcePowerAvailable { get; set; } = true;  // Доступно ли замедление
-    private float _currentRechargeTime = 0f;  // Текущее время восстановления
+    public bool IsIcePowerAvailable { get; set; } = true;
+    public float DefaultRechargeDuration { get; set; } = 7f;
+    public float RechargeDuration { get; set; }
+    private float _currentRechargeTime = 0f;
     private bool _isRecharging = false;
+    private bool _isIcePowerActive = false; // Новый флаг для отслеживания активности Ice Power перед паузой
+    private float _remainingSlowMotionTime = 0f;  // Время, которое осталось до окончания действия Ice Power
 
     private void Awake() 
     {
@@ -19,24 +22,24 @@ public class IcePowerController : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
+
+        RechargeDuration = DefaultRechargeDuration;
     }
 
     private void Start()
     {
-        // Инициализируем Ice Power UI с максимальным значением 1 и текущим значением 1 (полная шкала)
         _icePowerUIController.InitializeIcePowerUI(1f, 1f);
-        _slowMotionOverlayScreenController.gameObject.SetActive(false);  // Отключаем overlay в начале
+        _slowMotionOverlayScreenController.gameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (_isRecharging)
         {
-            // Восстановление Ice Power
             _currentRechargeTime += Time.deltaTime;
-            float newValue = Mathf.Clamp01(_currentRechargeTime / _rechargeDuration);
+            float newValue = Mathf.Clamp01(_currentRechargeTime / RechargeDuration);
 
-            _icePowerUIController.UpdateIcePowerUI(newValue);  // Обновляем значение на UI
+            _icePowerUIController.UpdateIcePowerUI(newValue);
 
             if (newValue >= 1f)
             {
@@ -52,19 +55,43 @@ public class IcePowerController : MonoBehaviour
         {
             IsIcePowerAvailable = false;
             _isRecharging = false;
-            _icePowerUIController.UpdateIcePowerUI(0f);  // Полностью расходуем шкалу
-            _slowMotionOverlayScreenController.gameObject.SetActive(true);  // Включаем эффект замедления
-            Time.timeScale = 0.5f;  // Замедляем время
+            _isIcePowerActive = true;  // Устанавливаем флаг активности способности Ice Power
+            _icePowerUIController.UpdateIcePowerUI(0f);
+            _slowMotionOverlayScreenController.gameObject.SetActive(true);
+            
+            _remainingSlowMotionTime = _slowMotionDuration;
+            TimeController.Instance.StopTime(0.5f);
 
-            Invoke(nameof(EndSlowMotion), _slowMotionDuration);  // Через 5 секунд отключаем замедление
+            Invoke(nameof(EndSlowMotion), _slowMotionDuration);
         }
     }
 
     private void EndSlowMotion()
     {
-        Time.timeScale = 1f;  // Возвращаем время в нормальное состояние
-        _slowMotionOverlayScreenController.CloseScreen();  // Отключаем overlay
-        _isRecharging = true;  // Начинаем восстановление Ice Power
+        _isIcePowerActive = false;  // Сбрасываем флаг активности Ice Power
+        TimeController.Instance.ResetTime();
+        _slowMotionOverlayScreenController.CloseScreen();
+        _isRecharging = true;
         _currentRechargeTime = 0f;
+    }
+
+    // Новый метод, который вызывается при нажатии паузы
+    public void PauseIcePower()
+    {
+        if (_isIcePowerActive)
+        {
+            // Отменяем Invoke для завершения замедления времени, чтобы оно не истекло на паузе
+            CancelInvoke(nameof(EndSlowMotion));
+        }
+    }
+
+    // Новый метод, который вызывается при возобновлении игры
+    public void ResumeIcePower()
+    {
+        if (_isIcePowerActive)
+        {
+            // Продолжаем действие способности Ice Power
+            Invoke(nameof(EndSlowMotion), _remainingSlowMotionTime);
+        }
     }
 }

@@ -39,9 +39,7 @@ public class EndGameController : MonoBehaviour
 
         // Устанавливаем текст уровня, если это не Endless Mode
         if (isEndlessMode)
-        {
             _levelTextController.gameObject.SetActive(false);
-        }
         else
         {
             _levelTextController.gameObject.SetActive(true);
@@ -50,6 +48,8 @@ public class EndGameController : MonoBehaviour
             PlayerPrefsController.SetLevelUnlocked(level + 1, true); // Открываем следующий уровень
             PlayerPrefsController.SetCompletedLevels(level); // Отмечаем текущий уровень как завершенный
         }
+
+        PlayerPrefsController.SetPoints(PlayerPrefsController.GetPoints(0) + score);
 
         // Устанавливаем текст очков
         _scoresTextController.SetText($"Scores: {score}");
