@@ -5,11 +5,13 @@ public class TimeController : MonoBehaviour
 {
     public static TimeController Instance { get; private set; }
 
-    private float _currentTimeScale = -1; // Изначально значение не инициализировано
-    private bool _isTimeStopped = false;  
-    private float _timeSpeedUpMaximum = 3f;  
-    private float _timeIncreaseRate = 0.001f;  
+    private float _currentTimeScale = -1;  // Текущий множитель времени до паузы
+    private bool _isTimeStopped = false;
+    private float _timeSpeedUpMaximum = 3f;
+    private float _timeIncreaseRate = 0.001f;
     private bool _isTimeSpeedingUp = false;
+
+    public bool IsTimeStopped => _isTimeStopped;
 
     private void Awake() 
     {
@@ -24,67 +26,68 @@ public class TimeController : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-    // Метод для остановки времени
+    // Метод для остановки времени (например, пауза)
     public void StopTime(float newTimeScale) 
     {
         _isTimeStopped = true;
 
-        if (_currentTimeScale < 0)  // Сохраняем значение текущего TimeScale при первом вызове StopTime
+        if (_currentTimeScale < 0)
             _currentTimeScale = Time.timeScale;
 
-        Time.timeScale = Mathf.Max(0.0f, newTimeScale);  // Защищаем Time.timeScale от значений меньше 0
+        Time.timeScale = newTimeScale;
 
         StopSpeedingUp();
-
-        // Останавливаем Ice Power, если оно активно
-        IcePowerController.Instance?.PauseIcePower();
     }
 
-    // Метод для сброса времени
+    // Метод для сброса времени после паузы
     public void ResetTime() 
     {
-        if (_isTimeStopped)
+        _isTimeStopped = false;
+
+        // Проверяем, активна ли способность Ice Power
+        if (IcePowerController.Instance != null && IcePowerController.Instance.IsIcePowerActive)
         {
-            _isTimeStopped = false;
-
-            // Проверяем, что _currentTimeScale корректен и не отрицателен
-            if (_currentTimeScale >= 0)
-            {
-                Time.timeScale = Mathf.Max(0.0f, _currentTimeScale);  // Устанавливаем Time.timeScale, не меньше 0
-            }
-            else
-            {
-                // Если _currentTimeScale был инициализирован неправильно, устанавливаем 1.0f по умолчанию
-                Time.timeScale = 1.0f;
-            }
-
-            _currentTimeScale = -1;  // Сбрасываем текущий timeScale для следующих вызовов StopTime
-            StartSpeedingUp();
-            
-            // Возобновляем Ice Power, если оно было активно
-            IcePowerController.Instance?.ResumeIcePower();
+            IcePowerController.Instance.ResumeIcePower();  // Возвращаем замедление Ice Power
         }
+        else
+        {
+            // Восстанавливаем время, которое было до паузы
+            Time.timeScale = _currentTimeScale > 0 ? _currentTimeScale : 1f;
+        }
+
+        _currentTimeScale = -1;
+
+        StartSpeedingUp();
     }
 
+    // Метод для установки времени вручную
+    public void SetTimeScale(float timeScale)
+    {
+        Time.timeScale = timeScale;
+    }
+
+    // Метод для активации ускорения времени
     public void StartSpeedingUp()
     {
         _isTimeSpeedingUp = true;
         StartCoroutine(SpeedUpTime());
     }
 
+    // Метод для остановки ускорения времени
     public void StopSpeedingUp()
     {
         _isTimeSpeedingUp = false;
     }
 
+    // Корутин для постепенного увеличения времени
     private IEnumerator SpeedUpTime()
     {
         while (_isTimeSpeedingUp)
         {
-            if (Time.timeScale < _timeSpeedUpMaximum)  // Ограничиваем максимальную скорость
+            if (Time.timeScale < _timeSpeedUpMaximum)
                 Time.timeScale += _timeIncreaseRate;
-            
-            yield return new WaitForSeconds(0.05f);  // Ждем перед следующим увеличением
+
+            yield return new WaitForSeconds(0.05f);
         }
     }
 }

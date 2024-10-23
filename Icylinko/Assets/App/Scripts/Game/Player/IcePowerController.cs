@@ -9,12 +9,15 @@ public class IcePowerController : MonoBehaviour
     [SerializeField] private float _slowMotionDuration = 5f;
 
     public bool IsIcePowerAvailable { get; set; } = true;
+    public bool IsIcePowerActive { get; private set; } = false;
+
     public float DefaultRechargeDuration { get; set; } = 7f;
     public float RechargeDuration { get; set; }
     private float _currentRechargeTime = 0f;
     private bool _isRecharging = false;
-    private bool _isIcePowerActive = false; // Новый флаг для отслеживания активности Ice Power перед паузой
-    private float _remainingSlowMotionTime = 0f;  // Время, которое осталось до окончания действия Ice Power
+
+    private float _preIcePowerTimeScale;  // Значение времени до активации Ice Power
+    private float _duringIcePowerTimeScale;  // Значение времени, когда Ice Power была активирована
 
     private void Awake() 
     {
@@ -51,16 +54,17 @@ public class IcePowerController : MonoBehaviour
 
     public void UseIcePower()
     {
-        if (IsIcePowerAvailable)
+        if (IsIcePowerAvailable && !IsIcePowerActive)
         {
             IsIcePowerAvailable = false;
+            IsIcePowerActive = true;
             _isRecharging = false;
-            _isIcePowerActive = true;  // Устанавливаем флаг активности способности Ice Power
             _icePowerUIController.UpdateIcePowerUI(0f);
             _slowMotionOverlayScreenController.gameObject.SetActive(true);
-            
-            _remainingSlowMotionTime = _slowMotionDuration;
-            TimeController.Instance.StopTime(0.5f);
+
+            _preIcePowerTimeScale = Time.timeScale;  // Сохраняем значение Time.timeScale до активации Ice Power
+            _duringIcePowerTimeScale = 0.5f;  // Время во время Ice Power
+            TimeController.Instance.StopTime(_duringIcePowerTimeScale);  // Устанавливаем замедление времени
 
             Invoke(nameof(EndSlowMotion), _slowMotionDuration);
         }
@@ -68,30 +72,28 @@ public class IcePowerController : MonoBehaviour
 
     private void EndSlowMotion()
     {
-        _isIcePowerActive = false;  // Сбрасываем флаг активности Ice Power
-        TimeController.Instance.ResetTime();
-        _slowMotionOverlayScreenController.CloseScreen();
+        IsIcePowerActive = false;
+
+        // Проверяем, была ли пауза активирована
+        if (TimeController.Instance.IsTimeStopped)
+        {
+            _slowMotionOverlayScreenController.CloseScreen();
+        }
+        else
+        {
+            // Восстанавливаем значение времени до Ice Power
+            TimeController.Instance.SetTimeScale(_preIcePowerTimeScale);
+            _slowMotionOverlayScreenController.CloseScreen();
+        }
+
         _isRecharging = true;
         _currentRechargeTime = 0f;
     }
 
-    // Новый метод, который вызывается при нажатии паузы
-    public void PauseIcePower()
-    {
-        if (_isIcePowerActive)
-        {
-            // Отменяем Invoke для завершения замедления времени, чтобы оно не истекло на паузе
-            CancelInvoke(nameof(EndSlowMotion));
-        }
-    }
-
-    // Новый метод, который вызывается при возобновлении игры
+    // Возвращаем Ice Power эффект после выхода из паузы
     public void ResumeIcePower()
     {
-        if (_isIcePowerActive)
-        {
-            // Продолжаем действие способности Ice Power
-            Invoke(nameof(EndSlowMotion), _remainingSlowMotionTime);
-        }
+        TimeController.Instance.SetTimeScale(_duringIcePowerTimeScale);
+        _slowMotionOverlayScreenController.gameObject.SetActive(true);
     }
 }
