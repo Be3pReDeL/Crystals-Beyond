@@ -1,8 +1,11 @@
 using UnityEngine;
+using CandyCoded.HapticFeedback;
 
 public class VibrationController : MonoBehaviour
 {
     public static VibrationController Instance { get; private set;}
+
+    public enum VibrationType { light, medium, heavy }
 
     private void Awake() 
     {
@@ -18,10 +21,30 @@ public class VibrationController : MonoBehaviour
 
         // Если вибрация включена, можно, например, сразу вызвать вибрацию для проверки
         if (isEnabled)
-        {
-            Handheld.Vibrate();
-        }
+            Vibrate(VibrationType.light);
     }
 
-    public void Vibrate() => Handheld.Vibrate();
+    public void Vibrate(VibrationType vibrationType) 
+    {
+        if(PlayerPrefsController.IsVibrationEnabled())
+        {
+            switch (vibrationType)
+            {
+                case VibrationType.light:
+                    HapticFeedback.LightFeedback();
+                    break;
+                
+                case VibrationType.medium:
+                    HapticFeedback.MediumFeedback();
+                    break;
+                
+                case VibrationType.heavy:
+                    HapticFeedback.HeavyFeedback();
+                    break;
+
+                default:
+                    goto case VibrationType.light;
+            }
+        }
+    }
 }

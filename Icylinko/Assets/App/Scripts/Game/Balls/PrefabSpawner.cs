@@ -68,6 +68,8 @@ public class PrefabSpawner : MonoBehaviour
             BallMovement ballMovement = newPrefab.GetComponent<BallMovement>();
             ballMovement.Setup(rb, InitialSpeed, SpeedIncreaseRate);
         }
+
+        VibrationController.Instance.Vibrate(VibrationController.VibrationType.light);
     }
 
     public void Stop() 

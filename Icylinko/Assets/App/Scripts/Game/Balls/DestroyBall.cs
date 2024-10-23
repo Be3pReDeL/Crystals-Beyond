@@ -12,6 +12,8 @@ public class DestroyBall : MonoBehaviour
             
             SpawnParticle(segment.Particle);
 
+            VibrationController.Instance.Vibrate(VibrationController.VibrationType.medium);
+
             if (segment.ScoreValue < 0)
                 Player.Instance.TakeDamage(10);
 

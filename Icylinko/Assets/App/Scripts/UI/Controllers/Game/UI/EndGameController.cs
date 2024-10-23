@@ -32,6 +32,8 @@ public class EndGameController : MonoBehaviour
 
         _HUDScreenController.CloseScreen();
 
+        VibrationController.Instance.Vibrate(VibrationController.VibrationType.heavy);
+
         // Устанавливаем текст результата
         _resultTextController.SetText(isWinner ? "You win!" : "You loose!");
 
