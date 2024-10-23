@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 2
+  _slideDirection: 0
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 500
@@ -2331,7 +2331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 2
+  _slideDirection: 0
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 500
@@ -6310,7 +6310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 2
+  _slideDirection: 0
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 500
@@ -7164,7 +7164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationDuration: 0.5
-  _slideDirection: 2
+  _slideDirection: 0
   _fadeInDuration: 0.3
   _fadeOutDuration: 0.3
   _slideOffset: 500
