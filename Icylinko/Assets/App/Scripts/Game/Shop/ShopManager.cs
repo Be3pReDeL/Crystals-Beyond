@@ -3,22 +3,36 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
+    public static ShopManager Instance { get; private set; }
+
     [SerializeField] private List<ShopItemController> skins;
     [SerializeField] private List<ShopItemController> backgrounds;
+
+    private void Awake() 
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+    }
 
     private void Start()
     {
         LoadPurchasedItems();
-        DeselectOtherSkins(PlayerPrefsController.GetCurrentSkin("Skin 1"));
-        DeselectOtherBackgrounds(PlayerPrefsController.GetCurrentSkin("Background 1"));
+        SelectCurrentItems();
     }
 
     private void OnEnable()
     {
-        // Каждый раз при активации обновляем состояние покупок
+        // Обновляем состояние покупок и загружаем текущие выбранные товары
         LoadPurchasedItems();
+        SelectCurrentItems();
+    }
+
+    private void SelectCurrentItems()
+    {
         DeselectOtherSkins(PlayerPrefsController.GetCurrentSkin("Skin 1"));
-        DeselectOtherBackgrounds(PlayerPrefsController.GetCurrentSkin("Background 1"));
+        DeselectOtherBackgrounds(PlayerPrefsController.GetCurrentBackground("Background 1"));
     }
 
     public void DeselectOtherSkins(string selectedSkinName)
@@ -31,6 +45,15 @@ public class ShopManager : MonoBehaviour
             }
         }
         PlayerPrefsController.SetCurrentSkin(selectedSkinName);
+    }
+
+    public void UpdateAllButtonsUI() 
+    {
+        foreach (var skin in skins)
+            skin.UpdateUI();
+
+        foreach (var background in backgrounds)
+            background.UpdateUI();
     }
 
     public void DeselectOtherBackgrounds(string selectedBackgroundName)

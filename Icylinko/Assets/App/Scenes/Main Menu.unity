@@ -5204,12 +5204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsController: {fileID: 621507362}
-  shopManager: {fileID: 1893704838}
-  buttonTextController: {fileID: 2019624260}
-  buyButton: {fileID: 561443698}
-  itemCost: 40000
-  itemName: Skin 4
+  _pointsController: {fileID: 621507362}
+  _buttonTextController: {fileID: 2019624260}
+  _buyButton: {fileID: 561443698}
+  _itemCost: 40000
+  _itemName: Skin 4
 --- !u!1 &569459491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6650,12 +6649,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsController: {fileID: 621507362}
-  shopManager: {fileID: 1893704838}
-  buttonTextController: {fileID: 289221683}
-  buyButton: {fileID: 689649068}
-  itemCost: 20000
-  itemName: Background 2
+  _pointsController: {fileID: 621507362}
+  _buttonTextController: {fileID: 289221683}
+  _buyButton: {fileID: 689649068}
+  _itemCost: 20000
+  _itemName: Background 2
 --- !u!1 &690043080 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2007547474487526924, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
@@ -8010,12 +8008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsController: {fileID: 621507362}
-  shopManager: {fileID: 1893704838}
-  buttonTextController: {fileID: 360470921}
-  buyButton: {fileID: 776345813}
-  itemCost: 30000
-  itemName: Skin 3
+  _pointsController: {fileID: 621507362}
+  _buttonTextController: {fileID: 360470921}
+  _buyButton: {fileID: 776345813}
+  _itemCost: 30000
+  _itemName: Skin 3
 --- !u!1 &779917599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2007547474487526924, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
@@ -11816,12 +11813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsController: {fileID: 621507362}
-  shopManager: {fileID: 1893704838}
-  buttonTextController: {fileID: 1179415134}
-  buyButton: {fileID: 1055417082}
-  itemCost: 10000
-  itemName: Background 1
+  _pointsController: {fileID: 621507362}
+  _buttonTextController: {fileID: 1179415134}
+  _buyButton: {fileID: 1055417082}
+  _itemCost: 10000
+  _itemName: Background 1
 --- !u!1 &1059461195
 GameObject:
   m_ObjectHideFlags: 0
@@ -13283,12 +13279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsController: {fileID: 621507362}
-  shopManager: {fileID: 1893704838}
-  buttonTextController: {fileID: 561196459}
-  buyButton: {fileID: 1124204471}
-  itemCost: 30000
-  itemName: Background 3
+  _pointsController: {fileID: 621507362}
+  _buttonTextController: {fileID: 561196459}
+  _buyButton: {fileID: 1124204471}
+  _itemCost: 30000
+  _itemName: Background 3
 --- !u!1 &1128078993
 GameObject:
   m_ObjectHideFlags: 0
@@ -17312,12 +17307,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsController: {fileID: 621507362}
-  shopManager: {fileID: 1893704838}
-  buttonTextController: {fileID: 78918316}
-  buyButton: {fileID: 1489211473}
-  itemCost: 10000
-  itemName: Skin 1
+  _pointsController: {fileID: 621507362}
+  _buttonTextController: {fileID: 78918316}
+  _buyButton: {fileID: 1489211473}
+  _itemCost: 10000
+  _itemName: Skin 1
 --- !u!1 &1508440478
 GameObject:
   m_ObjectHideFlags: 0
@@ -23509,12 +23503,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsController: {fileID: 621507362}
-  shopManager: {fileID: 1893704838}
-  buttonTextController: {fileID: 1744479568}
-  buyButton: {fileID: 2036640232}
-  itemCost: 20000
-  itemName: Skin 2
+  _pointsController: {fileID: 621507362}
+  _buttonTextController: {fileID: 1744479568}
+  _buyButton: {fileID: 2036640232}
+  _itemCost: 20000
+  _itemName: Skin 2
 --- !u!1 &2036751687
 GameObject:
   m_ObjectHideFlags: 0

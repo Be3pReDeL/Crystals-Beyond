@@ -30,8 +30,6 @@ public class TimeController : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-    private void Update() => Debug.Log(Time.timeScale);
-
     // Останавливаем время для паузы
     public void StopTime(float newTimeScale) 
     {

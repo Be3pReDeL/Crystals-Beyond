@@ -3,35 +3,28 @@ using UnityEngine.UI;
 
 public class ShopItemController : MonoBehaviour
 {
-    [SerializeField] private PlayerPointsController pointsController;
-    [SerializeField] private ShopManager shopManager;
-    [SerializeField] private TextController buttonTextController;
-    [SerializeField] private Button buyButton;
-    [SerializeField] private int itemCost;
-    [SerializeField] private string itemName;  // Название товара (скин или фон)
+    [SerializeField] private PlayerPointsController _pointsController;
+    [SerializeField] private TextController _buttonTextController;
+    [SerializeField] private Button _buyButton;
+    [SerializeField] private int _itemCost;
+    [SerializeField] private string _itemName;
 
-    private bool isPurchased = false;
-    private bool isSelected = false;
+    private bool _isPurchased = false;
+    private bool _isSelected = false;
 
     private void Start()
     {
-        // Начальная установка состояния кнопки
         LoadState();
-        UpdateUI();
+        Invoke(nameof(UpdateUI), 0.05f);
     }
 
-    private void OnEnable()
-    {
-        // Каждый раз при активации объекта загружаем его состояние
-        LoadState();
-        UpdateUI();
-    }
+    private void OnEnable() => Invoke(nameof(UpdateUI), 0.05f);
 
     public void OnBuyButtonClick()
     {
-        if (!isPurchased)
+        if (!_isPurchased)
         {
-            if (pointsController.TrySpendPoints(itemCost))
+            if (_pointsController.TrySpendPoints(_itemCost))
             {
                 OnPurchased();
             }
@@ -40,11 +33,13 @@ public class ShopItemController : MonoBehaviour
         {
             SelectItem();
         }
+
+        ShopManager.Instance.UpdateAllButtonsUI();
     }
 
     public void OnPurchased()
     {
-        isPurchased = true;
+        _isPurchased = true;
         SavePurchase();
         SelectItem();
         UpdateUI();
@@ -52,91 +47,75 @@ public class ShopItemController : MonoBehaviour
 
     public void UpdateUI()
     {
-        if (isPurchased)
+        if (_isPurchased)
         {
-            if (isSelected)
-            {
-                buttonTextController.SetText("Selected");
-                buyButton.interactable = false;
-            }
-            else
-            {
-                buttonTextController.SetText("Select");
-                buyButton.interactable = true;
-            }
+            _buttonTextController.SetText(_isSelected ? "Selected" : "Select");
+            _buyButton.interactable = !_isSelected; // Если выбран, кнопка неактивна
         }
         else
         {
-            buttonTextController.SetText(itemCost.ToString());
-            buyButton.interactable = PlayerPrefsController.GetPoints(0) >= itemCost;
+            _buttonTextController.SetText(_itemCost.ToString());
+            _buyButton.interactable = _pointsController.GetPoints() >= _itemCost; // Используем новый метод
         }
     }
 
     public void SelectItem()
     {
-        isSelected = true;
-        if (shopManager.IsSkin(itemName))
+        _isSelected = true;
+        if (ShopManager.Instance.IsSkin(_itemName))
         {
-            shopManager.DeselectOtherSkins(itemName);  // Деселект остальных скинов
+            ShopManager.Instance.DeselectOtherSkins(_itemName);
         }
         else
         {
-            shopManager.DeselectOtherBackgrounds(itemName);  // Деселект остальных фонов
+            ShopManager.Instance.DeselectOtherBackgrounds(_itemName);
         }
         UpdateUI();
     }
 
     public void Deselect()
     {
-        isSelected = false;
+        _isSelected = false;
         UpdateUI();
     }
 
     private void SavePurchase()
     {
         // Сохранение покупки в PlayerPrefs
-        if (shopManager.IsSkin(itemName))
+        if (ShopManager.Instance.IsSkin(_itemName))
         {
             string purchasedSkins = PlayerPrefsController.GetPurchasedSkins("");
-            PlayerPrefsController.SetPurchasedSkins(purchasedSkins + itemName + ";");
+            PlayerPrefsController.SetPurchasedSkins(purchasedSkins + _itemName + ";");
         }
         else
         {
             string purchasedBackgrounds = PlayerPrefsController.GetPurchasedBackgrounds("");
-            PlayerPrefsController.SetPurchasedBackgrounds(purchasedBackgrounds + itemName + ";");
+            PlayerPrefsController.SetPurchasedBackgrounds(purchasedBackgrounds + _itemName + ";");
         }
     }
 
     private void LoadState()
     {
-        // Загружаем состояние покупки и выбранности
-        if (shopManager.IsSkin(itemName))
+        if (ShopManager.Instance.IsSkin(_itemName))
         {
             string purchasedSkins = PlayerPrefsController.GetPurchasedSkins("");
-            isPurchased = purchasedSkins.Contains(itemName);
+            _isPurchased = purchasedSkins.Contains(_itemName);
         }
         else
         {
             string purchasedBackgrounds = PlayerPrefsController.GetPurchasedBackgrounds("");
-            isPurchased = purchasedBackgrounds.Contains(itemName);
+            _isPurchased = purchasedBackgrounds.Contains(_itemName);
         }
 
-        // Загружаем текущее состояние выбранного скина или фона
         string currentSkin = PlayerPrefsController.GetCurrentSkin("");
         string currentBackground = PlayerPrefsController.GetCurrentBackground("");
 
-        if (shopManager.IsSkin(itemName))
-        {
-            isSelected = currentSkin == itemName;
-        }
-        else
-        {
-            isSelected = currentBackground == itemName;
-        }
+        _isSelected = (ShopManager.Instance.IsSkin(_itemName) && currentSkin == _itemName) ||
+                     (!ShopManager.Instance.IsSkin(_itemName) && currentBackground == _itemName);
     }
 
     public string GetItemName()
     {
-        return itemName;
+        return _itemName;
     }
 }
