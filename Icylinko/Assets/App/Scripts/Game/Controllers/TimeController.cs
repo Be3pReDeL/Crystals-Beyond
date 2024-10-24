@@ -5,13 +5,17 @@ public class TimeController : MonoBehaviour
 {
     public static TimeController Instance { get; private set; }
 
-    private float _currentTimeScale = -1;  // Текущий множитель времени до паузы
+    private float _prePauseTimeScale = 1f;  // Значение timeScale перед паузой
+    private float _preIcePowerTimeScale = 1f;  // Значение timeScale перед Ice Power
     private bool _isTimeStopped = false;
+    private bool _isIcePowerActive = false;
+
     private float _timeSpeedUpMaximum = 3f;
     private float _timeIncreaseRate = 0.001f;
     private bool _isTimeSpeedingUp = false;
 
     public bool IsTimeStopped => _isTimeStopped;
+    public bool IsIcePowerActive => _isIcePowerActive;
 
     private void Awake() 
     {
@@ -26,60 +30,78 @@ public class TimeController : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-    // Метод для остановки времени (например, пауза)
+    private void Update() => Debug.Log(Time.timeScale);
+
+    // Останавливаем время для паузы
     public void StopTime(float newTimeScale) 
     {
-        _isTimeStopped = true;
-
-        if (_currentTimeScale < 0)
-            _currentTimeScale = Time.timeScale;
-
-        Time.timeScale = newTimeScale;
-
-        StopSpeedingUp();
+        if (!_isTimeStopped)
+        {
+            _prePauseTimeScale = Time.timeScale;
+            _isTimeStopped = true;
+            Time.timeScale = newTimeScale;
+        }
     }
 
-    // Метод для сброса времени после паузы
+    // Сбрасываем время после паузы
     public void ResetTime() 
     {
         _isTimeStopped = false;
 
-        // Проверяем, активна ли способность Ice Power
-        if (IcePowerController.Instance != null && IcePowerController.Instance.IsIcePowerActive)
+        if (_isIcePowerActive)
         {
-            IcePowerController.Instance.ResumeIcePower();  // Возвращаем замедление Ice Power
+            // Если Ice Power была активна на момент паузы, возобновляем ее
+            Time.timeScale = 0.5f;
         }
         else
         {
-            // Восстанавливаем время, которое было до паузы
-            Time.timeScale = _currentTimeScale > 0 ? _currentTimeScale : 1f;
+            // Восстанавливаем значение перед паузой
+            Time.timeScale = _prePauseTimeScale;
+            StartSpeedingUp();
         }
-
-        _currentTimeScale = -1;
-
-        StartSpeedingUp();
     }
 
-    // Метод для установки времени вручную
-    public void SetTimeScale(float timeScale)
+    // Останавливаем время для Ice Power
+    public void StartIcePower()
     {
-        Time.timeScale = timeScale;
+        if (!_isIcePowerActive)
+        {
+            _preIcePowerTimeScale = Time.timeScale;
+            _isIcePowerActive = true;
+            StopSpeedingUp();
+            Time.timeScale = 0.5f;  // Замедляем время до 0.5
+        }
     }
 
-    // Метод для активации ускорения времени
+    // Завершаем Ice Power и восстанавливаем timeScale
+    public void EndIcePower()
+    {
+        if (_isIcePowerActive)
+        {
+            _isIcePowerActive = false;
+            Time.timeScale = _preIcePowerTimeScale;  // Восстанавливаем значение до активации Ice Power
+            StartSpeedingUp();  // Включаем ускорение времени
+        }
+    }
+
+    // Возобновляем Ice Power после паузы
+    public void ResumeIcePower()
+    {
+        Time.timeScale = 0.5f;
+    }
+
+    // Ускорение времени
     public void StartSpeedingUp()
     {
         _isTimeSpeedingUp = true;
         StartCoroutine(SpeedUpTime());
     }
 
-    // Метод для остановки ускорения времени
     public void StopSpeedingUp()
     {
         _isTimeSpeedingUp = false;
     }
 
-    // Корутин для постепенного увеличения времени
     private IEnumerator SpeedUpTime()
     {
         while (_isTimeSpeedingUp)

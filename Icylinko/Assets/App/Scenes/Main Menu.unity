@@ -636,6 +636,7 @@ GameObject:
   - component: {fileID: 78918312}
   - component: {fileID: 78918315}
   - component: {fileID: 78918314}
+  - component: {fileID: 78918316}
   m_Layer: 5
   m_Name: Skin 1 Buy Button Text
   m_TagString: Untagged
@@ -748,7 +749,7 @@ MonoBehaviour:
   m_margin: {x: 4.38752, y: 0, z: 3.7124634, w: 18.225067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &78918313
@@ -788,6 +789,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &78918316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78918310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101029205
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 495.49997, y: -125}
+  m_AnchoredPosition: {x: 495.5, y: -125}
   m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101029207
@@ -934,7 +947,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &101029209
@@ -1388,7 +1401,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 508ea72db311542368316db0941cf239, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e19da14e75e6241ecbfac33428c0fd5e, type: 2}
   m_sharedMaterial: {fileID: 5606691244080954867, guid: 508ea72db311542368316db0941cf239, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2071,6 +2084,108 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &237870854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1519683661}
+    m_Modifications:
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092505485289320177, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+      propertyPath: m_Name
+      value: Black Screen Image
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+--- !u!224 &237870855 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4512750778126564885, guid: 24f4d18c1637e488983d8dcb03d5c73c, type: 3}
+  m_PrefabInstance: {fileID: 237870854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &252920924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,7 +2291,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 731.25, y: -349.70676}
-  m_SizeDelta: {x: 248.5, y: 599.4135}
+  m_SizeDelta: {x: 248.50002, y: 599.4135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272455313
 MonoBehaviour:
@@ -2217,6 +2332,7 @@ GameObject:
   - component: {fileID: 289221679}
   - component: {fileID: 289221682}
   - component: {fileID: 289221681}
+  - component: {fileID: 289221683}
   m_Layer: 5
   m_Name: Background 2 Buy Button Text
   m_TagString: Untagged
@@ -2329,7 +2445,7 @@ MonoBehaviour:
   m_margin: {x: 7.648163, y: 0, z: 6.883423, w: 25.238892}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &289221680
@@ -2369,6 +2485,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &289221683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289221677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &297363988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2553,8 +2681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 592, y: -717.0431}
-  m_SizeDelta: {x: 1084, y: 266.81723}
+  m_AnchoredPosition: {x: 592, y: -717.04297}
+  m_SizeDelta: {x: 1084, y: 266.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304661033
 MonoBehaviour:
@@ -2630,6 +2758,7 @@ GameObject:
   - component: {fileID: 360470917}
   - component: {fileID: 360470920}
   - component: {fileID: 360470919}
+  - component: {fileID: 360470921}
   m_Layer: 5
   m_Name: Skin 3 Buy Button Text
   m_TagString: Untagged
@@ -2742,7 +2871,7 @@ MonoBehaviour:
   m_margin: {x: 5.0625, y: 0, z: 3.7124634, w: 18.225067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &360470918
@@ -2782,6 +2911,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &360470921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360470915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &375455507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3979,8 +4120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.25, y: -133.40862}
-  m_SizeDelta: {x: 300, y: 166.81723}
+  m_AnchoredPosition: {x: 207.25, y: -133.4086}
+  m_SizeDelta: {x: 300, y: 166.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516100977
 MonoBehaviour:
@@ -4046,7 +4187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 263c2a30b44714868af876f34d0c0eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7a64820c68714aee9e6f7b7e5677cb6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4120,8 +4261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f218400f8097d4426b46e9ccc54a0de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _offSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  _onSprite: {fileID: 21300000, guid: a7a64820c68714aee9e6f7b7e5677cb6, type: 3}
+  _offSprite: {fileID: 21300000, guid: 2c7cd4d421d384cd6b81ab917c541029, type: 3}
 --- !u!114 &516100984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4594,6 +4735,7 @@ GameObject:
   - component: {fileID: 561196455}
   - component: {fileID: 561196458}
   - component: {fileID: 561196457}
+  - component: {fileID: 561196459}
   m_Layer: 5
   m_Name: Background 3 Buy Button Text
   m_TagString: Untagged
@@ -4706,7 +4848,7 @@ MonoBehaviour:
   m_margin: {x: 6.883362, y: 0, z: 5.3536377, w: 24.474243}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &561196456
@@ -4746,6 +4888,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &561196459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561196453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &561443691
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,6 +4917,7 @@ GameObject:
   - component: {fileID: 561443695}
   - component: {fileID: 561443694}
   - component: {fileID: 561443693}
+  - component: {fileID: 561443701}
   m_Layer: 5
   m_Name: Skin 4 Buy Button
   m_TagString: Untagged
@@ -4787,8 +4942,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -488.35083}
-  m_SizeDelta: {x: 248.5, y: 143.33722}
+  m_AnchoredPosition: {x: 124.25001, y: -488.35083}
+  m_SizeDelta: {x: 248.50002, y: 143.33722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561443693
 MonoBehaviour:
@@ -4986,7 +5141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 561443699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 561443701}
+        m_TargetAssemblyTypeName: ShopItemController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &561443699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5025,6 +5192,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561443691}
   m_CullTransparentMesh: 1
+--- !u!114 &561443701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561443691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsController: {fileID: 621507362}
+  shopManager: {fileID: 1893704838}
+  buttonTextController: {fileID: 2019624260}
+  buyButton: {fileID: 561443698}
+  itemCost: 40000
+  itemName: Skin 4
 --- !u!1 &569459491
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,6 +5433,7 @@ GameObject:
   - component: {fileID: 621507360}
   - component: {fileID: 621507359}
   - component: {fileID: 621507361}
+  - component: {fileID: 621507362}
   m_Layer: 5
   m_Name: Scores Panel
   m_TagString: Untagged
@@ -5328,6 +5514,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!114 &621507362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621507357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dfc842b791a4cc3abcbe0b2bf6734c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsTextController: {fileID: 1653835311}
 --- !u!1 &623952615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2007547474487526924, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
@@ -5895,8 +6094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.25, y: -133.40862}
-  m_SizeDelta: {x: 300, y: 166.81723}
+  m_AnchoredPosition: {x: 207.25, y: -133.4086}
+  m_SizeDelta: {x: 300, y: 166.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683603351
 MonoBehaviour:
@@ -5962,7 +6161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 263c2a30b44714868af876f34d0c0eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7a64820c68714aee9e6f7b7e5677cb6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6036,8 +6235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5daa49ef97e649968d8ed614ac831ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _offSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  _onSprite: {fileID: 21300000, guid: a7a64820c68714aee9e6f7b7e5677cb6, type: 3}
+  _offSprite: {fileID: 21300000, guid: 2c7cd4d421d384cd6b81ab917c541029, type: 3}
 --- !u!114 &683603358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6164,6 +6363,7 @@ GameObject:
   - component: {fileID: 689649071}
   - component: {fileID: 689649075}
   - component: {fileID: 689649074}
+  - component: {fileID: 689649076}
   m_Layer: 5
   m_Name: Background 2 Buy Button
   m_TagString: Untagged
@@ -6234,7 +6434,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 689649069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 689649076}
+        m_TargetAssemblyTypeName: ShopItemController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &689649069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6426,6 +6638,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &689649076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689649066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsController: {fileID: 621507362}
+  shopManager: {fileID: 1893704838}
+  buttonTextController: {fileID: 289221683}
+  buyButton: {fileID: 689649068}
+  itemCost: 20000
+  itemName: Background 2
 --- !u!1 &690043080 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2007547474487526924, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
@@ -7493,6 +7723,7 @@ GameObject:
   - component: {fileID: 776345817}
   - component: {fileID: 776345820}
   - component: {fileID: 776345819}
+  - component: {fileID: 776345821}
   m_Layer: 5
   m_Name: Skin 3 Buy Button
   m_TagString: Untagged
@@ -7517,8 +7748,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -488.35083}
-  m_SizeDelta: {x: 248.5, y: 143.33722}
+  m_AnchoredPosition: {x: 124.25001, y: -488.35083}
+  m_SizeDelta: {x: 248.50002, y: 143.33722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776345813
 MonoBehaviour:
@@ -7563,7 +7794,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 776345814}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 776345821}
+        m_TargetAssemblyTypeName: ShopItemController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &776345814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7755,6 +7998,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &776345821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776345811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsController: {fileID: 621507362}
+  shopManager: {fileID: 1893704838}
+  buttonTextController: {fileID: 360470921}
+  buyButton: {fileID: 776345813}
+  itemCost: 30000
+  itemName: Skin 3
 --- !u!1 &779917599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2007547474487526924, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
@@ -8687,8 +8948,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 749.25, y: -133.40862}
-  m_SizeDelta: {x: 555, y: 166.81723}
+  m_AnchoredPosition: {x: 749.25, y: -133.4086}
+  m_SizeDelta: {x: 555, y: 166.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866324006
 MonoBehaviour:
@@ -8941,7 +9202,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 452.75, y: -349.70676}
-  m_SizeDelta: {x: 248.5, y: 599.4135}
+  m_SizeDelta: {x: 248.50002, y: 599.4135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &919998917
 MonoBehaviour:
@@ -9809,8 +10070,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 749.25, y: -133.40862}
-  m_SizeDelta: {x: 555, y: 166.81723}
+  m_AnchoredPosition: {x: 749.25, y: -133.4086}
+  m_SizeDelta: {x: 555, y: 166.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970013802
 MonoBehaviour:
@@ -10155,8 +10416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -163.64407}
-  m_SizeDelta: {x: 248.5, y: 248.5}
+  m_AnchoredPosition: {x: 124.25001, y: -163.64407}
+  m_SizeDelta: {x: 248.50002, y: 248.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972574400
 MonoBehaviour:
@@ -10669,8 +10930,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.25, y: -133.40862}
-  m_SizeDelta: {x: 300, y: 166.81723}
+  m_AnchoredPosition: {x: 207.25, y: -133.4086}
+  m_SizeDelta: {x: 300, y: 166.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995989994
 MonoBehaviour:
@@ -10736,7 +10997,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 263c2a30b44714868af876f34d0c0eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7a64820c68714aee9e6f7b7e5677cb6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10810,8 +11071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335bc461f8886420c997ece2e44b2d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _offSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  _onSprite: {fileID: 21300000, guid: a7a64820c68714aee9e6f7b7e5677cb6, type: 3}
+  _offSprite: {fileID: 21300000, guid: 2c7cd4d421d384cd6b81ab917c541029, type: 3}
 --- !u!114 &995990001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11046,7 +11307,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1022505654
@@ -11268,6 +11529,7 @@ GameObject:
   - component: {fileID: 1055417086}
   - component: {fileID: 1055417089}
   - component: {fileID: 1055417088}
+  - component: {fileID: 1055417090}
   m_Layer: 5
   m_Name: Background 1 Buy Button
   m_TagString: Untagged
@@ -11338,7 +11600,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1055417083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1055417090}
+        m_TargetAssemblyTypeName: ShopItemController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1055417083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11530,6 +11804,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1055417090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055417080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsController: {fileID: 621507362}
+  shopManager: {fileID: 1893704838}
+  buttonTextController: {fileID: 1179415134}
+  buyButton: {fileID: 1055417082}
+  itemCost: 10000
+  itemName: Background 1
 --- !u!1 &1059461195
 GameObject:
   m_ObjectHideFlags: 0
@@ -11566,7 +11858,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 174.25, y: -349.70676}
-  m_SizeDelta: {x: 248.5, y: 599.4135}
+  m_SizeDelta: {x: 248.50002, y: 599.4135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059461197
 MonoBehaviour:
@@ -12704,6 +12996,7 @@ GameObject:
   - component: {fileID: 1124204475}
   - component: {fileID: 1124204478}
   - component: {fileID: 1124204477}
+  - component: {fileID: 1124204479}
   m_Layer: 5
   m_Name: Background 3 Buy Button
   m_TagString: Untagged
@@ -12774,7 +13067,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1124204472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1124204479}
+        m_TargetAssemblyTypeName: ShopItemController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1124204472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12966,6 +13271,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1124204479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124204469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsController: {fileID: 621507362}
+  shopManager: {fileID: 1893704838}
+  buttonTextController: {fileID: 561196459}
+  buyButton: {fileID: 1124204471}
+  itemCost: 30000
+  itemName: Background 3
 --- !u!1 &1128078993
 GameObject:
   m_ObjectHideFlags: 0
@@ -13398,8 +13721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 592, y: -183.40862}
-  m_SizeDelta: {x: 1084, y: 266.81723}
+  m_AnchoredPosition: {x: 592, y: -183.4086}
+  m_SizeDelta: {x: 1084, y: 266.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166612323
 MonoBehaviour:
@@ -13596,6 +13919,7 @@ GameObject:
   - component: {fileID: 1179415130}
   - component: {fileID: 1179415133}
   - component: {fileID: 1179415132}
+  - component: {fileID: 1179415134}
   m_Layer: 5
   m_Name: Background 1 Buy Button Text
   m_TagString: Untagged
@@ -13708,7 +14032,7 @@ MonoBehaviour:
   m_margin: {x: 6.1185303, y: 0, z: 7.648163, w: 24.474121}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1179415131
@@ -13748,6 +14072,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1179415134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179415128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1184245533 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2007547474487526924, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
@@ -13900,8 +14236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -163.64407}
-  m_SizeDelta: {x: 248.5, y: 248.5}
+  m_AnchoredPosition: {x: 124.25001, y: -163.64407}
+  m_SizeDelta: {x: 248.50002, y: 248.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188984131
 MonoBehaviour:
@@ -14758,8 +15094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -163.64407}
-  m_SizeDelta: {x: 248.5, y: 248.5}
+  m_AnchoredPosition: {x: 124.25001, y: -163.64407}
+  m_SizeDelta: {x: 248.50002, y: 248.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285926904
 MonoBehaviour:
@@ -15058,7 +15394,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 1009.75, y: -349.70676}
-  m_SizeDelta: {x: 248.5, y: 599.4135}
+  m_SizeDelta: {x: 248.50002, y: 599.4135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324429745
 MonoBehaviour:
@@ -16689,6 +17025,7 @@ GameObject:
   - component: {fileID: 1489211477}
   - component: {fileID: 1489211480}
   - component: {fileID: 1489211479}
+  - component: {fileID: 1489211481}
   m_Layer: 5
   m_Name: Skin 1 Buy Button
   m_TagString: Untagged
@@ -16713,8 +17050,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -488.35083}
-  m_SizeDelta: {x: 248.5, y: 143.33722}
+  m_AnchoredPosition: {x: 124.25001, y: -488.35083}
+  m_SizeDelta: {x: 248.50002, y: 143.33722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489211473
 MonoBehaviour:
@@ -16759,7 +17096,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1489211474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1489211481}
+        m_TargetAssemblyTypeName: ShopItemController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1489211474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16951,6 +17300,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1489211481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489211471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsController: {fileID: 621507362}
+  shopManager: {fileID: 1893704838}
+  buttonTextController: {fileID: 78918316}
+  buyButton: {fileID: 1489211473}
+  itemCost: 10000
+  itemName: Skin 1
 --- !u!1 &1508440478
 GameObject:
   m_ObjectHideFlags: 0
@@ -17484,6 +17851,7 @@ RectTransform:
   - {fileID: 949140697}
   - {fileID: 1893704834}
   - {fileID: 1279039590}
+  - {fileID: 237870855}
   m_Father: {fileID: 2113903490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18342,7 +18710,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1588041451
@@ -18547,8 +18915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 749.25, y: -133.40862}
-  m_SizeDelta: {x: 555, y: 166.81723}
+  m_AnchoredPosition: {x: 749.25, y: -133.4086}
+  m_SizeDelta: {x: 555, y: 166.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605508782
 MonoBehaviour:
@@ -19240,6 +19608,7 @@ GameObject:
   - component: {fileID: 1653835308}
   - component: {fileID: 1653835307}
   - component: {fileID: 1653835306}
+  - component: {fileID: 1653835311}
   m_Layer: 5
   m_Name: Scores Text
   m_TagString: Untagged
@@ -19401,7 +19770,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1653835310
@@ -19412,6 +19781,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653835304}
   m_CullTransparentMesh: 1
+--- !u!114 &1653835311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653835304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1686318530
 GameObject:
   m_ObjectHideFlags: 0
@@ -19735,6 +20116,7 @@ GameObject:
   - component: {fileID: 1744479564}
   - component: {fileID: 1744479567}
   - component: {fileID: 1744479566}
+  - component: {fileID: 1744479568}
   m_Layer: 5
   m_Name: Skin 2 Buy Button Text
   m_TagString: Untagged
@@ -19847,7 +20229,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 4.0499268, w: 18.225067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1744479565
@@ -19887,6 +20269,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1744479568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744479562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1752829249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2007547474487526924, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
@@ -20560,8 +20954,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 592, y: -450.22583}
-  m_SizeDelta: {x: 1084, y: 266.81723}
+  m_AnchoredPosition: {x: 592, y: -450.2258}
+  m_SizeDelta: {x: 1084, y: 266.8172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865436512
 MonoBehaviour:
@@ -20601,6 +20995,7 @@ GameObject:
   - component: {fileID: 1893704836}
   - component: {fileID: 1893704835}
   - component: {fileID: 1893704837}
+  - component: {fileID: 1893704838}
   m_Layer: 5
   m_Name: Shop Screen
   m_TagString: Untagged
@@ -20703,6 +21098,27 @@ MonoBehaviour:
   - {fileID: 1188984135}
   - {fileID: 776345817}
   - {fileID: 360470919}
+--- !u!114 &1893704838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893704833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e6124e0dc7444d991feacdffb41e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: 1489211481}
+  - {fileID: 2036640240}
+  - {fileID: 776345821}
+  - {fileID: 561443701}
+  backgrounds:
+  - {fileID: 1055417090}
+  - {fileID: 689649076}
+  - {fileID: 1124204479}
 --- !u!1 &1917621103
 GameObject:
   m_ObjectHideFlags: 0
@@ -20741,8 +21157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -163.64407}
-  m_SizeDelta: {x: 248.5, y: 248.5}
+  m_AnchoredPosition: {x: 124.25001, y: -163.64407}
+  m_SizeDelta: {x: 248.50002, y: 248.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917621105
 MonoBehaviour:
@@ -22321,6 +22737,7 @@ GameObject:
   - component: {fileID: 2019624258}
   - component: {fileID: 2019624257}
   - component: {fileID: 2019624256}
+  - component: {fileID: 2019624260}
   m_Layer: 5
   m_Name: Skin 4 Buy Button Text
   m_TagString: Untagged
@@ -22462,7 +22879,7 @@ MonoBehaviour:
   m_margin: {x: 4.7249756, y: 0, z: 4.387451, w: 18.225067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2019624259
@@ -22473,6 +22890,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019624254}
   m_CullTransparentMesh: 1
+--- !u!114 &2019624260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019624254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2b2110ab56445fc8b8e50ecfff1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031242959
 GameObject:
   m_ObjectHideFlags: 0
@@ -22793,6 +23222,7 @@ GameObject:
   - component: {fileID: 2036640236}
   - component: {fileID: 2036640239}
   - component: {fileID: 2036640238}
+  - component: {fileID: 2036640240}
   m_Layer: 5
   m_Name: Skin 2 Buy Button
   m_TagString: Untagged
@@ -22817,8 +23247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.25, y: -488.35083}
-  m_SizeDelta: {x: 248.5, y: 143.33722}
+  m_AnchoredPosition: {x: 124.25001, y: -488.35083}
+  m_SizeDelta: {x: 248.50002, y: 143.33722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036640232
 MonoBehaviour:
@@ -22863,7 +23293,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2036640233}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2036640240}
+        m_TargetAssemblyTypeName: ShopItemController, Assembly-CSharp
+        m_MethodName: OnBuyButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2036640233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23055,6 +23497,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2036640240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036640230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsController: {fileID: 621507362}
+  shopManager: {fileID: 1893704838}
+  buttonTextController: {fileID: 1744479568}
+  buyButton: {fileID: 2036640232}
+  itemCost: 20000
+  itemName: Skin 2
 --- !u!1 &2036751687
 GameObject:
   m_ObjectHideFlags: 0
@@ -23180,7 +23640,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 508ea72db311542368316db0941cf239, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e19da14e75e6241ecbfac33428c0fd5e, type: 2}
   m_sharedMaterial: {fileID: 5606691244080954867, guid: 508ea72db311542368316db0941cf239, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

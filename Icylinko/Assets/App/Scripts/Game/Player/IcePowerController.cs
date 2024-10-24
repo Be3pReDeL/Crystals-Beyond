@@ -7,6 +7,7 @@ public class IcePowerController : MonoBehaviour
     [SerializeField] private IcePowerUIController _icePowerUIController;
     [SerializeField] private ScreenController _slowMotionOverlayScreenController;
     [SerializeField] private float _slowMotionDuration = 5f;
+    [SerializeField] private Animator[] _playerCircleSegmentsAnimators;
 
     public bool IsIcePowerAvailable { get; set; } = true;
     public bool IsIcePowerActive { get; private set; } = false;
@@ -16,8 +17,7 @@ public class IcePowerController : MonoBehaviour
     private float _currentRechargeTime = 0f;
     private bool _isRecharging = false;
 
-    private float _preIcePowerTimeScale;  // Значение времени до активации Ice Power
-    private float _duringIcePowerTimeScale;  // Значение времени, когда Ice Power была активирована
+    private const string _ANIMATORKEY = "Frozen";
 
     private void Awake() 
     {
@@ -62,9 +62,9 @@ public class IcePowerController : MonoBehaviour
             _icePowerUIController.UpdateIcePowerUI(0f);
             _slowMotionOverlayScreenController.gameObject.SetActive(true);
 
-            _preIcePowerTimeScale = Time.timeScale;  // Сохраняем значение Time.timeScale до активации Ice Power
-            _duringIcePowerTimeScale = 0.5f;  // Время во время Ice Power
-            TimeController.Instance.StopTime(_duringIcePowerTimeScale);  // Устанавливаем замедление времени
+            TimeController.Instance.StartIcePower();  // Активируем замедление времени через Ice Power
+
+            SetPlayerCircleSegmentsAnimatorsBools(_ANIMATORKEY, true);
 
             Invoke(nameof(EndSlowMotion), _slowMotionDuration);
         }
@@ -74,26 +74,26 @@ public class IcePowerController : MonoBehaviour
     {
         IsIcePowerActive = false;
 
-        // Проверяем, была ли пауза активирована
-        if (TimeController.Instance.IsTimeStopped)
-        {
-            _slowMotionOverlayScreenController.CloseScreen();
-        }
-        else
-        {
-            // Восстанавливаем значение времени до Ice Power
-            TimeController.Instance.SetTimeScale(_preIcePowerTimeScale);
-            _slowMotionOverlayScreenController.CloseScreen();
-        }
+        // Завершаем Ice Power
+        TimeController.Instance.EndIcePower();
 
+        _slowMotionOverlayScreenController.CloseScreen();
         _isRecharging = true;
         _currentRechargeTime = 0f;
+
+        SetPlayerCircleSegmentsAnimatorsBools(_ANIMATORKEY, false);
     }
 
-    // Возвращаем Ice Power эффект после выхода из паузы
     public void ResumeIcePower()
     {
-        TimeController.Instance.SetTimeScale(_duringIcePowerTimeScale);
+        TimeController.Instance.ResumeIcePower();
         _slowMotionOverlayScreenController.gameObject.SetActive(true);
+        SetPlayerCircleSegmentsAnimatorsBools(_ANIMATORKEY, true);
+    }
+
+    private void SetPlayerCircleSegmentsAnimatorsBools(string key, bool state) 
+    {
+        foreach (Animator animator in _playerCircleSegmentsAnimators)
+            animator.SetBool(key, state);
     }
 }

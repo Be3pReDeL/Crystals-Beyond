@@ -17,7 +17,7 @@ public class LevelButton : MonoBehaviour
         _button = GetComponent<Button>();
 
         // Устанавливаем текст с номером уровня
-        _levelText.SetText(_realLevelNumber.ToString());
+        _levelText.SetText(_levelNumber.ToString());
 
         // Проверяем, открыт ли уровень
         bool isUnlocked = PlayerPrefsController.IsLevelUnlocked(_realLevelNumber);

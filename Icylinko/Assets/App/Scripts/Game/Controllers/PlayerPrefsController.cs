@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class PlayerPrefsController : MonoBehaviour
@@ -18,6 +19,16 @@ public class PlayerPrefsController : MonoBehaviour
     private void Awake() 
     {
         SetLevelUnlocked(0, true); // Открываем нулевой уровень
+
+        SetPurchasedBackgrounds("Background 1");
+        SetPurchasedSkins("Skin 1");
+        if(PlayerPrefs.GetInt("Set Skin and Background One Time", 0) == 0)
+        {
+            SetCurrentBackground("Background 1");
+            SetCurrentSkin("Skin 1");
+
+            PlayerPrefs.SetInt("Set Skin and Background One Time", 1);
+        }
     }
 
     // Game Mode
