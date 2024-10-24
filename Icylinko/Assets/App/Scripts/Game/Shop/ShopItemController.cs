@@ -15,10 +15,10 @@ public class ShopItemController : MonoBehaviour
     private void Start()
     {
         LoadState();
-        Invoke(nameof(UpdateUI), 0.05f);
+        Invoke(nameof(UpdateUI), 0.1f);
     }
 
-    private void OnEnable() => Invoke(nameof(UpdateUI), 0.05f);
+    private void OnEnable() => Invoke(nameof(UpdateUI), 0.1f);
 
     public void OnBuyButtonClick()
     {
@@ -69,6 +69,7 @@ public class ShopItemController : MonoBehaviour
         else
         {
             ShopManager.Instance.DeselectOtherBackgrounds(_itemName);
+            BackgroundsController.Instance.ApplyBackground(_itemName);
         }
         UpdateUI();
     }

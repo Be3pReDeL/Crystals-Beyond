@@ -24,7 +24,7 @@ public class LevelButton : MonoBehaviour
         _button.interactable = isUnlocked;
 
         // Показываем или скрываем иконку завершения уровня
-        _completedIcon.SetActive(PlayerPrefsController.GetCompletedLevels(0) >= _realLevelNumber);
+        _completedIcon.SetActive(PlayerPrefsController.GetCompletedLevels(0) > _realLevelNumber);
 
         // Подписываемся на событие нажатия
         _button.onClick.AddListener(OnLevelButtonClick);

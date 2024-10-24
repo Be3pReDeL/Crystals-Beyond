@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
+using System.Net;
 
 [RequireComponent(typeof(CanvasGroup))]
 [RequireComponent(typeof(RectTransform))]
@@ -74,16 +76,22 @@ public class UIAnimator : MonoBehaviour
         _isAnimating = true; // Устанавливаем флаг анимации
         _rectTransform.DOAnchorPos(targetPosition, _animationDuration).SetEase(Ease.InCubic);
         _canvasGroup.DOFade(0f, _fadeOutDuration).SetEase(Ease.InCubic)
-            .OnComplete(() => {
-                if(gameObject.activeSelf) 
+            .OnComplete(() => 
+            {
+                try 
+                {
                     StartCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject));
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log(ex.Message);
+                }
             });
     }
 
     private IEnumerator DisableGameobjectCoroutine(float delay, GameObject gameObject) 
     {
         yield return new WaitForSeconds(delay);
-
         gameObject.SetActive(false);
         _isAnimating = false; // Сбрасываем флаг анимации
     }

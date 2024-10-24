@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4104000904199763745}
   - component: {fileID: 5985546852527307282}
   - component: {fileID: 7767478203419259414}
+  - component: {fileID: 2284513734647230192}
   m_Layer: 3
   m_Name: Standart Ball
   m_TagString: Untagged
@@ -288,3 +289,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6263ec7911704412896fa1e6df10f374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2284513734647230192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7461019861600239440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36999a33e4564e3d9f19251155e386b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerImage: {fileID: 6432469411790710494}
+  availableSkins:
+  - {fileID: 21300000, guid: 19ab632f67c3048ecb11bdfb4c6d00e5, type: 3}
+  - {fileID: 21300000, guid: a3bdbf786d8b04a3b99aed6bf6b9554b, type: 3}
+  - {fileID: 21300000, guid: 2dcba7ec5c63945a181a7b4eea3e5dd2, type: 3}
+  - {fileID: 21300000, guid: db3d4775a0774450092aa0b899e99e4a, type: 3}
