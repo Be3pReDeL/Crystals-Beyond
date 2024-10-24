@@ -20,10 +20,10 @@ public class PlayerPrefsController : MonoBehaviour
     {
         SetLevelUnlocked(0, true); // Открываем нулевой уровень
 
-        SetPurchasedBackgrounds("Background 1");
-        SetPurchasedSkins("Skin 1");
         if(PlayerPrefs.GetInt("Set Skin and Background One Time", 0) == 0)
         {
+            SetPurchasedBackgrounds("Background 1");
+            SetPurchasedSkins("Skin 1");
             SetCurrentBackground("Background 1");
             SetCurrentSkin("Skin 1");
 

@@ -74,7 +74,10 @@ public class UIAnimator : MonoBehaviour
         _isAnimating = true; // Устанавливаем флаг анимации
         _rectTransform.DOAnchorPos(targetPosition, _animationDuration).SetEase(Ease.InCubic);
         _canvasGroup.DOFade(0f, _fadeOutDuration).SetEase(Ease.InCubic)
-            .OnComplete(() => StartCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject)));
+            .OnComplete(() => {
+                if(gameObject.activeSelf) 
+                    StartCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject));
+            });
     }
 
     private IEnumerator DisableGameobjectCoroutine(float delay, GameObject gameObject) 
