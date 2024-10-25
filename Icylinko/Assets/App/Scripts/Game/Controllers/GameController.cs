@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     [Range(0, 30)]
     [SerializeField] private int _dificultyOfEndlessMode = 15;
 
+    [SerializeField] private GameObject _tutorialScreen;
+
     public enum GameMode { endless, levels }
     public GameMode CurrentGameMode { get; private set; }
     public int CurrentLevel { get; private set; } = 0;
@@ -42,6 +44,14 @@ public class GameController : MonoBehaviour
 
     private void Start() 
     {
+        if(PlayerPrefs.GetInt("Show Tutorial", 0) == 0)
+        {
+            TimeController.Instance.StopTime(0);
+            _tutorialScreen.SetActive(true);
+
+            PlayerPrefs.SetInt("Show Tutorial", 1);
+        }
+
         SpawnMaze(CurrentGameMode == GameMode.levels ? CurrentLevel : Random.Range(0, _levelMazes.Length));
         SetupPrefabSpawner(CurrentGameMode == GameMode.levels ? CurrentLevel : _dificultyOfEndlessMode);
 

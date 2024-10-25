@@ -18,7 +18,6 @@ public class PlayerPrefsController : MonoBehaviour
     private void Awake() 
     {
         SetLevelUnlocked(0, true); // Открываем нулевой уровень
-        SetPoints(100000);
 
         if(PlayerPrefs.GetInt("Set Skin and Background One Time", 0) == 0)
         {
