@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Win Slot
   - Loose Slot
+  - Ball
   layers:
   - Default
   - TransparentFX

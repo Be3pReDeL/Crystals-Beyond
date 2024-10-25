@@ -2,8 +2,6 @@ using UnityEngine;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine.UI;
-using System;
-using System.Net;
 
 [RequireComponent(typeof(CanvasGroup))]
 [RequireComponent(typeof(RectTransform))]
@@ -61,31 +59,24 @@ public class UIAnimator : MonoBehaviour
 
     public void Disappear(GameObject gameObject)
     {
-        if (_isAnimating) // Проверяем, идет ли анимация
+        if (_isAnimating)
         {
             Debug.Log("Animation in progress, cannot disappear yet.");
-            return; // Если анимация еще не завершена, игнорируем вызов
+            return;
         }
 
-        // Анимация удаления (вылет + уменьшение прозрачности)
         Vector2 targetPosition = GetStartPosition();
         
         if (TryGetComponent(out Button button))
             button.interactable = false;
 
-        _isAnimating = true; // Устанавливаем флаг анимации
+        _isAnimating = true;
         _rectTransform.DOAnchorPos(targetPosition, _animationDuration).SetEase(Ease.InCubic);
         _canvasGroup.DOFade(0f, _fadeOutDuration).SetEase(Ease.InCubic)
-            .OnComplete(() => 
+            .OnComplete(() =>
             {
-                try 
-                {
-                    StartCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject));
-                }
-                catch (Exception ex)
-                {
-                    Debug.Log(ex.Message);
-                }
+                // Запускаем корутину через CoroutineManager
+                CoroutineManager.Instance.StartExternalCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject));
             });
     }
 

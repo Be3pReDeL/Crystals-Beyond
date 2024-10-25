@@ -1248,98 +1248,98 @@ MonoBehaviour:
   _levelGoals: 050000000a0000000f00000014000000190000001e0000001e0000001e0000001e0000001e0000001e00000023000000280000002d000000320000003700000037000000370000003700000037000000370000003c00000041000000460000004b0000005000000050000000500000005000000050000000
   _levelMazes:
   - {fileID: 7036842006405825164, guid: 679f8fde28e594313b135684676c2dae, type: 3}
-  - {fileID: 7036842006405825164, guid: 679f8fde28e594313b135684676c2dae, type: 3}
-  - {fileID: 4378561033095985247, guid: 3ee580f3aafb54906a68fc4c4e790a21, type: 3}
   - {fileID: 4378561033095985247, guid: 3ee580f3aafb54906a68fc4c4e790a21, type: 3}
   - {fileID: 2237229557769153299, guid: 543c02b2456834e5cb1f329804e41c81, type: 3}
-  - {fileID: 2237229557769153299, guid: 543c02b2456834e5cb1f329804e41c81, type: 3}
-  - {fileID: 1622790415052211732, guid: 3ff92ae671d824b699c05555c4d25f12, type: 3}
   - {fileID: 1622790415052211732, guid: 3ff92ae671d824b699c05555c4d25f12, type: 3}
   - {fileID: 1393198625794731458, guid: e92a026968cb24bf3bce3d99a3142e87, type: 3}
-  - {fileID: 1393198625794731458, guid: e92a026968cb24bf3bce3d99a3142e87, type: 3}
-  - {fileID: 8979729524488492253, guid: 88d06a64182d44e87ace900ffaedd7c8, type: 3}
   - {fileID: 8979729524488492253, guid: 88d06a64182d44e87ace900ffaedd7c8, type: 3}
   - {fileID: 6585544106491158872, guid: 88e30adc363364ec0948ded542fffa53, type: 3}
-  - {fileID: 6585544106491158872, guid: 88e30adc363364ec0948ded542fffa53, type: 3}
-  - {fileID: 7785372358543770252, guid: e8c1077fda4874993a0ad4e019be370a, type: 3}
   - {fileID: 7785372358543770252, guid: e8c1077fda4874993a0ad4e019be370a, type: 3}
   - {fileID: 1063686221814017435, guid: c7767679184e34021ba049a2dfc386b2, type: 3}
-  - {fileID: 1063686221814017435, guid: c7767679184e34021ba049a2dfc386b2, type: 3}
-  - {fileID: 7892937364453079731, guid: 9a4c5e85f4d174afb9d52aa50f756f28, type: 3}
   - {fileID: 7892937364453079731, guid: 9a4c5e85f4d174afb9d52aa50f756f28, type: 3}
   - {fileID: 5010822188123533243, guid: 04e3d5a91c70941f393722a17d8cb52a, type: 3}
-  - {fileID: 5010822188123533243, guid: 04e3d5a91c70941f393722a17d8cb52a, type: 3}
-  - {fileID: 6565764760853455650, guid: c3db58ae497974363b2147cb35ad6e33, type: 3}
   - {fileID: 6565764760853455650, guid: c3db58ae497974363b2147cb35ad6e33, type: 3}
   - {fileID: 7206459458290082298, guid: 6e49347cf849240b9bca6e6239eaaf08, type: 3}
-  - {fileID: 7206459458290082298, guid: 6e49347cf849240b9bca6e6239eaaf08, type: 3}
-  - {fileID: 442802989942272028, guid: a38eaa9e7fb9848f78345266a1f7027f, type: 3}
   - {fileID: 442802989942272028, guid: a38eaa9e7fb9848f78345266a1f7027f, type: 3}
   - {fileID: 5135555645180747465, guid: d1bb1e9b9a77e4c50bb9f8844beaecae, type: 3}
+  - {fileID: 7036842006405825164, guid: 679f8fde28e594313b135684676c2dae, type: 3}
+  - {fileID: 4378561033095985247, guid: 3ee580f3aafb54906a68fc4c4e790a21, type: 3}
+  - {fileID: 2237229557769153299, guid: 543c02b2456834e5cb1f329804e41c81, type: 3}
+  - {fileID: 1622790415052211732, guid: 3ff92ae671d824b699c05555c4d25f12, type: 3}
+  - {fileID: 1393198625794731458, guid: e92a026968cb24bf3bce3d99a3142e87, type: 3}
+  - {fileID: 8979729524488492253, guid: 88d06a64182d44e87ace900ffaedd7c8, type: 3}
+  - {fileID: 6585544106491158872, guid: 88e30adc363364ec0948ded542fffa53, type: 3}
+  - {fileID: 7785372358543770252, guid: e8c1077fda4874993a0ad4e019be370a, type: 3}
+  - {fileID: 1063686221814017435, guid: c7767679184e34021ba049a2dfc386b2, type: 3}
+  - {fileID: 7892937364453079731, guid: 9a4c5e85f4d174afb9d52aa50f756f28, type: 3}
+  - {fileID: 5010822188123533243, guid: 04e3d5a91c70941f393722a17d8cb52a, type: 3}
+  - {fileID: 6565764760853455650, guid: c3db58ae497974363b2147cb35ad6e33, type: 3}
+  - {fileID: 7206459458290082298, guid: 6e49347cf849240b9bca6e6239eaaf08, type: 3}
+  - {fileID: 442802989942272028, guid: a38eaa9e7fb9848f78345266a1f7027f, type: 3}
   - {fileID: 5135555645180747465, guid: d1bb1e9b9a77e4c50bb9f8844beaecae, type: 3}
   _mazeSpawnPoint: {fileID: 908472533}
   _levelSpawnInterval:
-  - 5
-  - 4.75
-  - 4.5
-  - 4.25
-  - 4
-  - 3.75
-  - 3.5
-  - 3.25
-  - 3
-  - 2.9
-  - 2.8
-  - 2.7
-  - 2.6
-  - 2.5
-  - 2.4
-  - 2.3
-  - 2.2
-  - 2.1
   - 2
-  - 1.9
-  - 1.8
-  - 1.7
-  - 1.6
-  - 1.5
-  - 1.4
-  - 1.3
-  - 1.2
-  - 1.1
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
   - 0.5
   - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
   _levelInitialSpeed:
-  - 0.5
-  - 0.75
   - 1
-  - 1.25
-  - 1.5
-  - 1.75
+  - 1
+  - 1
+  - 1
+  - 1
   - 2
-  - 2.1
-  - 2.2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
   - 2.3
-  - 2.4
-  - 2.5
+  - 2.3
+  - 2.3
+  - 2.3
+  - 2.3
   - 2.6
-  - 2.7
-  - 2.8
-  - 2.9
+  - 2.6
+  - 2.6
+  - 2.6
+  - 2.6
   - 3
-  - 3.1
-  - 3.2
-  - 3.3
-  - 3.4
-  - 3.5
-  - 3.6
-  - 3.7
-  - 3.8
-  - 3.9
+  - 3
+  - 3
+  - 3
+  - 3
   - 4
-  - 4.05
-  - 4.1
-  - 4.15
+  - 4
+  - 4
+  - 4
   _levelCountAtTime:
   - 1
   - 1
@@ -7264,6 +7264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1397875735}
   - {fileID: 408441177}
   m_Father: {fileID: 430192906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8673,6 +8674,37 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &1397875734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397875735}
+  m_Layer: 3
+  m_Name: Health Pick-up Spawn Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1397875735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397875734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1216633030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1422864929
 GameObject:
   m_ObjectHideFlags: 0
@@ -10451,6 +10483,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814873044}
   m_CullTransparentMesh: 1
+--- !u!1 &1864635989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864635990}
+  - component: {fileID: 1864635991}
+  m_Layer: 0
+  m_Name: Health Pickup Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864635990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864635989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2140546462}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1864635991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864635989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c431379361341ecac15c3661d934ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPickupPrefab: {fileID: 4277012785509031469, guid: 36be51c5a466c4f419bb241693f5c81e, type: 3}
+  spawnInterval: 10
+  spawnAreaObject: {fileID: 1397875734}
 --- !u!1 &1882744040
 GameObject:
   m_ObjectHideFlags: 0
@@ -12581,6 +12660,7 @@ Transform:
   - {fileID: 935004244}
   - {fileID: 2076495425}
   - {fileID: 711099861}
+  - {fileID: 1864635990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3017366914124326419

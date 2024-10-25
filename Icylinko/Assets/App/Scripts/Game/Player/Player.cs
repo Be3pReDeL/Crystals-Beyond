@@ -53,6 +53,15 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Heal(int amount)
+    {
+        _currentHealth += amount;
+        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);  // Ограничиваем здоровье
+
+        // Обновляем UI здоровья
+        _healthUIController.UpdateHealthUI(_currentHealth);
+    }
+
     // Метод для обработки смерти игрока
     private void Die()
     {
