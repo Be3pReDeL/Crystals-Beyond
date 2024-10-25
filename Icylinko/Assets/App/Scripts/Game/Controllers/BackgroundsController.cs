@@ -18,12 +18,7 @@ public class BackgroundsController : MonoBehaviour
 
     private void Start()
     {
-        LoadCurrentBackground();
-    }
-
-    private void OnEnable()
-    {
-        LoadCurrentBackground();
+        ApplyBackground(PlayerPrefsController.GetCurrentBackground("Background 1"));
     }
 
     public void ApplyBackground(string backgroundName)
@@ -36,11 +31,5 @@ public class BackgroundsController : MonoBehaviour
                 break;
             }
         }
-    }
-
-    private void LoadCurrentBackground()
-    {
-        string savedBackground = PlayerPrefsController.GetCurrentBackground("Background 1");
-        ApplyBackground(savedBackground);
     }
 }

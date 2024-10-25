@@ -17,12 +17,18 @@ public class EndGameController : MonoBehaviour
 
     [SerializeField] private GameObject _menuGameObject;             // Объект, содержащий текст уровня
 
+    [SerializeField] private AudioClip _winAudioClip, _looseAudioClip;
+
+    private AudioSource _audioSource;
+
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
             Destroy(this);
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void ShowEndGameScreen(bool isWinner, int score, bool isEndlessMode, int level = 0)
@@ -31,6 +37,8 @@ public class EndGameController : MonoBehaviour
         _menuGameObject.SetActive(true);
 
         _HUDScreenController.CloseScreen();
+
+        _audioSource.PlayOneShot(isWinner ? _winAudioClip : _looseAudioClip);
 
         VibrationController.Instance.Vibrate(VibrationController.VibrationType.heavy);
 
@@ -43,7 +51,7 @@ public class EndGameController : MonoBehaviour
         else
         {
             _levelTextController.gameObject.SetActive(true);
-            _levelTextController.SetText($"Level: {level}");
+            _levelTextController.SetText($"Level: {level + 1}");
             // Отмечаем текущий уровень как завершенный
             PlayerPrefsController.SetLevelUnlocked(level + 1, true); // Открываем следующий уровень
             PlayerPrefsController.SetCompletedLevels(level); // Отмечаем текущий уровень как завершенный

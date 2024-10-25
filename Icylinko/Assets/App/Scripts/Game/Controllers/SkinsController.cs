@@ -8,13 +8,7 @@ public class SkinsController : MonoBehaviour
     private void Start()
     {
         // Загружаем текущий скин при старте
-        LoadCurrentSkin();
-    }
-
-    private void OnEnable()
-    {
-        // Загружаем скин каждый раз, когда объект активируется
-        LoadCurrentSkin();
+        ApplySkin(PlayerPrefsController.GetCurrentSkin("Skin 1"));
     }
 
     public void ApplySkin(string skinName)
@@ -24,15 +18,8 @@ public class SkinsController : MonoBehaviour
             if (availableSkins[i].name == skinName)
             {
                 playerImage.sprite = availableSkins[i];
-                PlayerPrefsController.SetCurrentSkin(skinName);
                 break;
             }
         }
-    }
-
-    private void LoadCurrentSkin()
-    {
-        string savedSkin = PlayerPrefsController.GetCurrentSkin("Skin 1");
-        ApplySkin(savedSkin);
     }
 }

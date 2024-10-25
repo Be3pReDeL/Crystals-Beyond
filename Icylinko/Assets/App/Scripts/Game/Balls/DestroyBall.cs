@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class DestroyBall : MonoBehaviour
 {
+    private static Transform _spawnPoint; 
+    private static string _SPAWNPOINTOBJECTNAME = "Spawn Point";
+
+    private void Awake() 
+    {
+        _spawnPoint = GameObject.Find(_SPAWNPOINTOBJECTNAME).transform;
+    } 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerCircleSegment segment = collision.GetComponent<PlayerCircleSegment>();
@@ -28,5 +36,5 @@ public class DestroyBall : MonoBehaviour
             GameController.Instance.ScoreGoal();
     }
 
-    private void SpawnParticle(GameObject particle) => Instantiate(particle, transform.position, Quaternion.identity);
+    private void SpawnParticle(GameObject particle) => Instantiate(particle, transform.position, Quaternion.identity, _spawnPoint);
 }

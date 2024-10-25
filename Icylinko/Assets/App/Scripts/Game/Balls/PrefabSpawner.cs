@@ -14,12 +14,16 @@ public class PrefabSpawner : MonoBehaviour
     private float _spawnTimer = 0f;  // Таймер для спавна
     private bool _isSpawningActive = true;
 
+    private AudioSource _audioSource;
+
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
             Destroy(this);
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -49,6 +53,8 @@ public class PrefabSpawner : MonoBehaviour
         GameObject randomPrefab = _prefabs[Random.Range(0, _prefabs.Length)];
 
         GameObject newPrefab = Instantiate(randomPrefab, _spawnPoint.position, Quaternion.identity, _spawnPoint);
+
+        _audioSource.Play();
 
         // Получаем компонент Rigidbody2D
         Rigidbody2D rb = newPrefab.GetComponent<Rigidbody2D>();

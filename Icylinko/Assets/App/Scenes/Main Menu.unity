@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &63834010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &113519816
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e19da14e75e6241ecbfac33428c0fd5e, type: 2}
-  m_sharedMaterial: {fileID: 5606691244080954867, guid: 508ea72db311542368316db0941cf239, type: 2}
+  m_sharedMaterial: {fileID: -6022881210095320343, guid: e19da14e75e6241ecbfac33428c0fd5e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_margin: {x: 10.158745, y: 0, z: 0, w: 18.624268}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &150795002
@@ -1959,6 +1959,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2629,6 +2633,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3056,6 +3064,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3200,6 +3212,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3453,6 +3469,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3777,6 +3797,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4023,6 +4047,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4280,7 +4308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &516100985
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4711,6 +4739,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4924,7 +4956,7 @@ GameObject:
   - component: {fileID: 561443693}
   - component: {fileID: 561443701}
   m_Layer: 5
-  m_Name: Skin 4 Buy Button
+  m_Name: Skin 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4962,7 +4994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: f9cd05cf764b54ec28d262fb149f9e35, type: 3}
 --- !u!82 &561443694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5209,7 +5241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsController: {fileID: 621507362}
   _buttonTextController: {fileID: 2019624260}
   _buyButton: {fileID: 561443698}
   _itemCost: 40000
@@ -5815,6 +5846,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6253,7 +6288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &683603359
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6369,7 +6404,7 @@ GameObject:
   - component: {fileID: 689649074}
   - component: {fileID: 689649076}
   m_Layer: 5
-  m_Name: Background 2 Buy Button
+  m_Name: Background 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6545,7 +6580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: f9cd05cf764b54ec28d262fb149f9e35, type: 3}
 --- !u!82 &689649075
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6654,7 +6689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsController: {fileID: 621507362}
   _buttonTextController: {fileID: 289221683}
   _buyButton: {fileID: 689649068}
   _itemCost: 20000
@@ -6906,6 +6940,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7050,6 +7088,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7239,6 +7281,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7461,7 +7507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 080f24cbbbc7a4f70830df393d3bbb55, type: 3}
 --- !u!82 &751693469
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7728,7 +7774,7 @@ GameObject:
   - component: {fileID: 776345819}
   - component: {fileID: 776345821}
   m_Layer: 5
-  m_Name: Skin 3 Buy Button
+  m_Name: Skin 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7904,7 +7950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: f9cd05cf764b54ec28d262fb149f9e35, type: 3}
 --- !u!82 &776345820
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8013,7 +8059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsController: {fileID: 621507362}
   _buttonTextController: {fileID: 360470921}
   _buyButton: {fileID: 776345813}
   _itemCost: 30000
@@ -8530,6 +8575,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8788,6 +8837,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9562,6 +9615,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9910,6 +9967,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10765,6 +10826,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11087,7 +11152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &995990002
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11533,7 +11598,7 @@ GameObject:
   - component: {fileID: 1055417088}
   - component: {fileID: 1055417090}
   m_Layer: 5
-  m_Name: Background 1 Buy Button
+  m_Name: Background 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11709,7 +11774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: f9cd05cf764b54ec28d262fb149f9e35, type: 3}
 --- !u!82 &1055417089
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11818,7 +11883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsController: {fileID: 621507362}
   _buttonTextController: {fileID: 1179415134}
   _buyButton: {fileID: 1055417082}
   _itemCost: 10000
@@ -12191,7 +12255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 080f24cbbbc7a4f70830df393d3bbb55, type: 3}
 --- !u!82 &1065127686
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12416,6 +12480,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12820,6 +12888,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12964,6 +13036,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12999,7 +13075,7 @@ GameObject:
   - component: {fileID: 1124204477}
   - component: {fileID: 1124204479}
   m_Layer: 5
-  m_Name: Background 3 Buy Button
+  m_Name: Background 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13175,7 +13251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: f9cd05cf764b54ec28d262fb149f9e35, type: 3}
 --- !u!82 &1124204478
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13284,7 +13360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsController: {fileID: 621507362}
   _buttonTextController: {fileID: 561196459}
   _buyButton: {fileID: 1124204471}
   _itemCost: 30000
@@ -14469,6 +14544,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15694,7 +15773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &1383080469
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15919,6 +15998,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16436,7 +16519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &1412209778
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16739,7 +16822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
 --- !u!82 &1417425648
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17027,7 +17110,7 @@ GameObject:
   - component: {fileID: 1489211479}
   - component: {fileID: 1489211481}
   m_Layer: 5
-  m_Name: Skin 1 Buy Button
+  m_Name: Skin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17203,7 +17286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: f9cd05cf764b54ec28d262fb149f9e35, type: 3}
 --- !u!82 &1489211480
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17312,7 +17395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsController: {fileID: 621507362}
   _buttonTextController: {fileID: 78918316}
   _buyButton: {fileID: 1489211473}
   _itemCost: 10000
@@ -17513,6 +17595,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18201,6 +18287,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18459,6 +18549,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18791,7 +18885,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8704600820029191008, guid: d42644174c4d8495cbec388466b7de3c, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2ffad0ba021094cbca54d72dd523df93, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -21789,6 +21883,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22120,7 +22218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 080f24cbbbc7a4f70830df393d3bbb55, type: 3}
 --- !u!82 &1956427819
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22459,6 +22557,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23156,7 +23258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 080f24cbbbc7a4f70830df393d3bbb55, type: 3}
 --- !u!82 &2031242968
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23272,7 +23374,7 @@ GameObject:
   - component: {fileID: 2036640238}
   - component: {fileID: 2036640240}
   m_Layer: 5
-  m_Name: Skin 2 Buy Button
+  m_Name: Skin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23448,7 +23550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376bf5520e9704b46a2ac44e7ab30e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: f9cd05cf764b54ec28d262fb149f9e35, type: 3}
 --- !u!82 &2036640239
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23557,7 +23659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b63c76801d224fcdad1e04d33aa2e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsController: {fileID: 621507362}
   _buttonTextController: {fileID: 1744479568}
   _buyButton: {fileID: 2036640232}
   _itemCost: 20000
@@ -23919,6 +24020,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24371,6 +24476,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24620,6 +24729,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8033409939144475317, guid: 963f1b53f71fc47f596353e22c31acba, type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d32e8a05c5c4720a385f14a010c663, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

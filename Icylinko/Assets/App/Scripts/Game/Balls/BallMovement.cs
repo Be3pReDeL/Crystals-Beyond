@@ -7,6 +7,10 @@ public class BallMovement : MonoBehaviour
     private float _currentSpeed;  // Текущая скорость
     private float _speedIncreaseRate;  // Скорость прироста
 
+    private AudioSource _audioSource;
+
+    private void Awake() => _audioSource = GetComponent<AudioSource>();
+
     private void Update()
     {
         // Постепенно увеличиваем скорость
@@ -29,5 +33,7 @@ public class BallMovement : MonoBehaviour
         // Меняем направление движения, сохраняя текущую скорость
         Vector2 newDirection = Vector2.Reflect(_rb.velocity.normalized, collision.contacts[0].normal);
         _rb.velocity = newDirection * _currentSpeed;
+
+        _audioSource.Play();
     }
 }

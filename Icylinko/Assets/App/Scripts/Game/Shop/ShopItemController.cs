@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class ShopItemController : MonoBehaviour
 {
-    [SerializeField] private PlayerPointsController _pointsController;
     [SerializeField] private TextController _buttonTextController;
     [SerializeField] private Button _buyButton;
     [SerializeField] private int _itemCost;
@@ -12,19 +11,21 @@ public class ShopItemController : MonoBehaviour
     private bool _isPurchased = false;
     private bool _isSelected = false;
 
+    private const float _UPDATINGUIDELAY = 0.05f;
+
     private void Start()
     {
         LoadState();
-        Invoke(nameof(UpdateUI), 0.1f);
+        Invoke(nameof(UpdateUI), _UPDATINGUIDELAY);
     }
 
-    private void OnEnable() => Invoke(nameof(UpdateUI), 0.1f);
+    private void OnEnable() => Invoke(nameof(UpdateUI), _UPDATINGUIDELAY);
 
     public void OnBuyButtonClick()
     {
         if (!_isPurchased)
         {
-            if (_pointsController.TrySpendPoints(_itemCost))
+            if (PlayerPointsController.Instance.TrySpendPoints(_itemCost))
             {
                 OnPurchased();
             }
@@ -55,7 +56,7 @@ public class ShopItemController : MonoBehaviour
         else
         {
             _buttonTextController.SetText(_itemCost.ToString());
-            _buyButton.interactable = _pointsController.GetPoints() >= _itemCost; // Используем новый метод
+            _buyButton.interactable = PlayerPointsController.Instance.GetPoints() >= _itemCost; // Используем новый метод
         }
     }
 

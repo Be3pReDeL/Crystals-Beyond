@@ -18,14 +18,6 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
-        LoadPurchasedItems();
-        SelectCurrentItems();
-    }
-
-    private void OnEnable()
-    {
-        // Обновляем состояние покупок и загружаем текущие выбранные товары
-        LoadPurchasedItems();
         SelectCurrentItems();
     }
 

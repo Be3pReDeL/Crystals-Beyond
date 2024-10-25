@@ -2,7 +2,16 @@ using UnityEngine;
 
 public class PlayerPointsController : MonoBehaviour
 {
+    public static PlayerPointsController Instance { get; private set; }
     [SerializeField] private TextController pointsTextController;
+
+    private void Awake() 
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+    }
 
     private void Start()
     {
