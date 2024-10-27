@@ -6,12 +6,11 @@ namespace Unity.Advertisement.IosSupport.Samples
 {
     public class ContextScreenManager : MonoBehaviour
     {
-        [SerializeField] private ContextScreenView _contextScreen;
+        [SerializeField] private ContextScreenView _contextScreenView;
 
-        private ContextScreenView _contextScreenView;
         private const string _PLAYERPREFSKEY = "GIdatLPL";
 
-        private void Awake()
+        private void Start()
         {
 #if UNITY_IOS
             ATTrackingStatusBinding.AuthorizationTrackingStatus status = ATTrackingStatusBinding.GetAuthorizationTrackingStatus();

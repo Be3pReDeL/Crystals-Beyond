@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9cd0c04993043aea4051af12479804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _contextScreen: {fileID: 114531588088387638}
+  _contextScreenView: {fileID: 114531588088387638}
 --- !u!4 &1246526939
 Transform:
   m_ObjectHideFlags: 0
