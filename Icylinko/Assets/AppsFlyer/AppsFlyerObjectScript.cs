@@ -4,16 +4,19 @@ using AppsFlyerSDK;
 
 public class AppsFlyerObjectScript : MonoBehaviour, IAppsFlyerConversionData
 {
-    [SerializeField] private string _devKey;
-    [SerializeField] private string _appID;
-    [SerializeField] private bool _getConversionData;
+    public string DevKey;
+    public string AppID;
+    public string UWPAppID;
+    public string MacOSAppID;
+    public bool IsDebug;
+    public bool GetConversionData;
 
     private const string _PLAYERPREFSKEY = "BOdatLPN";
 
     private void Start()
     {
-        AppsFlyer.setIsDebug(false);
-        AppsFlyer.initSDK(_devKey, _appID, _getConversionData ? this : null);
+        AppsFlyer.setIsDebug(IsDebug);
+        AppsFlyer.initSDK(DevKey, AppID, GetConversionData ? this : null);
 
         AppsFlyer.startSDK();
     }

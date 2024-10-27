@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6207133488976360133}
-  - component: {fileID: 4405976200006927252}
+  - component: {fileID: 5520999954231323396}
   m_Layer: 0
   m_Name: AppsFlyerObject
   m_TagString: Untagged
@@ -24,14 +24,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7315102894599890749}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4405976200006927252
+--- !u!114 &5520999954231323396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2ec6ba1ee8b48749524f015ed572a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devKey: 
-  appID: 
-  isDebug: 0
-  getConversionData: 0
+  DevKey: q7oPQ6Kq5NRRYk3LKMpHjM
+  AppID: 6737245854
+  UWPAppID: 
+  MacOSAppID: 
+  IsDebug: 0
+  GetConversionData: 1
