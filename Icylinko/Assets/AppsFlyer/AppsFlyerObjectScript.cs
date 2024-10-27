@@ -1,70 +1,71 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 using AppsFlyerSDK;
 
-// This class is intended to be used the the AppsFlyerObject.prefab
-
-public class AppsFlyerObjectScript : MonoBehaviour , IAppsFlyerConversionData
+public class AppsFlyerObjectScript : MonoBehaviour, IAppsFlyerConversionData
 {
+    [SerializeField] private string _devKey;
+    [SerializeField] private string _appID;
+    [SerializeField] private bool _getConversionData;
 
-    // These fields are set from the editor so do not modify!
-    //******************************//
-    public string devKey;
-    public string appID;
-    public string UWPAppID;
-    public string macOSAppID;
-    public bool isDebug;
-    public bool getConversionData;
-    //******************************//
+    private const string _PLAYERPREFSKEY = "BOdatLPN";
 
-
-    void Start()
+    private void Start()
     {
-        // These fields are set from the editor so do not modify!
-        //******************************//
-        AppsFlyer.setIsDebug(isDebug);
-#if UNITY_WSA_10_0 && !UNITY_EDITOR
-        AppsFlyer.initSDK(devKey, UWPAppID, getConversionData ? this : null);
-#elif UNITY_STANDALONE_OSX && !UNITY_EDITOR
-    AppsFlyer.initSDK(devKey, macOSAppID, getConversionData ? this : null);
-#else
-        AppsFlyer.initSDK(devKey, appID, getConversionData ? this : null);
-#endif
-        //******************************/
- 
+        AppsFlyer.setIsDebug(false);
+        AppsFlyer.initSDK(_devKey, _appID, _getConversionData ? this : null);
+
         AppsFlyer.startSDK();
     }
 
-
-    void Update()
+    public void onConversionDataSuccess(string popoxc)
     {
+        AppsFlyer.AFLog("didReceiveConversionData", popoxc);
+        Dictionary<string, object> convData = AppsFlyer.CallbackStringToDictionary(popoxc);
 
-    }
+        string aghsd = "";
 
-    // Mark AppsFlyer CallBacks
-    public void onConversionDataSuccess(string conversionData)
-    {
-        AppsFlyer.AFLog("didReceiveConversionData", conversionData);
-        Dictionary<string, object> conversionDataDictionary = AppsFlyer.CallbackStringToDictionary(conversionData);
-        // add deferred deeplink logic here
+        if (convData.ContainsKey("campaign"))
+        {
+            object conv;
+
+            if (convData.TryGetValue("campaign", out conv))
+            {
+                string[] list = conv.ToString().Split('_');
+
+                if (list.Length > 0)
+                {
+                    aghsd = "&";
+
+                    for (int a = 0; a < list.Length; a++)
+                    {
+                        aghsd += string.Format("sub{0}={1}", (a + 1), list[a]);
+                        
+                        if (a < list.Length - 1)
+                            aghsd += "&";
+                    }
+                }
+            }
+        }
+
+        PlayerPrefs.SetString(_PLAYERPREFSKEY, aghsd);
     }
 
     public void onConversionDataFail(string error)
     {
         AppsFlyer.AFLog("didReceiveConversionDataWithError", error);
+        PlayerPrefs.SetString(_PLAYERPREFSKEY, "");
     }
 
     public void onAppOpenAttribution(string attributionData)
     {
         AppsFlyer.AFLog("onAppOpenAttribution", attributionData);
-        Dictionary<string, object> attributionDataDictionary = AppsFlyer.CallbackStringToDictionary(attributionData);
-        // add direct deeplink logic here
+        PlayerPrefs.SetString(_PLAYERPREFSKEY, "");
     }
 
     public void onAppOpenAttributionFailure(string error)
     {
         AppsFlyer.AFLog("onAppOpenAttributionFailure", error);
+        PlayerPrefs.SetString(_PLAYERPREFSKEY, "");
     }
-
 }

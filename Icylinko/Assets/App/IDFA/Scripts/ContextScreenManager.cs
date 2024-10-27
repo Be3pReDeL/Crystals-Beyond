@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Unity.Advertisement.IosSupport.Components;
 using System.Collections;
+using Unity.Advertisement.IosSupport.Components;
 
 namespace Unity.Advertisement.IosSupport.Samples
 {
@@ -9,25 +8,31 @@ namespace Unity.Advertisement.IosSupport.Samples
     {
         [SerializeField] private ContextScreenView _contextScreen;
 
-        private const string _PLAYERPREFSKEY = "GIDATLPL";
+        private ContextScreenView _contextScreenView;
+        private const string _PLAYERPREFSKEY = "GIdatLPL";
 
-        private void Start()
+        private void Awake()
         {
 #if UNITY_IOS
-            var status = ATTrackingStatusBinding.GetAuthorizationTrackingStatus();
+            ATTrackingStatusBinding.AuthorizationTrackingStatus status = ATTrackingStatusBinding.GetAuthorizationTrackingStatus();
  
-            if (status == ATTrackingStatusBinding.AuthorizationTrackingStatus.NOT_DETERMINED)
-                _contextScreen.RequestAuthorizationTracking();
-#else
-            Debug.Log("Unity iOS Support: App Tracking Transparency status not checked, because the platform is not iOS.");
+            if (status == ATTrackingStatusBinding.AuthorizationTrackingStatus.NOT_DETERMINED || 
+            status == ATTrackingStatusBinding.AuthorizationTrackingStatus.DENIED || 
+            status == ATTrackingStatusBinding.AuthorizationTrackingStatus.RESTRICTED)
+                _contextScreenView.SentTrackingAuthorizationRequest?.AddListener(StartStartGIDATLPLCoroutine);
+            else
+            {
+                PlayerPrefs.SetInt(_PLAYERPREFSKEY, 1);
+
+                LoadSceneButton.LoadRelativeScene(1);
+            }
 #endif
-            StartCoroutine(StartGIDATLPL());
         }
 
         private IEnumerator StartGIDATLPL()
         {
-#if UNITY_IOS && !UNITY_EDITOR
-            var status = ATTrackingStatusBinding.GetAuthorizationTrackingStatus();
+#if UNITY_IOS
+            ATTrackingStatusBinding.AuthorizationTrackingStatus status = ATTrackingStatusBinding.GetAuthorizationTrackingStatus();
  
             while (status == ATTrackingStatusBinding.AuthorizationTrackingStatus.NOT_DETERMINED)
             {
@@ -43,5 +48,9 @@ namespace Unity.Advertisement.IosSupport.Samples
 
             yield return null;
         }
+
+        private void StartStartGIDATLPLCoroutine() => StartCoroutine(StartGIDATLPL());
+
+        private void OnDisable() => _contextScreenView.SentTrackingAuthorizationRequest?.RemoveListener(StartStartGIDATLPLCoroutine);
     }
 }
