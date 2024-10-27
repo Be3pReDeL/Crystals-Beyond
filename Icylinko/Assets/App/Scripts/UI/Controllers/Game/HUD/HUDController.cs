@@ -41,7 +41,7 @@ public class HUDController : MonoBehaviour
                 break;
 
             case GameController.GameMode.levels:
-                UpdateText(_levelTextController, string.Format(_defaultLevelText, GameController.Instance.CurrentLevel));
+                UpdateText(_levelTextController, string.Format(_defaultLevelText, GameController.Instance.CurrentLevel + 1));
                 break;
         }
     }
