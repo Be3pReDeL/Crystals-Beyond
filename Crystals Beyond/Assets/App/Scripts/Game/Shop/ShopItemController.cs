@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,15 +12,21 @@ public class ShopItemController : MonoBehaviour
     private bool _isPurchased = false;
     private bool _isSelected = false;
 
-    private const float _UPDATINGUIDELAY = 0.05f;
+    private const float _UI_UPDATE_DELAY = 0.05f;
 
     private void Start()
     {
+        if (PlayerPointsController.Instance == null || ShopManager.Instance == null)
+        {
+            Debug.LogError("Не удалось инициализировать ShopItemController: отсутствует один из Singleton-объектов.");
+            return;
+        }
+
         LoadState();
-        Invoke(nameof(UpdateUI), _UPDATINGUIDELAY);
+        StartCoroutine(DelayedUpdateUI(_UI_UPDATE_DELAY));
     }
 
-    private void OnEnable() => Invoke(nameof(UpdateUI), _UPDATINGUIDELAY);
+    private void OnEnable() => StartCoroutine(DelayedUpdateUI(_UI_UPDATE_DELAY));
 
     public void OnBuyButtonClick()
     {
@@ -38,12 +45,11 @@ public class ShopItemController : MonoBehaviour
         ShopManager.Instance.UpdateAllButtonsUI();
     }
 
-    public void OnPurchased()
+    private void OnPurchased()
     {
         _isPurchased = true;
         SavePurchase();
         SelectItem();
-        UpdateUI();
     }
 
     public void UpdateUI()
@@ -51,27 +57,31 @@ public class ShopItemController : MonoBehaviour
         if (_isPurchased)
         {
             _buttonTextController.SetText(_isSelected ? "Selected" : "Select");
-            _buyButton.interactable = !_isSelected; // Если выбран, кнопка неактивна
+            _buyButton.interactable = !_isSelected;
         }
         else
         {
             _buttonTextController.SetText(_itemCost.ToString());
-            _buyButton.interactable = PlayerPointsController.Instance.GetPoints() >= _itemCost; // Используем новый метод
+            _buyButton.interactable = PlayerPointsController.Instance.GetPoints() >= _itemCost;
         }
     }
 
     public void SelectItem()
     {
         _isSelected = true;
+
         if (ShopManager.Instance.IsSkin(_itemName))
         {
             ShopManager.Instance.DeselectOtherSkins(_itemName);
+            PlayerPrefsController.SetCurrentSkin(_itemName);
         }
         else
         {
             ShopManager.Instance.DeselectOtherBackgrounds(_itemName);
+            PlayerPrefsController.SetCurrentBackground(_itemName);
             BackgroundsController.Instance.ApplyBackground(_itemName);
         }
+
         UpdateUI();
     }
 
@@ -83,7 +93,6 @@ public class ShopItemController : MonoBehaviour
 
     private void SavePurchase()
     {
-        // Сохранение покупки в PlayerPrefs
         if (ShopManager.Instance.IsSkin(_itemName))
         {
             string purchasedSkins = PlayerPrefsController.GetPurchasedSkins("");
@@ -100,24 +109,21 @@ public class ShopItemController : MonoBehaviour
     {
         if (ShopManager.Instance.IsSkin(_itemName))
         {
-            string purchasedSkins = PlayerPrefsController.GetPurchasedSkins("");
-            _isPurchased = purchasedSkins.Contains(_itemName);
+            _isPurchased = PlayerPrefsController.GetPurchasedSkins("").Contains(_itemName);
+            _isSelected = PlayerPrefsController.GetCurrentSkin("") == _itemName;
         }
         else
         {
-            string purchasedBackgrounds = PlayerPrefsController.GetPurchasedBackgrounds("");
-            _isPurchased = purchasedBackgrounds.Contains(_itemName);
+            _isPurchased = PlayerPrefsController.GetPurchasedBackgrounds("").Contains(_itemName);
+            _isSelected = PlayerPrefsController.GetCurrentBackground("") == _itemName;
         }
-
-        string currentSkin = PlayerPrefsController.GetCurrentSkin("");
-        string currentBackground = PlayerPrefsController.GetCurrentBackground("");
-
-        _isSelected = (ShopManager.Instance.IsSkin(_itemName) && currentSkin == _itemName) ||
-                     (!ShopManager.Instance.IsSkin(_itemName) && currentBackground == _itemName);
     }
 
-    public string GetItemName()
+    private IEnumerator DelayedUpdateUI(float delay)
     {
-        return _itemName;
+        yield return new WaitForSeconds(delay);
+        UpdateUI();
     }
+
+    public string GetItemName() => _itemName;
 }
