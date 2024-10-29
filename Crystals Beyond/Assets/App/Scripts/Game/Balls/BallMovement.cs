@@ -1,39 +1,64 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 public class BallMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
-    private float _currentSpeed;  // Текущая скорость
-    private float _speedIncreaseRate;  // Скорость прироста
+    
+    [SerializeField] private float _initialSpeed = 5f;
+    [SerializeField] private float _speedIncreaseRate = 0.5f;
 
+    private float _currentSpeed;
     private AudioSource _audioSource;
 
-    private void Awake() => _audioSource = GetComponent<AudioSource>();
-
-    private void Update()
+    private void Awake()
     {
-        // Постепенно увеличиваем скорость
-        _currentSpeed += _speedIncreaseRate * Time.deltaTime;
+        _rb = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
+        
+        InitializeMovement();
+    }
 
-        // Нормализуем направление движения, чтобы поддерживать постоянную скорость
+    private void Update() => IncreaseSpeed();
+
+    // Инициализируем начальное состояние движения
+    private void InitializeMovement()
+    {
+        _currentSpeed = _initialSpeed;
         _rb.velocity = _rb.velocity.normalized * _currentSpeed;
     }
 
-    public void Setup(Rigidbody2D rb, float initialSpeed, float speedIncreaseRate)
+    // Увеличиваем скорость плавно
+    private void IncreaseSpeed()
     {
-        _rb = rb;
-        _currentSpeed = initialSpeed;
-        _speedIncreaseRate = speedIncreaseRate;
+        _currentSpeed += _speedIncreaseRate * Time.deltaTime;
+        _rb.velocity = _rb.velocity.normalized * _currentSpeed;
     }
 
-    // Обработка столкновений с изменением направления
+    // Метод для обработки звука столкновения
+    private void PlayCollisionSound()
+    {
+        if (_audioSource != null)
+            _audioSource.Play();
+    }
+
+    // Обработка столкновений с отражением направления
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Меняем направление движения, сохраняя текущую скорость
-        Vector2 newDirection = Vector2.Reflect(_rb.velocity.normalized, collision.contacts[0].normal);
-        _rb.velocity = newDirection * _currentSpeed;
+        if (collision.contacts.Length > 0)
+        {
+            Vector2 newDirection = Vector2.Reflect(_rb.velocity.normalized, collision.contacts[0].normal);
+            _rb.velocity = newDirection * _currentSpeed;
+            
+            PlayCollisionSound();
+        }
+    }
 
-        _audioSource.Play();
+    public void Setup(float initialSpeed, float speedIncreaseRate)
+    {
+        _initialSpeed = initialSpeed;
+        _speedIncreaseRate = speedIncreaseRate;
+        InitializeMovement();
     }
 }
