@@ -45,7 +45,7 @@ public class ShopItemController : MonoBehaviour
         ShopManager.Instance.UpdateAllButtonsUI();
     }
 
-    private void OnPurchased()
+    public void OnPurchased()
     {
         _isPurchased = true;
         SavePurchase();
