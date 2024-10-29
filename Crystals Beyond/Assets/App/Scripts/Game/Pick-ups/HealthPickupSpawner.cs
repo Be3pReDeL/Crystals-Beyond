@@ -5,8 +5,7 @@ public class HealthPickupSpawner : MonoBehaviour
     [SerializeField] private GameObject healthPickupPrefab;      // Префаб для HealthPickup
     [SerializeField] private float spawnInterval = 5f;           // Интервал спавна предметов
     [SerializeField] private GameObject spawnAreaObject;         // Ссылка на объект, определяющий зону спавна
-
-    private Vector3 spawnAreaSize;                               // Размер зоны спавна
+    [SerializeField] private Vector3 spawnAreaSize = new Vector3(10f, 0f, 10f); // Размер зоны спавна, настраиваемый в инспекторе
 
     private void Start()
     {
@@ -14,10 +13,6 @@ public class HealthPickupSpawner : MonoBehaviour
         {
             // Устанавливаем размер зоны спавна на основе размеров spawnAreaObject
             spawnAreaSize = spawnAreaObject.transform.localScale;
-        }
-        else
-        {
-            Debug.LogError("Необходимо указать объект зоны спавна (spawnAreaObject)");
         }
 
         InvokeRepeating(nameof(SpawnPickup), spawnInterval, spawnInterval); // Запускаем спавн по таймеру
@@ -33,16 +28,15 @@ public class HealthPickupSpawner : MonoBehaviour
             0,
             Random.Range(-spawnAreaSize.z / 2, spawnAreaSize.z / 2)
         );
-        Instantiate(healthPickupPrefab, spawnAreaObject.transform.position + randomPosition, Quaternion.identity);
+
+        // Спавним предмет в пределах зоны
+        Instantiate(healthPickupPrefab, transform.position + randomPosition, Quaternion.identity);
     }
 
     // Визуализация зоны спавна в редакторе
     private void OnDrawGizmos()
     {
-        if (spawnAreaObject != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(spawnAreaObject.transform.position, spawnAreaObject.transform.localScale);
-        }
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(spawnAreaObject != null ? spawnAreaObject.transform.position : transform.position, spawnAreaSize);
     }
 }

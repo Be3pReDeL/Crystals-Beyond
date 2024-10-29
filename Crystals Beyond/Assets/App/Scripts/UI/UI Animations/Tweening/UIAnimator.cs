@@ -60,10 +60,7 @@ public class UIAnimator : MonoBehaviour
     public void Disappear(GameObject gameObject)
     {
         if (_isAnimating)
-        {
-            Debug.Log("Animation in progress, cannot disappear yet.");
             return;
-        }
 
         Vector2 targetPosition = GetStartPosition();
         
@@ -76,7 +73,7 @@ public class UIAnimator : MonoBehaviour
             .OnComplete(() =>
             {
                 // Запускаем корутину через CoroutineManager
-                CoroutineManager.Instance.StartExternalCoroutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject));
+                CoroutineManager.StartRoutine(DisableGameobjectCoroutine(_DEACTIVATESCREENDELAY, gameObject));
             });
     }
 

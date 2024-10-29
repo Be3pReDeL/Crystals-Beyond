@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class BackgroundsController : MonoBehaviour
 {
@@ -8,28 +9,45 @@ public class BackgroundsController : MonoBehaviour
     [SerializeField] private Image backgroundImage;
     [SerializeField] private Sprite[] availableBackgrounds;
 
-    private void Awake() 
+    private Dictionary<string, Sprite> _backgroundDictionary;
+
+    private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            InitializeBackgroundDictionary();
+        }
         else
-            Destroy(this);
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        ApplyBackground(PlayerPrefsController.GetCurrentBackground("Background 1"));
+        string backgroundName = PlayerPrefsController.GetCurrentBackground("Background 1") ?? "Background 1";
+        ApplyBackground(backgroundName);
+    }
+
+    private void InitializeBackgroundDictionary()
+    {
+        _backgroundDictionary = new Dictionary<string, Sprite>();
+        foreach (Sprite sprite in availableBackgrounds)
+        {
+            _backgroundDictionary[sprite.name] = sprite;
+        }
     }
 
     public void ApplyBackground(string backgroundName)
     {
-        for (int i = 0; i < availableBackgrounds.Length; i++)
+        if (_backgroundDictionary.TryGetValue(backgroundName, out Sprite backgroundSprite))
         {
-            if (availableBackgrounds[i].name == backgroundName)
-            {
-                backgroundImage.sprite = availableBackgrounds[i];
-                break;
-            }
+            backgroundImage.sprite = backgroundSprite;
+        }
+        else
+        {
+            Debug.LogWarning($"Background '{backgroundName}' not found. Ensure the background name is correct.");
         }
     }
 }

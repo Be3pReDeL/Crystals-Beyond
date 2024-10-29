@@ -3,42 +3,55 @@ using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour
 {
-    [SerializeField] private int _levelNumber;  // Номер уровня, устанавливаемый через инспектор
-    [SerializeField] private TextController _levelText;  // Текст с номером уровня
-    [SerializeField] private GameObject _completedIcon;  // Иконка завершенного уровня
+    [SerializeField] private int _levelNumber;
+    [SerializeField] private TextController _levelText;
+    [SerializeField] private GameObject _completedIcon;
     
     private int _realLevelNumber;
     private Button _button;
 
     private void Start()
     {
-        _realLevelNumber = _levelNumber - 1;
-
         _button = GetComponent<Button>();
-
-        // Устанавливаем текст с номером уровня
-        _levelText.SetText(_levelNumber.ToString());
-
-        // Проверяем, открыт ли уровень
-        bool isUnlocked = PlayerPrefsController.IsLevelUnlocked(_realLevelNumber);
-        _button.interactable = isUnlocked;
-
-        // Показываем или скрываем иконку завершения уровня
-        _completedIcon.SetActive(PlayerPrefsController.GetCompletedLevels(0) > _levelNumber);
-
+        _realLevelNumber = _levelNumber - 1;
+        
+        // Инициализируем интерфейс
+        InitializeUI();
+        
+        // Инициализируем состояние уровня
+        InitializeLevelState();
+        
         // Подписываемся на событие нажатия
         _button.onClick.AddListener(OnLevelButtonClick);
     }
 
+    private void InitializeUI()
+    {
+        // Устанавливаем текст с номером уровня
+        _levelText.SetText(_levelNumber.ToString());
+    }
+
+    private void InitializeLevelState()
+    {
+        bool isUnlocked = PlayerPrefsController.IsLevelUnlocked(_realLevelNumber);
+        _button.interactable = isUnlocked;
+
+        bool isCompleted = PlayerPrefsController.GetCompletedLevels(0) > _levelNumber;
+        _completedIcon.SetActive(isCompleted);
+    }
+
     private void OnLevelButtonClick()
     {
-        // Устанавливаем режим игры в "levels"
-        PlayerPrefsController.SetGameMode(GameController.GameMode.levels);
-
-        // Устанавливаем текущий уровень на основе номера, установленного в инспекторе
-        PlayerPrefsController.SetLevel(_realLevelNumber);
-
-        // Загружаем следующую сцену
+        // Настройка уровня и режима
+        SetupLevel();
+        
+        // Загружаем сцену
         LoadSceneButton.LoadRelativeScene(1);
+    }
+
+    private void SetupLevel()
+    {
+        PlayerPrefsController.SetGameMode(GameController.GameMode.Levels);
+        PlayerPrefsController.SetLevel(_realLevelNumber);
     }
 }

@@ -2,13 +2,20 @@ using UnityEngine;
 
 public class DestroyBall : MonoBehaviour
 {
-    private static Transform _spawnPoint; 
-    private static string _SPAWNPOINTOBJECTNAME = "Spawn Point";
+    [SerializeField] private Transform _spawnPoint;
+    [SerializeField] private string _spawnPointTag = "SpawnPoint";
 
-    private void Awake() 
+    private void Awake()
     {
-        _spawnPoint = GameObject.Find(_SPAWNPOINTOBJECTNAME).transform;
-    } 
+        if (_spawnPoint == null)
+        {
+            GameObject spawnObject = GameObject.FindWithTag(_spawnPointTag);
+            if (spawnObject != null)
+                _spawnPoint = spawnObject.transform;
+            else
+                Debug.LogWarning("Spawn point not found. Ensure an object with tag 'SpawnPoint' is present in the scene.");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,13 +24,11 @@ public class DestroyBall : MonoBehaviour
         if (segment != null)
         {
             UpdateScores(segment);
-            
             SpawnParticle(segment.Particle);
-
-            VibrationController.Instance.Vibrate(VibrationController.VibrationType.medium);
+            HandleVibration();
 
             if (segment.ScoreValue < 0)
-                Player.Instance.TakeDamage(10);
+                Player.Instance?.TakeDamage(10);
 
             Destroy(gameObject);
         }
@@ -31,10 +36,25 @@ public class DestroyBall : MonoBehaviour
 
     private void UpdateScores(PlayerCircleSegment segment)
     {
-        GameController.Instance.ScorePoints(segment.ScoreValue);
-        if(GameController.Instance.CurrentGameMode == GameController.GameMode.levels)
-            GameController.Instance.ScoreGoal();
+        if (GameController.Instance != null)
+        {
+            GameController.Instance.ScorePoints(segment.ScoreValue);
+            if (GameController.Instance.CurrentGameMode == GameController.GameMode.Levels)
+                GameController.Instance.ScoreGoal();
+        }
     }
 
-    private void SpawnParticle(GameObject particle) => Instantiate(particle, transform.position, Quaternion.identity, _spawnPoint);
+    private void SpawnParticle(GameObject particle)
+    {
+        if (_spawnPoint != null)
+            Instantiate(particle, transform.position, Quaternion.identity, _spawnPoint);
+        else
+            Instantiate(particle, transform.position, Quaternion.identity);
+    }
+
+    private void HandleVibration()
+    {
+        if (VibrationController.Instance != null)
+            VibrationController.Instance.Vibrate(VibrationController.VibrationType.medium);
+    }
 }

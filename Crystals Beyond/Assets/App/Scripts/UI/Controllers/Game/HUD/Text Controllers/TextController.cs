@@ -15,6 +15,7 @@ public class TextController : MonoBehaviour, ITextController
     public void SetText(string text)
     {
         if (_text == null) _text = GetComponent<TextMeshProUGUI>(); // Подстраховка на случай если _text не успеет проинициализироваться
+        
         _text.text = text;
     }
 }

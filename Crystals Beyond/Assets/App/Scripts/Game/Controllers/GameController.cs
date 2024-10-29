@@ -13,90 +13,130 @@ public class GameController : MonoBehaviour
     [SerializeField] private float[] _levelCountAtTime;
     [SerializeField] private float[] _levelSpeedIncreaseRate;
     [Range(0, 30)]
-    [SerializeField] private int _dificultyOfEndlessMode = 15;
+    [SerializeField] private int _difficultyOfEndlessMode = 15;
 
     [SerializeField] private GameObject _tutorialScreen;
 
-    public enum GameMode { endless, levels }
+    public enum GameMode { Endless, Levels }
     public GameMode CurrentGameMode { get; private set; }
     public int CurrentLevel { get; private set; } = 0;
 
-    public UnityEvent<bool> OnGameComplete;
+    public UnityEvent<bool> OnGameComplete { get; private set; } = new UnityEvent<bool>();
 
-    private int _points = 0;  // Текущий счет
-    private int _caughtBalls = 0;  // Количество пойманных шариков
+    private int _points = 0;
+    private int _caughtBalls = 0;
 
     private void Awake() 
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(this);
-
-        if (OnGameComplete == null)
-            OnGameComplete = new UnityEvent<bool>();
-
-        CurrentGameMode = PlayerPrefsController.GetGameMode(GameMode.endless);
-        
-        if (CurrentGameMode == GameMode.levels)
-            CurrentLevel = PlayerPrefsController.GetLevel(0);
+        InitializeSingleton();
+        InitializeGameMode();
+        InitializeLevel();
     }
 
     private void Start() 
     {
-        if(PlayerPrefs.GetInt("Show Tutorial", 0) == 0)
+        ShowTutorialIfFirstLaunch();
+        InitializeGame();
+    }
+
+    private void InitializeSingleton()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
+    private void InitializeGameMode()
+    {
+        CurrentGameMode = PlayerPrefsController.GetGameMode(GameMode.Endless);
+    }
+
+    private void InitializeLevel()
+    {
+        if (CurrentGameMode == GameMode.Levels)
+        {
+            CurrentLevel = PlayerPrefsController.GetLevel(0);
+        }
+    }
+
+    private void ShowTutorialIfFirstLaunch()
+    {
+        if (PlayerPrefs.GetInt("Show Tutorial", 0) == 0)
         {
             TimeController.Instance.StopTime(0);
             _tutorialScreen.SetActive(true);
-
             PlayerPrefs.SetInt("Show Tutorial", 1);
         }
+    }
 
-        SpawnMaze(CurrentGameMode == GameMode.levels ? CurrentLevel : Random.Range(0, _levelMazes.Length));
-        SetupPrefabSpawner(CurrentGameMode == GameMode.levels ? CurrentLevel : _dificultyOfEndlessMode);
-
-        HUDController.Instance.UpdateScoresText(0);
-        if (CurrentGameMode == GameMode.levels)
-            HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel]);
-
+    private void InitializeGame()
+    {
+        SpawnMaze(CurrentGameMode == GameMode.Levels ? CurrentLevel : Random.Range(0, _levelMazes.Length));
+        SetupPrefabSpawner(CurrentGameMode == GameMode.Levels ? CurrentLevel : _difficultyOfEndlessMode);
+        
+        InitializeHUD();
         TimeController.Instance.StartSpeedingUp();
-
         OnGameComplete.AddListener(CompleteGame);
     }
 
-    private void SetupPrefabSpawner(int type)
+    private void InitializeHUD()
     {
-        PrefabSpawner.Instance.SpawnInterval = _levelSpawnInterval[type];
-        PrefabSpawner.Instance.InitialSpeed = _levelInitialSpeed[type];
-        PrefabSpawner.Instance.CountAtTime = _levelCountAtTime[type];
-        PrefabSpawner.Instance.SpeedIncreaseRate = _levelSpeedIncreaseRate[type];
+        HUDController.Instance.SetScore(_points);
+        if (CurrentGameMode == GameMode.Levels)
+        {
+            HUDController.Instance.SetGoal(_levelGoals[CurrentLevel]);
+        }
     }
 
-    private void SpawnMaze(int type) => Instantiate(_levelMazes[type], _mazeSpawnPoint.position, Quaternion.identity, _mazeSpawnPoint);
+    private void SetupPrefabSpawner(int index)
+    {
+        PrefabSpawner.Instance.SpawnInterval = _levelSpawnInterval[index];
+        PrefabSpawner.Instance.InitialSpeed = _levelInitialSpeed[index];
+        PrefabSpawner.Instance.CountAtTime = _levelCountAtTime[index];
+        PrefabSpawner.Instance.SpeedIncreaseRate = _levelSpeedIncreaseRate[index];
+    }
+
+    private void SpawnMaze(int index)
+    {
+        Instantiate(_levelMazes[index], _mazeSpawnPoint.position, Quaternion.identity, _mazeSpawnPoint);
+    }
 
     public void ScorePoints(int points)
     {
-        _points += points;  // Увеличиваем счет за выигрышный сегмент
-        HUDController.Instance.UpdateScoresText(_points);  // Обновляем число заработанных очков
+        _points += points;
+        HUDController.Instance.SetScore(_points);
     }
 
     public void ScoreGoal()
     {
-        _caughtBalls++;  // Увеличиваем счет за выигрышный сегмент
-        HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel] - _caughtBalls);  // Обновляем число заработанных очков
-
-        if (_caughtBalls == _levelGoals[CurrentLevel])
-            OnGameComplete?.Invoke(true);
+        _caughtBalls++;
+        if (CurrentGameMode == GameMode.Levels)
+        {
+            HUDController.Instance.SetGoal(_levelGoals[CurrentLevel] - _caughtBalls);
+            if (_caughtBalls >= _levelGoals[CurrentLevel])
+            {
+                OnGameComplete?.Invoke(true);
+            }
+        }
     }
 
-    private void CompleteGame(bool isPlayerAWinner) 
+    private void CompleteGame(bool isPlayerAWinner)
     {
         PrefabSpawner.Instance.Stop();
         IcePowerController.Instance.IsIcePowerAvailable = false;
         TimeController.Instance.StopSpeedingUp();
 
-        EndGameController.Instance.ShowEndGameScreen(isPlayerAWinner, _points, CurrentGameMode == GameMode.endless, CurrentLevel);
-
-        Debug.Log("SO PLAYER IS A " + (isPlayerAWinner ? "WINNER" : "LOSER"));
+        EndGameController.Instance.ShowEndGameScreen(
+            isPlayerAWinner, 
+            _points, 
+            CurrentGameMode == GameMode.Endless, 
+            CurrentLevel
+        );
     }
 }

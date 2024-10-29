@@ -10,17 +10,14 @@ public class HUDController : MonoBehaviour
 
     [SerializeField] private GameObject _goalText;
 
-    private const string DEFAULTGOALTEXT = "Goal: {0}";
-    private string _defaultLevelText = "Level: {0}";
-    private string _defaultGameModeText = "Endless Mode";
-    private const string DEFAULTSCORESTEXT = "Scores: {0}";
+    private const string EndlessModeText = "Endless Mode";
 
     private void Awake() 
     {
         if (Instance == null)
             Instance = this;
         else
-            Destroy(this);
+            Destroy(gameObject);
     }
 
     private void Start() 
@@ -28,27 +25,28 @@ public class HUDController : MonoBehaviour
         ChangeGameMode(GameController.Instance.CurrentGameMode);
     }
 
-    public void UpdateGoalText(int score) => UpdateText(_goalTextController, string.Format(DEFAULTGOALTEXT, score < 0 ? 0 : score));
-    public void UpdateScoresText(int points) => UpdateText(_scoresTextController, string.Format(DEFAULTSCORESTEXT, points));
+    public void SetGoal(int goal) => UpdateText(_goalTextController, $"Goal: {Mathf.Max(0, goal)}");
+    public void SetScore(int score) => UpdateText(_scoresTextController, $"Scores: {score}");
+    public void SetLevel(int level) => UpdateText(_levelTextController, $"Level: {level}");
 
     public void ChangeGameMode(GameController.GameMode gameMode) 
     {
         switch (gameMode) 
         {
-            case GameController.GameMode.endless:
-                UpdateText(_levelTextController, _defaultGameModeText);
+            case GameController.GameMode.Endless:
+                UpdateText(_levelTextController, EndlessModeText);
                 _goalText.SetActive(false);
                 break;
 
-            case GameController.GameMode.levels:
-                UpdateText(_levelTextController, string.Format(_defaultLevelText, GameController.Instance.CurrentLevel + 1));
+            case GameController.GameMode.Levels:
+                SetLevel(GameController.Instance.CurrentLevel + 1);
+                _goalText.SetActive(true);
                 break;
         }
     }
 
-    private void UpdateText(ITextController textController, string text)
+    private void UpdateText(TextController textController, string text)
     {
-        if (textController != null)
-            textController.SetText(text);
+        textController?.SetText(text);
     }
 }

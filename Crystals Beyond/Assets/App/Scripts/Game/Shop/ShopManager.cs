@@ -13,18 +13,29 @@ public class ShopManager : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else
-            Destroy(this);
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
 
     private void Start()
     {
+        LoadPurchasedItems();
         SelectCurrentItems();
     }
 
     private void SelectCurrentItems()
     {
-        DeselectOtherSkins(PlayerPrefsController.GetCurrentSkin("Skin 1"));
-        DeselectOtherBackgrounds(PlayerPrefsController.GetCurrentBackground("Background 1"));
+        string currentSkin = PlayerPrefsController.GetCurrentSkin("Skin 1");
+        string currentBackground = PlayerPrefsController.GetCurrentBackground("Background 1");
+        
+        DeselectOtherSkins(currentSkin);
+        DeselectOtherBackgrounds(currentBackground);
+        
+        // Сохранение текущих выбранных элементов для быстрого доступа
+        PlayerPrefsController.SetCurrentSkin(currentSkin);
+        PlayerPrefsController.SetCurrentBackground(currentBackground);
     }
 
     public void DeselectOtherSkins(string selectedSkinName)
@@ -36,7 +47,6 @@ public class ShopManager : MonoBehaviour
                 skin.Deselect();
             }
         }
-        PlayerPrefsController.SetCurrentSkin(selectedSkinName);
     }
 
     public void UpdateAllButtonsUI() 
@@ -57,16 +67,12 @@ public class ShopManager : MonoBehaviour
                 background.Deselect();
             }
         }
-        PlayerPrefsController.SetCurrentBackground(selectedBackgroundName);
     }
 
     public bool IsSkin(string itemName)
     {
-        foreach (var skin in skins)
-        {
-            if (skin.GetItemName() == itemName) return true;
-        }
-        return false;
+        // Быстрый поиск по скинам
+        return skins.Exists(skin => skin.GetItemName() == itemName);
     }
 
     private void LoadPurchasedItems()

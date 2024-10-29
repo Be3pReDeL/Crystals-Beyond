@@ -20,7 +20,7 @@ public class PlayerPointsController : MonoBehaviour
 
     public void UpdatePointsUI()
     {
-        int points = GetPoints(); // Обновляем UI с использованием нового метода
+        int points = GetPoints();
         pointsTextController.SetText(points.ToString());
     }
 
@@ -37,15 +37,23 @@ public class PlayerPointsController : MonoBehaviour
         return false;
     }
 
-    // Добавляем метод для получения текущих очков
+    // Метод для получения текущих очков
     public int GetPoints()
     {
-        return PlayerPrefsController.GetPoints(0); // Получаем очки из PlayerPrefs
+        return PlayerPrefsController.GetPoints(0);
     }
 
     // Метод для установки очков
     public void SetPoints(int points)
     {
         PlayerPrefsController.SetPoints(points);
+        UpdatePointsUI();
+    }
+
+    // Метод для добавления очков
+    public void AddPoints(int amount)
+    {
+        int points = GetPoints() + amount;
+        SetPoints(points);
     }
 }

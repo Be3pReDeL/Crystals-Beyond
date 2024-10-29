@@ -3,12 +3,11 @@ using UnityEngine.UI;
 
 public abstract class ToggleSetting : MonoBehaviour
 {
-    [SerializeField] protected Sprite _onSprite;
-    [SerializeField] protected Sprite _offSprite;
-    protected Button _toggleButton;
+    [SerializeField] private Sprite _onSprite;
+    [SerializeField] private Sprite _offSprite;
+    private Button _toggleButton;
     protected bool _isEnabled;
     
-    // Для каждого конкретного класса нужно переопределить эти ключи
     protected abstract string PlayerPrefKey { get; }
 
     protected virtual void Awake() 
@@ -18,9 +17,11 @@ public abstract class ToggleSetting : MonoBehaviour
 
     protected virtual void Start()
     {
-        // Загружаем сохраненное состояние
+        // Загружаем состояние и обновляем UI
         _isEnabled = LoadStateFromPlayerPrefs();
         UpdateUI();
+        
+        // Добавляем обработчик для изменения состояния
         _toggleButton.onClick.AddListener(ToggleState);
     }
 
@@ -34,19 +35,20 @@ public abstract class ToggleSetting : MonoBehaviour
 
     protected virtual void UpdateUI()
     {
+        // Обновляем визуальное представление в зависимости от состояния
         _toggleButton.image.sprite = _isEnabled ? _onSprite : _offSprite;
     }
 
-    // Применение настройки через SoundController
+    // Абстрактный метод для применения специфичной логики настройки
     protected abstract void ApplySetting();
 
-    // Сохраняем текущее состояние в PlayerPrefs
+    // Сохраняем состояние в PlayerPrefs через контроллер
     protected virtual void SaveStateToPlayerPrefs(bool state)
     {
         PlayerPrefsController.SetBool(PlayerPrefKey, state);
     }
 
-    // Загружаем сохраненное состояние из PlayerPrefs
+    // Загружаем состояние из PlayerPrefs через контроллер
     protected virtual bool LoadStateFromPlayerPrefs()
     {
         return PlayerPrefsController.GetBool(PlayerPrefKey, true);
