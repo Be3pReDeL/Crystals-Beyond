@@ -7,7 +7,6 @@ public class HealthPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("HEALTH");
         if (other.CompareTag("Ball"))  // Проверяем, что игрок касается предмета
         {
             Player.Instance.Heal(healthAmount);  // Увеличиваем здоровье игрока

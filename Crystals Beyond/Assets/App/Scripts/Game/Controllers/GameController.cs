@@ -96,7 +96,5 @@ public class GameController : MonoBehaviour
         TimeController.Instance.StopSpeedingUp();
 
         EndGameController.Instance.ShowEndGameScreen(isPlayerAWinner, _points, CurrentGameMode == GameMode.endless, CurrentLevel);
-
-        Debug.Log("SO PLAYER IS A " + (isPlayerAWinner ? "WINNER" : "LOSER"));
     }
 }

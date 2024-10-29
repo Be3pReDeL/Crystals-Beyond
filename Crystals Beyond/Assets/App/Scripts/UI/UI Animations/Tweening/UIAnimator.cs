@@ -60,10 +60,7 @@ public class UIAnimator : MonoBehaviour
     public void Disappear(GameObject gameObject)
     {
         if (_isAnimating)
-        {
-            Debug.Log("Animation in progress, cannot disappear yet.");
             return;
-        }
 
         Vector2 targetPosition = GetStartPosition();
         

@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Icylinko.sln"
+    "dotnet.defaultSolution": "Crystals Beyond.sln"
 }

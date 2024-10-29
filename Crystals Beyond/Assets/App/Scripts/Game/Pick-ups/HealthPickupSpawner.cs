@@ -11,14 +11,8 @@ public class HealthPickupSpawner : MonoBehaviour
     private void Start()
     {
         if (spawnAreaObject != null)
-        {
             // Устанавливаем размер зоны спавна на основе размеров spawnAreaObject
             spawnAreaSize = spawnAreaObject.transform.localScale;
-        }
-        else
-        {
-            Debug.LogError("Необходимо указать объект зоны спавна (spawnAreaObject)");
-        }
 
         InvokeRepeating(nameof(SpawnPickup), spawnInterval, spawnInterval); // Запускаем спавн по таймеру
     }
