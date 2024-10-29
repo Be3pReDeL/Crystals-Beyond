@@ -1,2 +1,2 @@
-# Spherics Beyond
- "Spherics Beyond" game + WebView app for "Apps4You"
+# Crystals Beyond
+ "Crystals Beyond" game + WebView app for "Apps4You"
