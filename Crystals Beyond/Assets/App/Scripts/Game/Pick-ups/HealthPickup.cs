@@ -7,13 +7,13 @@ public class HealthPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Ball"))  // Проверяем, что игрок касается предмета
+        if (other.CompareTag("Ball"))  // Проверяем, что объект с тегом "Ball" касается предмета
         {
-            Player.Instance.Heal(healthAmount);  // Увеличиваем здоровье игрока
+            Player.Instance?.Heal(healthAmount);  // Увеличиваем здоровье игрока, если Player.Instance не равен null
 
             if (pickupEffect != null)
             {
-                ParticleSystem effect = Instantiate(pickupEffect, transform.position, Quaternion.identity);
+                Instantiate(pickupEffect, transform.position, Quaternion.identity);  // Создаем эффект подбора
             }
 
             Destroy(gameObject);  // Удаляем предмет после подбора
