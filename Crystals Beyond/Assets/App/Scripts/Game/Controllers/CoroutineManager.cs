@@ -19,9 +19,24 @@ public class CoroutineManager : MonoBehaviour
         }
     }
 
-    // Метод для запуска корутины извне
-    public void StartExternalCoroutine(IEnumerator coroutine)
+    // Потокобезопасный запуск корутины
+    public static void StartRoutine(IEnumerator coroutine)
     {
-        StartCoroutine(coroutine);
+        if (coroutine == null) return;
+        
+        if (_instance == null)
+        {
+            var manager = new GameObject("CoroutineManager");
+            _instance = manager.AddComponent<CoroutineManager>();
+            DontDestroyOnLoad(manager);
+        }
+
+        _instance.StartCoroutineSafely(coroutine);
+    }
+
+    private void StartCoroutineSafely(IEnumerator coroutine)
+    {
+        if (this != null && gameObject != null)
+            StartCoroutine(coroutine);
     }
 }
