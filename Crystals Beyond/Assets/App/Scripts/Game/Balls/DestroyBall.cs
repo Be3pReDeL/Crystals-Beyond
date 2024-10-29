@@ -39,7 +39,7 @@ public class DestroyBall : MonoBehaviour
         if (GameController.Instance != null)
         {
             GameController.Instance.ScorePoints(segment.ScoreValue);
-            if (GameController.Instance.CurrentGameMode == GameController.GameMode.levels)
+            if (GameController.Instance.CurrentGameMode == GameController.GameMode.Levels)
                 GameController.Instance.ScoreGoal();
         }
     }
