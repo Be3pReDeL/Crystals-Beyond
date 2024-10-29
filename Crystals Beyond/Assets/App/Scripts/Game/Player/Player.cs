@@ -12,60 +12,80 @@ public class Player : MonoBehaviour
     [SerializeField] private IcePowerController _icePowerController;  // Ссылка на Ice Power контроллер
     [SerializeField] private Button _icePowerButton;  // Ссылка на кнопку Ice Power
 
+    public delegate void PlayerDeathHandler();
+    public event PlayerDeathHandler OnPlayerDeath;  // Событие для обработки смерти
+
     private void Awake() 
     {
         if (Instance == null)
             Instance = this;
         else
-            Destroy(this);
+            Destroy(gameObject);
     }
 
     private void Start()
     {
-        // Инициализируем здоровье игрока
+        if (_healthUIController == null)
+        {
+            Debug.LogError("Health UI Controller не назначен в инспекторе!");
+            return;
+        }
+
+        if (_icePowerController == null)
+        {
+            Debug.LogError("Ice Power Controller не назначен в инспекторе!");
+            return;
+        }
+
+        if (_icePowerButton != null)
+        {
+            _icePowerButton.onClick.AddListener(ActivateIcePower);
+        }
+        else
+        {
+            Debug.LogError("Ice Power Button не назначен в инспекторе!");
+        }
+
         _currentHealth = _maxHealth;
         _healthUIController.InitializeHealthUI(_maxHealth, _currentHealth);
-
-        // Добавляем слушателя нажатия на кнопку
-        _icePowerButton.onClick.AddListener(ActivateIcePower);
     }
 
-    // Метод для активации Ice Power
     private void ActivateIcePower()
     {
         if (_icePowerController.IsIcePowerAvailable)
+        {
             _icePowerController.UseIcePower();
+        }
     }
 
-    // Метод для получения урона
     public void TakeDamage(int damage)
     {
-        _currentHealth -= damage;  // Уменьшаем здоровье игрока
-        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);  // Ограничиваем здоровье в пределах 0 и максимума
+        _currentHealth -= damage;
+        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
 
-        // Обновляем здоровье на UI
         _healthUIController.UpdateHealthUI(_currentHealth);
 
-        // Проверка, достиг ли игрок нуля здоровья
         if (_currentHealth <= 0)
         {
-            Die();  // Вызываем метод смерти игрока
+            Die();
         }
     }
 
     public void Heal(int amount)
     {
         _currentHealth += amount;
-        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);  // Ограничиваем здоровье
+        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
 
-        // Обновляем UI здоровья
         _healthUIController.UpdateHealthUI(_currentHealth);
     }
 
-    // Метод для обработки смерти игрока
     private void Die()
     {
-        // Обрабатываем смерть (например, завершение игры)
-        GameController.Instance.OnGameComplete?.Invoke(false);  // Сообщаем GameController о завершении игры
+        if (Instance == this)
+        {
+            OnPlayerDeath?.Invoke();  // Вызываем событие смерти
+            GameController.Instance?.OnGameComplete?.Invoke(false);
+            Destroy(gameObject);  // Удаляем объект игрока, если нужно
+        }
     }
 }
