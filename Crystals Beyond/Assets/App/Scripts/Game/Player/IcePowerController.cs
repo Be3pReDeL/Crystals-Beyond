@@ -9,7 +9,7 @@ public class IcePowerController : MonoBehaviour
     [SerializeField] private float _slowMotionDuration = 5f;
     [SerializeField] private Animator[] _playerCircleSegmentsAnimators;
 
-    public bool IsIcePowerAvailable { get; private set; } = true;
+    public bool IsIcePowerAvailable { get; set; } = true;
     public bool IsIcePowerActive { get; private set; } = false;
 
     public float DefaultRechargeDuration { get; set; } = 7f;

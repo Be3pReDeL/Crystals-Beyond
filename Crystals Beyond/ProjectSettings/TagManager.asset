@@ -7,6 +7,7 @@ TagManager:
   - Win Slot
   - Loose Slot
   - Ball
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

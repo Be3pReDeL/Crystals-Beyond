@@ -87,10 +87,10 @@ public class GameController : MonoBehaviour
 
     private void InitializeHUD()
     {
-        HUDController.Instance.UpdateScoresText(_points);
+        HUDController.Instance.SetScore(_points);
         if (CurrentGameMode == GameMode.Levels)
         {
-            HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel]);
+            HUDController.Instance.SetGoal(_levelGoals[CurrentLevel]);
         }
     }
 
@@ -110,7 +110,7 @@ public class GameController : MonoBehaviour
     public void ScorePoints(int points)
     {
         _points += points;
-        HUDController.Instance.UpdateScoresText(_points);
+        HUDController.Instance.SetScore(_points);
     }
 
     public void ScoreGoal()
@@ -118,7 +118,7 @@ public class GameController : MonoBehaviour
         _caughtBalls++;
         if (CurrentGameMode == GameMode.Levels)
         {
-            HUDController.Instance.UpdateGoalText(_levelGoals[CurrentLevel] - _caughtBalls);
+            HUDController.Instance.SetGoal(_levelGoals[CurrentLevel] - _caughtBalls);
             if (_caughtBalls >= _levelGoals[CurrentLevel])
             {
                 OnGameComplete?.Invoke(true);
