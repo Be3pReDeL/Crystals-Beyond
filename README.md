@@ -1,2 +1,2 @@
 # Spherics Beyond
- "Icylinko" game + WebView app for "Apps4You"
+ "Spherics Beyond" game + WebView app for "Apps4You"
